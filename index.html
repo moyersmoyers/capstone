@@ -9,13 +9,47 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="navbar-brand" href="#">XYZ Resort</a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
 		    	<span class="navbar-toggler-icon"></span>
 		    </button>
-		    <div class="collapse navbar-collapse" id="navbarText">
-		    	<ul class="navbar-nav nav-underline ms-auto me-auto mb-2 mb-lg-0">
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">XYZ Resort</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav nav-underline ms-auto me-auto mb-2 my-2">
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="rooms.html">Rooms</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="amenities.html">Amenities</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="gallery.html">Gallery</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="testimonial.html">Testimonial</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="contactus.html">Contact Us</a>
+			    		</li>
+			    		<li class="nav-item">
+			    			<a class="nav-link mx-2" href="#">Reserve Now</a>
+			    		</li>
+		    		</ul>
+				    		
+		    		
+				</div>
+			</div>
+
+		    <!-- <div class="collapse navbar-collapse" id="navbarText">
+		    	 <ul class="navbar-nav nav-underline ms-auto me-auto mb-2 mb-lg-0">
 		    		<li class="nav-item">
 		    			<a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
 		    		</li>
@@ -41,8 +75,8 @@
 			    			<a class="nav-link mx-2" href="#">Reserve Now</a>
 			    		</li>
 		    		</ul>
-		    	</span>
-		    </div>
+		    	</span> 
+		    </div> -->
 		</div>
 	</nav>
 
@@ -50,52 +84,68 @@
         <div class="container">
             <div class="masterhead-subheading">Welcome to</div>
             <div class="masterhead-heading">XYZ Resort</div>
-            <div class="masterhead-subheading-bottom">The great resort for great people</div>
+            <div class="masterhead-subheading-bottom">Great resort for great people</div>
         </div>
     </header>
 
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Rooms</h2>
+                <h2 class="section-heading">Resort Amenities</h2>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <div class="col-md-4 my-3">
+					<div class="card" style="width: 100%; height: 480px;">
+						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+						<div class="card-body">
+							<h5 class="card-title">Amenity #1</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Read more</a>
+						</div>
+					</div>
                 </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <div class="col-md-4 my-3">
+					<div class="card" style="width: 100%; height: 480px;">
+						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+						<div class="card-body">
+							<h5 class="card-title">Amenity #2</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk.</p>
+							<a href="#" class="btn btn-primary">Read more</a>
+						</div>
+					</div>
                 </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <div class="col-md-4 my-3">
+					<div class="card" style="width: 100%; height: 480px;">
+						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+						<div class="card-body">
+							<h5 class="card-title">Amenity #3</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Read more</a>
+						</div>
+					</div>
+                </div>
+                <div class="col-md-4 my-3">
+					<div class="card" style="width: 100%; height: 480px;">
+						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+						<div class="card-body">
+							<h5 class="card-title">Amenity #4</h5>
+							<p class="card-text">Some quick example text to build on the card-text.</p>
+							<a href="#" class="btn btn-primary">Read more</a>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
     </section>
 
 
-	<div class="container">
-		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-body-secondary"> Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023 . All rights reserved.</p>
+	<div class="container-fluid px-5">
+		<footer class="py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-body-secondary"> Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023</p>
 
-			<ul class="nav col-md-4 justify-content-end">
+			<ul class="nav col-md-4 ">
 				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms and Condition</a></li>
-				<li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li>
+				<!-- <li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li> -->
 				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy and Policy</a></li>
 			</ul>
 		</footer>
@@ -103,26 +153,25 @@
 
 	<!-- scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		const navbar = document.querySelector('.navbar');
 		window.onscroll = window.onload = () => {
-			if(this.scrollY >= 60 || this.innerWidth <= 991){
+			if(this.scrollY >= 60){
 				navbar.classList.add('nav-scrolled');
 			}
 			else{
 				navbar.classList.remove('nav-scrolled');
 			}
 		}
-		const navbar_ul = document.querySelector('.navbar-nav');
-		window.onresize = window.onload = () => {
+		/*window.onresize = window.onload = () => {
 			if(this.scrollY >= 60 || this.innerWidth <= 991){
 				navbar.classList.add('nav-scrolled');
-				navbar_ul.classList.add('text-warning');
 			}
 			else{
 				navbar.classList.remove('nav-scrolled');
 			}
-		}
+		}*/
 		
 	</script>
 </body>
