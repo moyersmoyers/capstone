@@ -3,7 +3,13 @@
 *{
 	font-family: 'Bebas Neue', sans-serif;
 }*/
-
+button{
+	outline: none !important;
+    box-shadow: none !important;
+}
+.masterhead-heading{
+	letter-spacing: 2px;
+}
 .masterhead {
 	position: relative;
 	padding-top: 8.5rem;
@@ -80,6 +86,46 @@
 	background-color: red;
 }
 
+.offcanvas{
+	transition: all 0.2s;
+}
+
+.offcanvas:after{
+	content: '';
+}
+
 .page-section{
-	padding: 6rem 0;
+	padding: 5rem 0;
+}
+
+.section-heading{
+	padding-bottom: 3rem;
+}
+
+.card-text{
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	display: -webkit-box;
+}
+
+@media (min-width: 536px){
+	footer{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+	footer ul{
+		justify-content: flex-end;
+	}
+}
+@media (max-width: 535px){
+	footer{
+		text-align: center;
+		justify-content: center;
+	}
+	footer ul{
+		justify-content: center;
+	}
 }
