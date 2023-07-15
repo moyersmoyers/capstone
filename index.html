@@ -2,21 +2,20 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 	<title>XYZ Resort</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-		<div class="container-fluid">
+	<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+		<div class="container">
 			<a class="navbar-brand" href="#">XYZ Resort</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		    	<span class="navbar-toggler-icon"></span>
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarText">
-		    	<ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+		    	<ul class="navbar-nav nav-underline ms-auto me-auto mb-2 mb-lg-0">
 		    		<li class="nav-item">
 		    			<a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
 		    		</li>
@@ -39,7 +38,7 @@
 		    	<span class="navbar-text">
 		    		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-4" href="#">Reserve Now</a> <!-- style="background-color:orange;border-radius:10px;" -->
+			    			<a class="nav-link mx-2" href="#">Reserve Now</a>
 			    		</li>
 		    		</ul>
 		    	</span>
@@ -47,11 +46,52 @@
 		</div>
 	</nav>
 
-	<div class="bg-danger" style="height:100px"></div>
+	<header class="masterhead">
+        <div class="container">
+            <div class="masterhead-subheading">Welcome to</div>
+            <div class="masterhead-heading">XYZ Resort</div>
+            <div class="masterhead-subheading-bottom">The great resort for great people</div>
+        </div>
+    </header>
+
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Rooms</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">E-Commerce</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Responsive Design</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Web Security</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 <a href="#" class="text-body-secondary">XYZ Resort</a>. All Rights Reserved.</p>
+			<p class="col-md-4 mb-0 text-body-secondary"> Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023 . All rights reserved.</p>
 
 			<ul class="nav col-md-4 justify-content-end">
 				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms and Condition</a></li>
@@ -60,5 +100,30 @@
 			</ul>
 		</footer>
 	</div>
+
+	<!-- scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		const navbar = document.querySelector('.navbar');
+		window.onscroll = window.onload = () => {
+			if(this.scrollY >= 60 || this.innerWidth <= 991){
+				navbar.classList.add('nav-scrolled');
+			}
+			else{
+				navbar.classList.remove('nav-scrolled');
+			}
+		}
+		const navbar_ul = document.querySelector('.navbar-nav');
+		window.onresize = window.onload = () => {
+			if(this.scrollY >= 60 || this.innerWidth <= 991){
+				navbar.classList.add('nav-scrolled');
+				navbar_ul.classList.add('text-warning');
+			}
+			else{
+				navbar.classList.remove('nav-scrolled');
+			}
+		}
+		
+	</script>
 </body>
 </html>
