@@ -1,31 +1,85 @@
-.nav-link{
+/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+	font-family: 'Bebas Neue', sans-serif;
+}*/
+
+.masterhead {
+	position: relative;
+	padding-top: 8.5rem;
+	padding-bottom: 6rem;
+	text-align: center;
+	color: #fff;
+	background-image: url("../img/homepage-bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+}
+
+.masterhead:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .5);
+}
+
+.masterhead-heading, .masterhead-subheading, .masterhead-subheading-bottom{
 	position: relative;
 }
 
-.nav-link::after{
-	content: '';
-	opacity: 0;
-	transition: all 0.2s;
-	height: 2px;
-	width: 100%;
-	background-color: white;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+.masterhead .masterhead-subheading, .masterhead-subheading-bottom{
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	margin-bottom: 25px;
 }
 
-.nav-link:hover::after{
-	opacity: 1;
+.masterhead .masterhead-heading{
+	font-size: 3.25rem;
+	font-weight: 700;
+	line-height: 3.25rem;
+	margin-bottom: 1rem;
 }
 
-.active::after{
-	content: '' !important;
-	opacity: 1 !important;
-	transition: all 0.2s !important;
-	height: 2px !important;
-	width: 100% !important;
-	background-color: white !important;
-	position: absolute !important;
-	bottom: 0 !important;
-	left: 0 !important;
+@media (min-width: 768px) {
+	.masterhead {
+		padding-top: 13.5rem;
+		padding-bottom: 12.5rem;
+	}
+
+	.masterhead .masterhead-subheading, .masterhead-subheading-bottom{
+		font-size: 2.25rem;
+		line-height: 2.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.masterhead .masterhead-heading{
+		font-size: 4.5rem;
+		font-weight: 700;
+		line-height: 4.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.navbar{
+	transition: all 0.3s;
+}
+
+.nav-scrolled{
+	background-color: #1B1B1E;
+}
+
+.navbar-toggler span{
+	text-decoration: none; 
+}
+
+.navbar_ul{
+	background-color: red;
+}
+
+.page-section{
+	padding: 6rem 0;
 }
