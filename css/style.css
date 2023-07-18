@@ -1,19 +1,25 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Rubik:wght@300&display=swap');
 
-*{
-	font-family: 'Bebas Neue', sans-serif;
-}*/
+body{
+	font-family: "Rubik", arial, sans-serif;
+}
+
 button{
 	outline: none !important;
     box-shadow: none !important;
 }
-.masterhead-heading{
-	letter-spacing: 2px;
+
+.heading-font{
+	font-family: "Playfair Display", times, serif;
 }
+
 .masterhead {
+	height: 100vh;
 	position: relative;
-	padding-top: 8.5rem;
-	padding-bottom: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	color: #fff;
 	background-image: url("../img/homepage-bg.jpg");
@@ -33,38 +39,31 @@ button{
 	background: rgba(0, 0, 0, .5);
 }
 
-.masterhead-heading, .masterhead-subheading, .masterhead-subheading-bottom{
+.masterhead-heading, .masterhead-subheading{
 	position: relative;
 }
 
-.masterhead .masterhead-subheading, .masterhead-subheading-bottom{
+.masterhead-subheading{
 	font-size: 1.5rem;
-	line-height: 1.5rem;
-	margin-bottom: 25px;
+	line-height: 2.25rem;
+	margin-bottom: 2rem;
 }
 
-.masterhead .masterhead-heading{
-	font-size: 3.25rem;
-	font-weight: 700;
-	line-height: 3.25rem;
+.masterhead-heading{
+	font-size: 3.5rem;
+	line-height: 4.5rem;
 	margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-	.masterhead {
-		padding-top: 13.5rem;
-		padding-bottom: 12.5rem;
-	}
-
-	.masterhead .masterhead-subheading, .masterhead-subheading-bottom{
-		font-size: 2.25rem;
+	.masterhead-subheading{
+		font-size: 1.5rem;
 		line-height: 2.25rem;
 		margin-bottom: 2rem;
 	}
 
-	.masterhead .masterhead-heading{
-		font-size: 4.5rem;
-		font-weight: 700;
+	.masterhead-heading{
+		font-size: 4rem;
 		line-height: 4.5rem;
 		margin-bottom: 1rem;
 	}
@@ -99,7 +98,33 @@ button{
 }
 
 .section-heading{
-	padding-bottom: 3rem;
+	padding-bottom: 1.4rem;
+	font-size: 3rem;
+}
+
+.card {
+	overflow: hidden;
+	width: 100%;
+	filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3));
+}
+
+.card-image{
+	overflow: hidden;
+}
+
+.card-img-top{
+	max-height: 15rem;
+	transition: all 0.3s;
+}
+
+.card-img-top:hover{
+	cursor: pointer;
+	transform: scale(1.035);
+}
+
+.card-title{
+	font-size: 1.35rem;
+    letter-spacing: .5px;
 }
 
 .card-text{
@@ -108,6 +133,68 @@ button{
 	-webkit-line-clamp: 5;
 	display: -webkit-box;
 }
+
+.room-bg{
+	position: relative;
+	background-image: url('../img/homepage-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	height: 600px;
+	margin-bottom: 1rem;
+    overflow: hidden;
+    color: white;
+}
+
+.room-bg:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(rgba(0,0,0,0),rgba(0, 0, 0, 0.75));
+    transition: all .5s;
+    height: 200%;
+}
+
+.room-bg:hover:before{
+	transform: translateY(-50%);
+}
+
+.room-bg:hover .room-text{
+	transform: translateY(-120%);
+}
+
+.room-title{
+	font-size: 2rem;
+}
+
+.room-text{
+	position: absolute;
+	top: 82%;
+    transition: all .5s;
+    overflow: hidden;
+    padding-left: 1.5rem;
+}
+
+.room-price{
+	font-size: 1.75rem;
+	padding-bottom: 1rem;
+}
+
+.pernight-text{
+	font-size: 16px;
+}
+
+.room-category-container{
+	padding-bottom: 1.5rem;
+}
+
+.room-category-value{
+	font-weight: 600;
+}
+
 
 @media (min-width: 536px){
 	footer{
