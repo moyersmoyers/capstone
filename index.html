@@ -8,8 +8,9 @@
 	<title>XYZ Resort</title>
 </head>
 <body>
+	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-		<div class="container-fluid">
+		<div class="container">
 			<a class="navbar-brand" href="#">XYZ Resort</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
 		    	<span class="navbar-toggler-icon"></span>
@@ -20,115 +21,181 @@
 					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
-					<ul class="navbar-nav nav-underline ms-auto me-auto mb-2 my-2">
+					<ul class="navbar-nav nav-underline ms-auto mb-2 my-2">
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+			    			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="rooms.html">Rooms</a>
+			    			<a class="nav-link" href="rooms.html">Rooms</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="amenities.html">Amenities</a>
+			    			<a class="nav-link" href="amenities.html">Amenities</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="gallery.html">Gallery</a>
+			    			<a class="nav-link" href="gallery.html">Gallery</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="testimonial.html">Testimonial</a>
+			    			<a class="nav-link" href="testimonial.html">Testimonial</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="contactus.html">Contact Us</a>
+			    			<a class="nav-link" href="contactus.html">Contact</a>
 			    		</li>
 			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="#">Reserve Now</a>
+			    			<a class="nav-link" href="#">Reserve Now</a>
 			    		</li>
 		    		</ul>
-				    		
-		    		
 				</div>
 			</div>
-
-		    <!-- <div class="collapse navbar-collapse" id="navbarText">
-		    	 <ul class="navbar-nav nav-underline ms-auto me-auto mb-2 mb-lg-0">
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
-		    		</li>
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2" href="rooms.html">Rooms</a>
-		    		</li>
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2" href="amenities.html">Amenities</a>
-		    		</li>
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2" href="gallery.html">Gallery</a>
-		    		</li>
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2" href="testimonial.html">Testimonial</a>
-		    		</li>
-		    		<li class="nav-item">
-		    			<a class="nav-link mx-2" href="contactus.html">Contact Us</a>
-		    		</li>
-		    	</ul>
-		    	<span class="navbar-text">
-		    		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			    		<li class="nav-item">
-			    			<a class="nav-link mx-2" href="#">Reserve Now</a>
-			    		</li>
-		    		</ul>
-		    	</span> 
-		    </div> -->
 		</div>
 	</nav>
 
+	<!-- HEADER -->
 	<header class="masterhead">
         <div class="container">
-            <div class="masterhead-subheading">Welcome to</div>
-            <div class="masterhead-heading">XYZ Resort</div>
-            <div class="masterhead-subheading-bottom">Great resort for great people</div>
+            <div class="masterhead-heading heading-font">Welcome to XYZ Resort</div>
+            <div class="masterhead-subheading">Great resort for great people</div>
         </div>
     </header>
 
-    <section class="page-section" id="services">
+    <!-- ROOMS -->
+    <section class="page-section">
+        <div class="container-fluid">
+            <div class="text-center">
+                <h2 class="section-heading heading-font">Rooms</h2>
+            </div>
+            <div class="container-fluid">
+            	<div class="row">
+	                <div class="col-lg-3 col-md-6">
+	                	<div class="room-bg">
+							<div class="room-text">
+								<h3 class="heading-font room-title">Standard Room</h3>
+								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Max 5 people</div>
+									</div>
+								</div>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
+									</div>
+								</div>
+								<a href="rooms.html" class="text-white">More details</a>
+							</div>
+	                	</div>
+	                </div>
+	                <div class="col-lg-3 col-md-6">
+	                	<div class="room-bg">
+	                		<div class="room-text">
+								<h3 class="heading-font room-title">Family Room</h3>
+								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Max 5 people</div>
+									</div>
+								</div>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
+									</div>
+								</div>
+								<a href="rooms.html" class="text-white">More details</a>
+							</div>
+	                	</div>
+	                </div>
+	                <div class="col-lg-3 col-md-6">
+	                	<div class="room-bg">
+	                		<div class="room-text">
+								<h3 class="heading-font room-title">Deluxe Room</h3>
+								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Max 5 people</div>
+									</div>
+								</div>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
+									</div>
+								</div>
+								<a href="rooms.html" class="text-white">More details</a>
+							</div>
+	                	</div>
+	                </div>
+	                <div class="col-lg-3 col-md-6">
+	                	<div class="room-bg">
+	                		<div class="room-text">
+								<h3 class="heading-font room-title">LuxuryLuxuryLuxuryLuxuryLuxury Room</h3>
+								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Max 5 people</div>
+									</div>
+								</div>
+								<div class="room-category-container">
+									<div class="row">
+										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
+									</div>
+								</div>
+								<a href="rooms.html" class="text-white">More details</a>
+							</div>
+	                	</div>
+	                </div>
+	            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="page-section bg-light">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading">Resort Amenities</h2>
+                <h2 class="section-heading heading-font">Resort Amenities</h2>
             </div>
             <div class="row text-center">
-                <div class="col-md-4 my-3">
-					<div class="card" style="width: 100%; height: 480px;">
-						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+                <div class="col-lg-4 col-md-6 my-2">
+					<div class="card h-100">
+						<div class="card-image">
+							<img src="img/wqe.jpg" class="card-img-top" alt="...">
+						</div>
 						<div class="card-body">
-							<h5 class="card-title">Amenity #1</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<h5 class="card-title heading-font">Wi-Fi</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 							<a href="#" class="btn btn-primary">Read more</a>
 						</div>
 					</div>
                 </div>
-                <div class="col-md-4 my-3">
-					<div class="card" style="width: 100%; height: 480px;">
-						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+                <div class="col-lg-4 col-md-6 my-2">
+					<div class="card h-100">
+						<div class="card-image">
+							<img src="img/wqe.jpg" class="card-img-top" alt="...">
+						</div>
 						<div class="card-body">
-							<h5 class="card-title">Amenity #2</h5>
+							<h5 class="card-title heading-font">Car Parking</h5>
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk.</p>
 							<a href="#" class="btn btn-primary">Read more</a>
 						</div>
 					</div>
                 </div>
-                <div class="col-md-4 my-3">
-					<div class="card" style="width: 100%; height: 480px;">
-						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+                <div class="col-lg-4 col-md-6 my-2">
+					<div class="card h-100">
+						<div class="card-image">
+							<img src="img/wqe.jpg" class="card-img-top" alt="...">
+						</div>
 						<div class="card-body">
-							<h5 class="card-title">Amenity #3</h5>
+							<h5 class="card-title heading-font">Minibar</h5>
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 							<a href="#" class="btn btn-primary">Read more</a>
 						</div>
 					</div>
                 </div>
-                <div class="col-md-4 my-3">
-					<div class="card" style="width: 100%; height: 480px;">
-						<img src="img/wqe.jpg" class="card-img-top" alt="..." style="max-height: 15rem;">
+                <div class="col-lg-4 col-md-6 my-2">
+					<div class="card h-100">
+						<div class="card-image">
+							<img src="img/wqe.jpg" class="card-img-top" alt="...">
+						</div>
 						<div class="card-body">
-							<h5 class="card-title">Amenity #4</h5>
+							<h5 class="card-title heading-font">Basketball Court</h5>
 							<p class="card-text">Some quick example text to build on the card-text.</p>
 							<a href="#" class="btn btn-primary">Read more</a>
 						</div>
@@ -138,7 +205,31 @@
         </div>
     </section>
 
+    <!-- Gallery -->
+    <section class="page-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading heading-font">Gallery</h2>
+            </div>
+            <div class="">
+            	
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonial -->
+    <section class="page-section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading heading-font">Testimonials</h2>
+            </div>
+            <div class="">
+            	
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
 	<div class="container-fluid px-5">
 		<footer class="py-3 my-4 border-top">
 			<p class="col-md-4 mb-0 text-body-secondary"> Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023</p>
@@ -154,25 +245,7 @@
 	<!-- scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		const navbar = document.querySelector('.navbar');
-		window.onscroll = window.onload = () => {
-			if(this.scrollY >= 60){
-				navbar.classList.add('nav-scrolled');
-			}
-			else{
-				navbar.classList.remove('nav-scrolled');
-			}
-		}
-		/*window.onresize = window.onload = () => {
-			if(this.scrollY >= 60 || this.innerWidth <= 991){
-				navbar.classList.add('nav-scrolled');
-			}
-			else{
-				navbar.classList.remove('nav-scrolled');
-			}
-		}*/
-		
+	<script type="text/javascript" src="script/script.js">
 	</script>
 </body>
 </html>
