@@ -1,251 +1,321 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"></meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-	<title>XYZ Resort</title>
-</head>
-<body>
-	<!-- NAVBAR -->
-	<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-		<div class="container">
-			<a class="navbar-brand" href="#">XYZ Resort</a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
-		    	<span class="navbar-toggler-icon"></span>
-		    </button>
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">XYZ Resort</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<ul class="navbar-nav nav-underline ms-auto mb-2 my-2">
-			    		<li class="nav-item">
-			    			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="rooms.html">Rooms</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="amenities.html">Amenities</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="gallery.html">Gallery</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="testimonial.html">Testimonial</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="contactus.html">Contact</a>
-			    		</li>
-			    		<li class="nav-item">
-			    			<a class="nav-link" href="#">Reserve Now</a>
-			    		</li>
-		    		</ul>
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>XYZ Resort</title>
+		<!-- BOOTSTRAP -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+		<!-- CAROUSEL -->
+		<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+		<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- STYLE -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body class="no-scroll">
+
+		<!-- PRELOADER -->
+		<div class="loader"></div>
+
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+			<div class="container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
+				<a class="navbar-brand" href="#">XYZ Resort</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
+			    	<span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">XYZ Resort</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav nav-underline ms-auto mb-2 my-2">
+				    		<li class="nav-item">
+				    			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="rooms.html">Rooms</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="amenities.html">Amenities</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="gallery.html">Gallery</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Testimonial</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="contactus.html">Contact</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="#">Reserve Now</a>
+				    		</li>
+			    		</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
-	<!-- HEADER -->
-	<header class="masterhead">
-        <div class="container">
-            <div class="masterhead-heading heading-font">Welcome to XYZ Resort</div>
-            <div class="masterhead-subheading">Great resort for great people</div>
-        </div>
-    </header>
 
-    <!-- ROOMS -->
-    <section class="page-section">
-        <div class="container-fluid">
-            <div class="text-center">
-                <h2 class="section-heading heading-font">Rooms</h2>
-            </div>
-            <div class="container-fluid">
-            	<div class="row">
-	                <div class="col-lg-3 col-md-6">
-	                	<div class="room-bg">
-							<div class="room-text">
-								<h3 class="heading-font room-title">Standard Room</h3>
-								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Max 5 people</div>
-									</div>
-								</div>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
-									</div>
-								</div>
-								<a href="rooms.html" class="text-white">More details</a>
+		<!-- HEADER -->
+		<!-- <header class="masterhead">
+	        <div class="container">
+	            <div class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">Welcome to XYZ Resort</div>
+	            <div class="masterhead-subheading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">Great resort for great people</div>
+	        </div>
+	    </header> -->
+	    <header id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-theme="light" data-aos="fade-in" data-aos-delay="400">
+		    <div class="carousel-indicators">
+		      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		    </div>
+		    <div class="carousel-inner">
+		      <div class="carousel-item active" data-bs-interval="5000">
+		        <div class="masterhead" style="background-image: url('img/homepage-bg.jpg');"></div>
+		        <div class="carousel-caption">
+		            <h1 class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">Welcome To XYZ Resort</h1>
+		            <p class="masterhead-subheading opacity-75" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel.</p>
+		        </div>
+		      </div>
+		      <div class="carousel-item" data-bs-interval="5000">
+		        <div class="masterhead" style="background-image: url('img/wqe.jpg');"></div>
+		        <div class="container">
+		          <div class="carousel-caption">
+		            <h1 class="masterhead-heading heading-font">Another example headline. Another example headline.</h1>
+		            <p class="masterhead-subheading opacity-75">Some representative placeholder content for the second slide of the carousel.</p>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="carousel-item" data-bs-interval="5000">
+		        <div class="masterhead" style="background-image: url('img/qw.jpg');"></div>
+		        <div class="container">
+		          <div class="carousel-caption">
+		            <h1 class="masterhead-heading heading-font">One more for good measure.</h1>
+		            <p class="masterhead-subheading opacity-75">Some representative placeholder content for the third slide of this carousel.</p>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+		      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		      <span class="visually-hidden">Previous</span>
+		    </button>
+		    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		      <span class="visually-hidden">Next</span>
+		    </button>
+		  </header>
+
+
+	    <!-- ROOMS -->
+	    <section class="page-section bg-light">
+	        <div class="container">
+	            <div class="text-center">
+	                <h2 class="section-heading heading-font" data-aos="fade-up">Rooms</h2>
+	            </div>
+				<div class="owl-carousel owl-theme">
+				    <div class="item" data-aos="fade-up" data-aos-delay="400">
+						<img src="img/qw.jpg" />
+						<div class="details text-center">
+				        	<h4 class="heading-font text-truncate">Standard Room</h4>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-details">
+				        		asdasdas | asdasd | asdasd | asdasdasdada | asdasda | asdasd | a sdasdasdasdasd | asdasdasds | asdasda
+				        	</p>
+				        	<div class="room-button-container">
+				        		<a class="btn btn-primary btn-book">Book now!</a>
+								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+				        	</div>
+				        </div>
+				    </div>
+				    <div class="item" data-aos="fade-up" data-aos-delay="500">
+						<img src="img/wqe.jpg" />
+						<div class="details text-center">
+				        	<h4 class="heading-font text-truncate">Family Room</h4>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-details">
+				        		asdasdas | asdasd | asdasd | asdasdasdada
+				        	</p>
+				        	<div class="room-button-container">
+				        		<a class="btn btn-primary btn-book">Book now!</a>
+								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+				        	</div>
+				        </div>
+				    </div>
+				    <div class="item" data-aos="fade-up" data-aos-delay="600">
+						<img src="img/qw.jpg" />
+						<div class="details text-center">
+				        	<h4 class="heading-font text-truncate">Deluxe Room</h4>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-details">
+				        		asdasdas | asdasd | asdasd | asdasdasdada | asdasda | asdasd | a sdasdasdasdasd | asdasdasds | asdasda
+				        	</p>
+				        	<div class="room-button-container">
+				        		<a class="btn btn-primary btn-book">Book now!</a>
+								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+				        	</div>
+				        </div>
+				    </div>
+				    <div class="item" data-aos="fade-up" data-aos-delay="700">
+						<img src="img/wqe.jpg" />
+						<div class="details text-center">
+				        	<h4 class="heading-font text-truncate">Luxury Room</h4>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-details">
+				        		asdasdas | asdasd | asdasd | asdasdasdada
+				        	</p>
+				        	<div class="room-button-container">
+				        		<a class="btn btn-primary btn-book">Book now!</a>
+								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+				        	</div>
+				        </div>
+				    </div>
+				</div>
+
+				<div class="text-center" data-aos="fade-up" data-aos-delay="800">
+					<a href="#" class="">
+						View all rooms <i class="bi bi-arrow-right-circle view-arrow"></i>
+					</a>
+				</div>
+	        </div>
+	    </section>
+	    
+
+	    <!-- AMENITIES -->
+	    <section class="page-section">
+	        <div class="container">
+	            <div class="text-center">
+	                <h2 class="section-heading heading-font" data-aos="fade-up">Resort Amenities</h2>
+	            </div>
+	            <div class="row text-center">
+	                <div class="col-lg-4 col-md-6 my-2">
+						<div class="card h-100">
+							<div class="card-image">
+								<img src="img/wqe.jpg" class="card-img-top" alt="...">
 							</div>
-	                	</div>
+							<div class="card-body">
+								<h5 class="card-title heading-font">Wi-Fi</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Read more</a>
+							</div>
+						</div>
 	                </div>
-	                <div class="col-lg-3 col-md-6">
-	                	<div class="room-bg">
-	                		<div class="room-text">
-								<h3 class="heading-font room-title">Family Room</h3>
-								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Max 5 people</div>
-									</div>
-								</div>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
-									</div>
-								</div>
-								<a href="rooms.html" class="text-white">More details</a>
+	                <div class="col-lg-4 col-md-6 my-2">
+						<div class="card h-100">
+							<div class="card-image">
+								<img src="img/wqe.jpg" class="card-img-top" alt="...">
 							</div>
-	                	</div>
+							<div class="card-body">
+								<h5 class="card-title heading-font">Car Parking</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk.</p>
+								<a href="#" class="btn btn-primary">Read more</a>
+							</div>
+						</div>
 	                </div>
-	                <div class="col-lg-3 col-md-6">
-	                	<div class="room-bg">
-	                		<div class="room-text">
-								<h3 class="heading-font room-title">Deluxe Room</h3>
-								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Max 5 people</div>
-									</div>
-								</div>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
-									</div>
-								</div>
-								<a href="rooms.html" class="text-white">More details</a>
+	                <div class="col-lg-4 col-md-6 my-2">
+						<div class="card h-100">
+							<div class="card-image">
+								<img src="img/wqe.jpg" class="card-img-top" alt="...">
 							</div>
-	                	</div>
+							<div class="card-body">
+								<h5 class="card-title heading-font">Minibar</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Read more</a>
+							</div>
+						</div>
 	                </div>
-	                <div class="col-lg-3 col-md-6">
-	                	<div class="room-bg">
-	                		<div class="room-text">
-								<h3 class="heading-font room-title">Luxury Room</h3>
-								<p class="room-price">&#8369;100<span class="pernight-text"> / night</span></p>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Max 5 people</div>
-									</div>
-								</div>
-								<div class="room-category-container">
-									<div class="row">
-										<div class="col room-category-value">&#8226; Wi-Fi, Bathroom, TV</div>
-									</div>
-								</div>
-								<a href="rooms.html" class="text-white">More details</a>
+	                <div class="col-lg-4 col-md-6 my-2">
+						<div class="card h-100">
+							<div class="card-image">
+								<img src="img/wqe.jpg" class="card-img-top" alt="...">
 							</div>
-	                	</div>
+							<div class="card-body">
+								<h5 class="card-title heading-font">Basketball Court</h5>
+								<p class="card-text">Some quick example text to build on the card-text.</p>
+								<a href="#" class="btn btn-primary">Read more</a>
+							</div>
+						</div>
 	                </div>
 	            </div>
-            </div>
-        </div>
-    </section>
+	        </div>
+	    </section>
 
-    <!-- AMENITIES -->
-    <section class="page-section bg-light">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading heading-font">Resort Amenities</h2>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-4 col-md-6 my-2">
-					<div class="card h-100">
-						<div class="card-image">
-							<img src="img/wqe.jpg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<h5 class="card-title heading-font">Wi-Fi</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Read more</a>
-						</div>
-					</div>
-                </div>
-                <div class="col-lg-4 col-md-6 my-2">
-					<div class="card h-100">
-						<div class="card-image">
-							<img src="img/wqe.jpg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<h5 class="card-title heading-font">Car Parking</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk.</p>
-							<a href="#" class="btn btn-primary">Read more</a>
-						</div>
-					</div>
-                </div>
-                <div class="col-lg-4 col-md-6 my-2">
-					<div class="card h-100">
-						<div class="card-image">
-							<img src="img/wqe.jpg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<h5 class="card-title heading-font">Minibar</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Read more</a>
-						</div>
-					</div>
-                </div>
-                <div class="col-lg-4 col-md-6 my-2">
-					<div class="card h-100">
-						<div class="card-image">
-							<img src="img/wqe.jpg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<h5 class="card-title heading-font">Basketball Court</h5>
-							<p class="card-text">Some quick example text to build on the card-text.</p>
-							<a href="#" class="btn btn-primary">Read more</a>
-						</div>
-					</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Gallery -->
-    <section class="page-section">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading heading-font">Gallery</h2>
-            </div>
-            <div class="">
-            	
-            </div>
-        </div>
-    </section>
+	    <!-- Gallery -->
+	    <section class="page-section bg-light">
+	        <div class="container">
+	            <div class="text-center">
+	                <h2 class="section-heading heading-font" data-aos="fade-up">Gallery</h2>
+	            </div>
+				
+				
 
-    <!-- Testimonial -->
-    <section class="page-section bg-light">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading heading-font">Testimonials</h2>
-            </div>
-            <div class="">
-            	
-            </div>
-        </div>
-    </section>
+	        </div>
+	    </section>
 
-    <!-- FOOTER -->
-	<div class="container-fluid px-5">
-		<footer class="py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-body-secondary"> Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023</p>
 
-			<ul class="nav col-md-4 ">
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms and Condition</a></li>
-				<!-- <li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li> -->
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy and Policy</a></li>
-			</ul>
-		</footer>
-	</div>
+	    <!-- Testimonial -->
+	    <section class="page-section">
+	        <div class="container">
+	            <div class="text-center">
+	                <h2 class="section-heading heading-font" data-aos="fade-up">Testimonials</h2>
+	            </div>
+	            <div class="">
+	            	
+	            </div>
+	        </div>
+	    </section>
 
-	<!-- scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="script/script.js">
-	</script>
-</body>
+
+	    <!-- FOOTER -->
+		<div class="container-fluid px-5">
+			<footer class="py-3 my-4 border-top">
+				<p class="col-md-4 mb-0 text-body-secondary">
+				 Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023
+				</p>
+				<ul class="nav col-md-4 ">
+					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms and Condition</a></li>
+					<!-- <li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li> -->
+					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy and Policy</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<!-- JQUERY -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+		<!-- BOOTSTRAP -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<!-- FONTAWESOME -->
+		<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+		<!-- CAROUSEL -->
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<!-- AOS -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<!-- SCRIPT -->
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
 </html>
