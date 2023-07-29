@@ -13,6 +13,8 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 		<!-- AOS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- NANOGALLERY -->
+		<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" rel="stylesheet">
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
@@ -47,9 +49,9 @@
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="gallery.html">Gallery</a>
 				    		</li>
-				    		<li class="nav-item">
+				    		<!-- <li class="nav-item">
 				    			<a class="nav-link" href="testimonial.html">Testimonial</a>
-				    		</li>
+				    		</li> -->
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="contactus.html">Contact</a>
 				    		</li>
@@ -64,12 +66,6 @@
 
 
 		<!-- HEADER -->
-		<!-- <header class="masterhead">
-	        <div class="container">
-	            <div class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">Welcome to XYZ Resort</div>
-	            <div class="masterhead-subheading" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">Great resort for great people</div>
-	        </div>
-	    </header> -->
 	    <header id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-theme="light" data-aos="fade-in" data-aos-delay="400">
 		    <div class="carousel-indicators">
 		      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -80,8 +76,8 @@
 		      <div class="carousel-item active" data-bs-interval="5000">
 		        <div class="masterhead" style="background-image: url('img/homepage-bg.jpg');"></div>
 		        <div class="carousel-caption">
-		            <h1 class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">Welcome To XYZ Resort</h1>
-		            <p class="masterhead-subheading opacity-75" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel.</p>
+		            <h1 class="masterhead-heading heading-font w-75" data-aos="fade-down" data-aos-duration="1500">Welcome To XYZ Resort</h1>
+		            <p class="masterhead-subheading opacity-75 w-70" data-aos="fade-up" data-aos-duration="1500">Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel.</p>
 		        </div>
 		      </div>
 		      <div class="carousel-item" data-bs-interval="5000">
@@ -103,14 +99,6 @@
 		        </div>
 		      </div>
 		    </div>
-		    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-		      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		      <span class="visually-hidden">Previous</span>
-		    </button>
-		    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		      <span class="visually-hidden">Next</span>
-		    </button>
 		  </header>
 
 
@@ -121,7 +109,7 @@
 	                <h2 class="section-heading heading-font" data-aos="fade-up">Rooms</h2>
 	            </div>
 				<div class="owl-carousel owl-theme">
-				    <div class="item" data-aos="fade-up" data-aos-delay="400">
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="100">
 						<img src="img/qw.jpg" />
 						<div class="details text-center">
 				        	<h4 class="heading-font text-truncate">Standard Room</h4>
@@ -130,16 +118,15 @@
 				        		<span class="room-price">100</span>
 				        		<span class="pernight-text">/ night</span>
 				        	</p>
-				        	<p class="room-details">
-				        		asdasdas | asdasd | asdasd | asdasdasdada | asdasda | asdasd | a sdasdasdasdasd | asdasdasds | asdasda
+				        	<p class="room-description">
+				        		This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.
 				        	</p>
 				        	<div class="room-button-container">
-				        		<a class="btn btn-primary btn-book">Book now!</a>
-								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+								<a href="rooms.html" class="btn btn-primary">View details</a>
 				        	</div>
 				        </div>
 				    </div>
-				    <div class="item" data-aos="fade-up" data-aos-delay="500">
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="200">
 						<img src="img/wqe.jpg" />
 						<div class="details text-center">
 				        	<h4 class="heading-font text-truncate">Family Room</h4>
@@ -148,16 +135,15 @@
 				        		<span class="room-price">100</span>
 				        		<span class="pernight-text">/ night</span>
 				        	</p>
-				        	<p class="room-details">
-				        		asdasdas | asdasd | asdasd | asdasdasdada
+				        	<p class="room-description">
+				        		This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.
 				        	</p>
 				        	<div class="room-button-container">
-				        		<a class="btn btn-primary btn-book">Book now!</a>
-								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+								<a href="rooms.html" class="btn btn-primary">View details</a>
 				        	</div>
 				        </div>
 				    </div>
-				    <div class="item" data-aos="fade-up" data-aos-delay="600">
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="300">
 						<img src="img/qw.jpg" />
 						<div class="details text-center">
 				        	<h4 class="heading-font text-truncate">Deluxe Room</h4>
@@ -166,16 +152,15 @@
 				        		<span class="room-price">100</span>
 				        		<span class="pernight-text">/ night</span>
 				        	</p>
-				        	<p class="room-details">
-				        		asdasdas | asdasd | asdasd | asdasdasdada | asdasda | asdasd | a sdasdasdasdasd | asdasdasds | asdasda
+				        	<p class="room-description">
+				        		Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.
 				        	</p>
 				        	<div class="room-button-container">
-				        		<a class="btn btn-primary btn-book">Book now!</a>
-								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+								<a href="rooms.html" class="btn btn-primary">View details</a>
 				        	</div>
 				        </div>
 				    </div>
-				    <div class="item" data-aos="fade-up" data-aos-delay="700">
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="400">
 						<img src="img/wqe.jpg" />
 						<div class="details text-center">
 				        	<h4 class="heading-font text-truncate">Luxury Room</h4>
@@ -184,18 +169,17 @@
 				        		<span class="room-price">100</span>
 				        		<span class="pernight-text">/ night</span>
 				        	</p>
-				        	<p class="room-details">
-				        		asdasdas | asdasd | asdasd | asdasdasdada
+				        	<p class="room-description">
+				        		Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.
 				        	</p>
 				        	<div class="room-button-container">
-				        		<a class="btn btn-primary btn-book">Book now!</a>
-								<a href="rooms.html" class="btn btn-outline-primary">More details</a>
+								<a href="rooms.html" class="btn btn-primary">View details</a>
 				        	</div>
 				        </div>
 				    </div>
 				</div>
 
-				<div class="text-center" data-aos="fade-up" data-aos-delay="800">
+				<div class="text-center" data-aos="fade-up">
 					<a href="#" class="">
 						View all rooms <i class="bi bi-arrow-right-circle view-arrow"></i>
 					</a>
@@ -205,63 +189,48 @@
 	    
 
 	    <!-- AMENITIES -->
-	    <section class="page-section">
+	    <!-- <section class="page-section">
 	        <div class="container">
 	            <div class="text-center">
 	                <h2 class="section-heading heading-font" data-aos="fade-up">Resort Amenities</h2>
 	            </div>
-	            <div class="row text-center">
-	                <div class="col-lg-4 col-md-6 my-2">
-						<div class="card h-100">
-							<div class="card-image">
-								<img src="img/wqe.jpg" class="card-img-top" alt="...">
-							</div>
-							<div class="card-body">
-								<h5 class="card-title heading-font">Wi-Fi</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-	                </div>
-	                <div class="col-lg-4 col-md-6 my-2">
-						<div class="card h-100">
-							<div class="card-image">
-								<img src="img/wqe.jpg" class="card-img-top" alt="...">
-							</div>
-							<div class="card-body">
-								<h5 class="card-title heading-font">Car Parking</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk.</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-	                </div>
-	                <div class="col-lg-4 col-md-6 my-2">
-						<div class="card h-100">
-							<div class="card-image">
-								<img src="img/wqe.jpg" class="card-img-top" alt="...">
-							</div>
-							<div class="card-body">
-								<h5 class="card-title heading-font">Minibar</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-	                </div>
-	                <div class="col-lg-4 col-md-6 my-2">
-						<div class="card h-100">
-							<div class="card-image">
-								<img src="img/wqe.jpg" class="card-img-top" alt="...">
-							</div>
-							<div class="card-body">
-								<h5 class="card-title heading-font">Basketball Court</h5>
-								<p class="card-text">Some quick example text to build on the card-text.</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-	                </div>
+
+				
+	            <div class="container">
+	            	<div class="row">
+		            	<div class="col-lg-6 col-md-12 left-amenity">
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
+								<span class="amenity-name">Free WiFi access</span>
+		            		</div>
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-car fa-xl" style="color: #005eff;"></i>
+								<span class="amenity-name">Car Parking</span>
+		            		</div>
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-utensils fa-xl" style="color: #005eff;"></i>
+								<span class="amenity-name">Free Breakfast</span>
+		            		</div>
+		            	</div>
+		            	<div class="col-lg-6 col-md-12 right-amenity">
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-dumbbell fa-xl" style="color: #005eff;"></i>
+								<span class="amenity-name">Gym or Fitness Center</span>
+		            		</div>
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-basketball fa-xl" style="color: #005eff;"></i> 
+								<span class="amenity-name">Basketball Court</span>
+		            		</div>
+		            		<div class="amenity-item">
+								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
+								<span class="amenity-name">Free WiFi access</span>
+		            		</div>
+		            	</div>
+		            </div>
 	            </div>
+	            
 	        </div>
-	    </section>
+	    </section> -->
 
 
 	    <!-- Gallery -->
@@ -291,15 +260,15 @@
 
 
 	    <!-- FOOTER -->
-		<div class="container-fluid px-5">
-			<footer class="py-3 my-4 border-top">
-				<p class="col-md-4 mb-0 text-body-secondary">
-				 Copyright &copy; <a href="#" class="text-body-secondary">XYZ Resort</a> 2023
+		<div class="container-fluid px-5 bg-dark">
+			<footer class="py-5 border-top text-white">
+				<p class="col-md-4 mb-0 ">
+				 Copyright &copy; <a href="#" class="text-white">XYZ Resort</a> 2023
 				</p>
 				<ul class="nav col-md-4 ">
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terms and Condition</a></li>
+					<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Terms and Condition</a></li>
 					<!-- <li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li> -->
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy and Policy</a></li>
+					<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Privacy and Policy</a></li>
 				</ul>
 			</footer>
 		</div>
@@ -315,6 +284,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<!-- AOS -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<!-- NANOGALLERY -->
+		<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
 		<!-- SCRIPT -->
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
