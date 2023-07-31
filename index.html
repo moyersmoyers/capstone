@@ -13,8 +13,10 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 		<!-- AOS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<!-- NANOGALLERY -->
-		<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" rel="stylesheet">
+		<!-- GG -->
+		<link rel="stylesheet" type="text/css" href="css/grid-gallery.css"/>
+		<!-- FANCYBOX -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
@@ -101,11 +103,22 @@
 		    </div>
 		  </header>
 
+		<!-- ABOUT US -->
+		<section class="page-section">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="section-heading heading-font" data-aos="fade-up">About Us</h2>
+				</div>
+				<div class="">
+
+				</div>
+			</div>
+		</section>
 
 	    <!-- ROOMS -->
 	    <section class="page-section bg-light">
 	        <div class="container">
-	            <div class="text-center">
+	            <div class="text-start">
 	                <h2 class="section-heading heading-font" data-aos="fade-up">Rooms</h2>
 	            </div>
 				<div class="owl-carousel owl-theme">
@@ -178,7 +191,6 @@
 				        </div>
 				    </div>
 				</div>
-
 				<div class="text-center" data-aos="fade-up">
 					<a href="#" class="">
 						View all rooms <i class="bi bi-arrow-right-circle view-arrow"></i>
@@ -234,20 +246,80 @@
 
 
 	    <!-- Gallery -->
-	    <section class="page-section bg-light">
+	    <section class="page-section">
 	        <div class="container">
 	            <div class="text-center">
 	                <h2 class="section-heading heading-font" data-aos="fade-up">Gallery</h2>
 	            </div>
-				
-				
+	            <!-- <div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/wqe.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/qw.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/homepage-bg.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/wqe.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/qw.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/homepage-bg.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/wqe.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/qw.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/homepage-bg.jpg">
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div> -->
+				<div class="gg-container">
+					<div class="gg-box homepage-gg">
+						<a href="img/parking.jpg" data-fancybox="gallery">
+							<img src="img/parking.jpg">
+						</a>
+						<a href="img/wifi.jpg" data-fancybox="gallery">
+							<img src="img/wifi.jpg">
+						</a>
+						<a href="img/court.jpg" data-fancybox="gallery">
+							<img src="img/court.jpg">
+						</a>
+						<a href="img/homepage-bg.jpg" data-fancybox="gallery">
+							<img src="img/homepage-bg.jpg">
+						</a>
+						<a href="img/wqe.jpg" data-fancybox="gallery">
+							<img src="img/wqe.jpg">
+						</a>
+						<a href="img/qw.jpg" data-fancybox="gallery">
+							<img src="img/qw.jpg">
+						</a>
+					</div>
+				</div>
 
+				<div class="text-center pt-5" data-aos="fade-up">
+					<a href="gallery.html" class="btn btn-primary">
+						View more <i class="bi bi-arrow-right-circle view-arrow"></i>
+					</a>
+				</div>
 	        </div>
 	    </section>
 
 
 	    <!-- Testimonial -->
-	    <section class="page-section">
+	    <section class="page-section bg-light">
 	        <div class="container">
 	            <div class="text-center">
 	                <h2 class="section-heading heading-font" data-aos="fade-up">Testimonials</h2>
@@ -258,14 +330,79 @@
 	        </div>
 	    </section>
 
-
 	    <!-- FOOTER -->
 		<div class="container-fluid px-5 bg-dark">
+			<section class="page-section text-white">
+		        <div class="container">
+		            <div class="text-center mb-5">
+		                <h2 class="section-heading heading-font" data-aos="fade-up">Contact Us</h2>
+		            </div>
+		            <div class="row">
+		            	<div class="col-lg-6 col-md-12 pb-5">
+							<form class="row g-3 text-dark">
+								<div class="col-md-6">
+									<div class="form-floating" data-aos="fade-right">
+										<input type="email" class="form-control" id="floatingInput" placeholder="Your Name">
+										<label for="floatingInput">Name</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating" data-aos="fade-right">
+										<input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com">
+										<label for="floatingInput">Email address</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-floating" data-aos="fade-right" data-aos-delay="100">
+										<select class="form-select" id="floatingSelect" aria-label="Select a subject">
+											<option selected disabled></option>
+											<option value="Feedback">Feedback</option>
+											<option value="Testimonal">Testimonial</option>
+											<option value="Others">Others</option>
+										</select>
+										<label for="floatingSelect">Subject</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-floating" data-aos="fade-right" data-aos-delay="200">
+										<textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2" style="height: 100px"></textarea>
+										<label for="floatingTextarea2">Message</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<button type="submit" class="btn btn-primary" data-aos="fade-right" data-aos-delay="300">Submit</button>
+								</div>
+							</form>
+			            </div>
+		            	<div class="col-lg-6 col-md-12 text-center px-5">
+		            		<div class="col-12 pb-3">
+	            				<h4 class="heading-font" data-aos="fade-left">Contact Information</h4>
+		            		</div>
+		            		<div class="col-12" data-aos="fade-left" data-aos-delay="100">
+		            			<i class="fa-solid fa-location-dot fa-lg"></i> <strong>Address</strong><p>001 Mla. East Road, Palangoy, Binangonan, Rizal</p>
+		            		</div>
+		            		<div class="col-12" data-aos="fade-left" data-aos-delay="200">
+		            			<i class="fa-solid fa-phone fa-lg"></i> <strong>Contact Number</strong><p>09162967411, (02)85707204, (02)87882152</p>
+		            		</div>
+		            		<div class="col-12" data-aos="fade-left" data-aos-delay="300">
+		            			<i class="fa-solid fa-envelope fa-lg"></i> <strong>Email Address</strong><p> marikinamarikina@gmail.com</p>
+		            		</div>
+		            		<div class="col-12 py-3" data-aos="fade-left" data-aos-delay="400">
+		            			<h4 class="heading-font">Social Media</h4>
+		            			<a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a>
+		            		</div>
+		            	</div>
+		            </div>
+		        </div>
+		    </section>
+
+	    	<hr>
+
 			<footer class="py-5 border-top text-white">
-				<p class="col-md-4 mb-0 ">
+				<p class="col-md-4 mb-0">
 				 Copyright &copy; <a href="#" class="text-white">XYZ Resort</a> 2023
 				</p>
-				<ul class="nav col-md-4 ">
+				<ul class="nav col-md-4">
 					<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Terms and Condition</a></li>
 					<!-- <li class="nav-item"><span class=" nav-link px-2 text-body">·</span></li> -->
 					<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Privacy and Policy</a></li>
@@ -284,8 +421,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<!-- AOS -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<!-- NANOGALLERY -->
-		<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+		<!-- GG -->
+		<script type="text/javascript" src="js/grid-gallery.js"></script>
+		<!-- FANCYBOX -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<!-- SCRIPT -->
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
