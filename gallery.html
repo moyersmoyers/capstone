@@ -13,6 +13,10 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 		<!-- AOS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- GG -->
+		<link rel="stylesheet" type="text/css" href="css/grid-gallery.css"/>
+		<!-- FANCYBOX -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/gallery.css">
 	</head>
@@ -71,50 +75,46 @@
 	    </header>
 
 		<!-- Gallery -->
-	    <section class="page-section bg-light" data-aos="fade-up" data-aos-duration="1200">
+	    <!-- <section class="page-section bg-light" data-aos="fade-up" data-aos-duration="1200">
 	        <div class="container-fluid">
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="img/wqe.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/qw.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/homepage-bg.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/wqe.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/qw.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/homepage-bg.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/wqe.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/qw.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/homepage-bg.jpg">
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
-				</div>
+				
 
 	        </div>
-	    </section>
+	    </section> -->
 
 	    <section class="page-section">
 	    	<div class="container">
-	    		
+				<div class="gg-container" data-aos="fade-up">
+					<div class="gg-box gallery-gg">
+						<a href="img/court.jpg" data-fancybox="gallery">
+							<img src="img/court.jpg">
+						</a>
+						<a href="img/parking.jpg" data-fancybox="gallery">
+							<img src="img/parking.jpg">
+						</a>
+						<a href="img/wifi.jpg" data-fancybox="gallery">
+							<img src="img/wifi.jpg">
+						</a>
+						<a href="img/homepage-bg.jpg" data-fancybox="gallery">
+							<img src="img/homepage-bg.jpg">
+						</a>
+						<a href="img/wqe.jpg" data-fancybox="gallery">
+							<img src="img/wqe.jpg">
+						</a>
+						<a href="img/qw.jpg" data-fancybox="gallery">
+							<img src="img/qw.jpg">
+						</a>
+						<a href="img/court.jpg" data-fancybox="gallery">
+							<img src="img/court.jpg">
+						</a>
+						<a href="img/parking.jpg" data-fancybox="gallery">
+							<img src="img/parking.jpg">
+						</a>
+						<a href="img/homepage-bg.jpg" data-fancybox="gallery">
+							<img src="img/homepage-bg.jpg">
+						</a>
+					</div>
+				</div>
 	    	</div>
 	    </section>
 
@@ -132,6 +132,7 @@
 			</footer>
 		</div>
 
+		<!-- JQUERY -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
 		<!-- BOOTSTRAP -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -142,7 +143,17 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<!-- AOS -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<!-- GG -->
+		<script type="text/javascript" src="js/grid-gallery.js"></script>
+		<!-- FANCYBOX -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<!-- SCRIPT -->
 		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript">
+			gridGallery({
+				selector: ".gallery-gg"
+			});
+			Fancybox.bind("[data-fancybox]", {});
+		</script>
 	</body>
 </html>
