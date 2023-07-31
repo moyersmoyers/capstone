@@ -15,14 +15,13 @@ window.onscroll = window.onload = () => {
 }
 
 $('.owl-carousel').owlCarousel({
-    loop: true,
     margin: 10,
     nav: true,
     loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    navText: ["<a  data-aos='fade-right' class='btn btn-primary btn-book' style='margin-right:30px'><i class='bi bi-arrow-left'></i></a>","<a  data-aos='fade-left' class='btn btn-primary btn-book'><i class='bi bi-arrow-right'></i></a>"],
+    navText: ["<a data-aos='fade-right' class='btn btn-primary btn-book' style='margin-right:30px'><i class='bi bi-arrow-left'></i></a>","<a  data-aos='fade-left' class='btn btn-primary btn-book'><i class='bi bi-arrow-right'></i></a>"],
     responsive:{
         0:{
             items: 1
@@ -38,6 +37,7 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
 
 AOS.init({
   once: true
@@ -76,3 +76,9 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+gridGallery({
+ selector: ".homepage-gg",
+ layout: "horizontal"
+});
+
+Fancybox.bind("[data-fancybox]", {});
