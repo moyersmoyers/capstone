@@ -19,7 +19,7 @@ $('.owl-carousel').owlCarousel({
     nav: true,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
     navText: ["<a data-aos='fade-right' class='btn btn-primary btn-book' style='margin-right:30px'><i class='bi bi-arrow-left'></i></a>","<a  data-aos='fade-left' class='btn btn-primary btn-book'><i class='bi bi-arrow-right'></i></a>"],
     responsive:{
