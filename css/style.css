@@ -53,6 +53,16 @@ button{
 	font-family: "Playfair Display", times, serif;
 }
 
+.line{
+	display: grid;
+	justify-items: center;
+	padding-bottom: 1.4rem;
+}
+
+.line hr{
+	width: 5rem;
+}
+
 
 /* MASTERHEAD START */
 .masterhead {
@@ -136,7 +146,6 @@ button{
 }
 
 .section-heading{
-	padding-bottom: 1.4rem;
 	font-size: 2.5rem;
 }
 
@@ -182,6 +191,9 @@ button{
 }
 
 .owl-nav{
+    /*position: absolute;
+    right: 0;
+    top: -70px;*/
 	display: flex;
 	flex: wrap;
 	justify-content: center;
@@ -266,6 +278,42 @@ button{
 }
 /* BOOTSTRAP CAROUSEL START */
 
+
+
+/* SWIPER CAROUSEL START */
+.swiper {
+	width: 100%;
+	height: 30rem;
+	padding: 0 3rem 5rem 3rem;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.swiper-pagination{
+	position: absolute;
+	bottom: 3rem;
+}
+/* SWIPER CAROUSEL END */
+
+
+/* AMENITIES START */
 .left-amenity, .right-amenity{
 	display: flex;
     flex-wrap: wrap;
@@ -304,27 +352,47 @@ button{
 .amenity-name{
 	margin: 0 1rem;
 }
+/* AMENITIES END */
+
+
+/* GOOGLE MAP START */
+.google-map{
+	position: relative;
+}
+
+.google-map iframe{
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+@media (max-width: 991px){
+	.google-map{
+		margin-top: 2rem;
+	}
+	.google-map iframe{
+		height: 500px;
+		width: 100%;
+		position: inherit;
+	}
+}
+/* GOOGLE MAP END */
 
 
 /* FOOTER START */
-@media (min-width: 536px){
-	footer{
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-	}
-	footer ul{
-		justify-content: flex-end;
-	}
+footer small, footer .social-icon{
+	color: #aaa;
 }
-@media (max-width: 535px){
-	footer{
-		text-align: center;
-		justify-content: center;
-	}
-	footer ul{
-		justify-content: center;
-	}
+.address{
+	text-decoration: none;
+}
+.address p small:hover{
+	color: #fff;
+}
+.copyright{
+	font-size: 14px;
+	margin-bottom: 0;
 }
 /* FOOTER END */
