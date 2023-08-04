@@ -10,6 +10,28 @@ button{
     box-shadow: none !important;
 }
 
+.heading-font{
+	font-family: "Playfair Display", times, serif;
+}
+
+.line{
+	display: grid;
+	justify-items: center;
+	padding-bottom: 1.4rem;
+}
+
+.line hr{
+	width: 5rem;
+}
+
+.page-section{
+	padding: 5rem 0;
+}
+
+.section-heading{
+	font-size: 2.5rem;
+}
+
 
 /* LOADER START */
 .no-scroll {
@@ -25,6 +47,7 @@ button{
 	display: flex;	
 	align-items: center;
 	justify-content: center;
+	transition: all 0.3s;
 }
 
 .loader:after {
@@ -49,19 +72,32 @@ button{
 /* LOADER END */
 
 
-.heading-font{
-	font-family: "Playfair Display", times, serif;
+/* HEADER CAROUSEL START */
+.carousel {
+	height: 100vh;
 }
 
-.line{
-	display: grid;
-	justify-items: center;
-	padding-bottom: 1.4rem;
+.carousel-inner{
+	height: 100%;
 }
 
-.line hr{
-	width: 5rem;
+.carousel-caption {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+	z-index: 10;
+	height: 100%;
+	bottom: 0;
 }
+
+.carousel-item {
+  height: auto;
+}
+/* HEADER CAROUSEL START */
 
 
 /* MASTERHEAD START */
@@ -141,13 +177,30 @@ button{
 /* NAVBAR END */
 
 
-.page-section{
-	padding: 5rem 0;
+/* ABOUT US START */
+.about-us img{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
 }
 
-.section-heading{
-	font-size: 2.5rem;
+.about-us-content{
+	width: 80%;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	display: -webkit-box;
 }
+
+@media (max-width: 991px){
+	.about-us-text{
+		padding: 3rem 0;
+	}
+}
+/* ABOUT US END */
 
 
 /* AMENITIES START */
@@ -190,21 +243,32 @@ button{
 	height: 600px;
 }
 
-.owl-nav{
-    /*position: absolute;
-    right: 0;
-    top: -70px;*/
-	display: flex;
-	flex: wrap;
-	justify-content: center;
+.owl-stage-outer{
+	height: 570px;
 }
+
+.owl-nav{
+    position: relative;
+    /*bottom: 10rem;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+/*.owl-prev{
+	position: relative;
+	right: 3rem;
+}
+.owl-next{
+	position: relative;
+	left: 3rem;
+}*/
 /* OWL CAROUSEL END */
 
 
 /* ROOMS SECTION START*/
 .room-button-container{
 	display: flex;
-	flex: wrap;
 	align-content: center;
 	justify-content: space-evenly;
 }
@@ -251,40 +315,11 @@ button{
 /* ROOMS SECTION START*/
 
 
-/* BOOTSTRAP CAROUSEL START */
-.carousel {
-	height: 100vh;
-}
-
-.carousel-inner{
-	height: 100%;
-}
-
-.carousel-caption {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-	z-index: 10;
-	height: 100%;
-	bottom: 0;
-}
-
-.carousel-item {
-  height: auto;
-}
-/* BOOTSTRAP CAROUSEL START */
-
-
-
-/* SWIPER CAROUSEL START */
+/* TESTIMONIAL START */
 .swiper {
-	width: 100%;
+	width: 80%;
 	height: 30rem;
-	padding: 0 3rem 5rem 3rem;
+	padding: 0 0 2.5rem 0;
 }
 
 .swiper-slide {
@@ -294,23 +329,86 @@ button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
-.swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+.swiper-buttons{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	justify-content: space-between;
 }
 
-.swiper-pagination{
+.swiper-button-next, .swiper-button-prev{
+	position: relative;
+	/*bottom: -1.7rem;*/
+	bottom: 16rem;
+	left: 0;
+    padding: 2rem 1rem;
+    background: red;
+}
+
+/*.swiper-button-next{
+	left: 4rem;
+}
+
+.swiper-button-prev{
+	left: -4rem;
+}*/
+
+:root {
+    --swiper-navigation-size: 20px;
+    --swiper-theme-color: #fff;
+}
+
+.quote{
 	position: absolute;
-	bottom: 3rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 4.5rem;
 }
-/* SWIPER CAROUSEL END */
+
+figure{
+	width: 80%;
+	margin: auto;
+}
+
+.blockquote{
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	display: -webkit-box;
+}
+
+
+@media (max-width: 991px){
+	figure{
+		width: 75%;
+	}
+}
+@media (max-width: 767px){
+	figure{
+		width: 70%;
+	}
+}
+@media (max-width: 430px){
+	figure{
+		width: 60%;
+	}
+.blockquote{
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	display: -webkit-box;
+}
+}
+
+/*.testi{
+	background: linear-gradient(180deg, #fdcd3b 60%, #f8f9fa 40%) !important;
+}*/
+/* TESTIMONIAL END */
 
 
 /* AMENITIES START */
@@ -358,6 +456,7 @@ button{
 /* GOOGLE MAP START */
 .google-map{
 	position: relative;
+	overflow: hidden;
 }
 
 .google-map iframe{
@@ -366,6 +465,7 @@ button{
 	left: 0;
 	top: 0;
 	position: absolute;
+	overflow: hidden;
 }
 
 @media (max-width: 991px){
@@ -394,5 +494,10 @@ footer small, footer .social-icon{
 .copyright{
 	font-size: 14px;
 	margin-bottom: 0;
+}
+@media (max-width: 460px){
+	footer .text-start{
+		text-align: center !important;
+	}
 }
 /* FOOTER END */
