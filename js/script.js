@@ -38,10 +38,10 @@ $('.owl-carousel').owlCarousel({
 
 
 AOS.init({
-  once: true
+    once: true
 });
 
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".testimonialSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
@@ -55,10 +55,26 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    /*autoplay: {
-        delay: 4000,
+    autoplay: {
+        delay: 7000,
         disableOnInteraction: false,
-    },*/
+    },
+});
+
+new Swiper(".headerSwiper", {
+    slidesPerView: 1,
+    loop: true,
+    effect: "fade",
+    noSwiping: true,
+    noSwipingClass: "swiper-slide",
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });
 
 gridGallery({
@@ -66,4 +82,13 @@ gridGallery({
  layout: "horizontal"
 });
 
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {
+    Toolbar:{
+        display:{
+            left:[],
+            middle:["infobar"],
+            right:["close"],
+        },
+    },
+});
+
