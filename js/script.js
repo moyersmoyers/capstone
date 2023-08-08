@@ -96,7 +96,8 @@ const progressSteps = document.querySelectorAll(".progress-step");
 let formStepsNum = 0;
 
 nextBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
         formStepsNum++;
         updateFormSteps();
         updateProgressbar();
@@ -104,7 +105,8 @@ nextBtn.forEach((btn) => {
 });
 
 prevBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
         formStepsNum--;
         updateFormSteps();
         updateProgressbar();
