@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Rubik:wght@300&display=swap');
+
+body{
+	font-family: "Rubik", arial, sans-serif;
+}
+
+button{
+	outline: none !important;
+    box-shadow: none !important;
+}
+
+.heading-font{
+	font-family: "Playfair Display", times, serif;
+}
+
+.line{
+	display: grid;
+	justify-items: center;
+	padding-bottom: 1.4rem;
+}
+
+.line hr{
+	width: 5rem;
+}
+
+.page-section{
+	padding: 5rem 0;
+}
+
+.section-heading{
+	padding-bottom: 1.4rem;
+	font-size: 2.5rem;
+}
+
+/* LOADER START */
+.no-scroll {
+   overflow: hidden;
+}
+
+.loader {
+	z-index: 2000;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background: #fff;
+	display: flex;	
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.loader:after {
+	content: " ";
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #222;
+	border-color: #222 transparent #222 transparent;
+	animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* LOADER END */
+
+
+/* HEADER SWIPER START */
+.head{
+	background: #343a40;
+	padding: 7rem 0 3rem;
+}
+
+.head p{
+	margin: 0;
+}
+/* HEADER END */
+
+
+/* NAVBAR START */
+.navbar{
+	transition: all 0.3s;
+}
+
+.nav-scrolled{
+	background-color: #1B1B1E;
+}
+
+.navbar-toggler span{
+	text-decoration: none; 
+}
+
+.navbar_ul{
+	background-color: red;
+}
+
+.offcanvas{
+	transition: all 0.2s;
+}
+
+.offcanvas:after{
+	content: '';
+}
+/* NAVBAR END */
+
+
+.form-steps{
+	display: none;
+}
+
+.form-steps-active{
+	display: block;
+}
+
+
+/* PROGRESSBAR */
+.progressbar{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	counter-reset: step;
+	margin-bottom: 4rem;
+}
+
+.progressbar:before, .progress{
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 99%;
+	background: #dcdcdc;
+	z-index: -1;
+}
+
+.progress{
+	background: #343a40;
+	width: 0%;
+	transition: all 0.3s;
+}
+
+.progress-step{
+	width: 3.2rem;
+	height: 3.2rem;
+	background: #dcdcdc;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.progress-step:before{
+	counter-increment: step;
+	content: counter(step);
+}
+
+.progress-step:after{
+	content: attr(data-title);
+	position: absolute;
+	top: 4rem;
+	font-size: 0.85rem;
+	color: #000;
+}
+
+.progress-step-active{
+	background: #343a40;
+	color: #fff;
+}
+
+
+
+/* FOOTER START */
+.copyright{
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.address{
+	text-decoration: none;
+}
+
+.address p small:hover{
+	color: #fff;
+}
+
+footer small, footer .social-icon{
+	color: #aaa;
+}
+/* FOOTER END */
