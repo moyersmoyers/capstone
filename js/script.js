@@ -77,11 +77,6 @@ new Swiper(".headerSwiper", {
     },
 });
 
-gridGallery({
- selector: ".homepage-gg",
- layout: "horizontal"
-});
-
 Fancybox.bind("[data-fancybox]", {
     Toolbar:{
         display:{
@@ -92,3 +87,49 @@ Fancybox.bind("[data-fancybox]", {
     },
 });
 
+const nextBtn = document.querySelectorAll(".btn-next");
+const prevBtn = document.querySelectorAll(".btn-prev");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-steps");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        formStepsNum++;
+        updateFormSteps();
+        updateProgressbar();
+    });
+});
+
+prevBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        formStepsNum--;
+        updateFormSteps();
+        updateProgressbar();
+    });
+});
+
+function updateFormSteps(){
+    formSteps.forEach((formStep) => {
+        formStep.classList.contains("form-steps-active") && formStep.classList.remove("form-steps-active");
+    });
+
+    formSteps[formStepsNum].classList.add("form-steps-active");
+}
+
+function updateProgressbar(){
+    progressSteps.forEach((progressStep, index) => {
+        if(index < formStepsNum + 1){
+            progressStep.classList.add("progress-step-active");
+        }
+        else{
+            progressStep.classList.remove("progress-step-active");
+        }
+    });
+
+    const progressActive = document.querySelectorAll(".progress-step-active");
+
+    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
