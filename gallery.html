@@ -59,7 +59,7 @@
 				    			<a class="nav-link" href="contactus.html">Contact</a>
 				    		</li>
 				    		<li class="nav-item">
-				    			<a class="nav-link" href="#">Reserve Now</a>
+				    			<a class="nav-link" href="reservation.html">Reserve Now</a>
 				    		</li>
 			    		</ul>
 					</div>
@@ -79,17 +79,10 @@
 	    </header>
 
 		<!-- Gallery -->
-	    <!-- <section class="page-section bg-light" data-aos="fade-up" data-aos-duration="1200">
-	        <div class="container-fluid">
-				
-
-	        </div>
-	    </section> -->
-
 	    <section class="page-section">
 	    	<div class="container">
 				<div class="gg-container" data-aos="fade-up">
-					<div class="gg-box gallery-gg">
+					<div class="gg-box" id="gallery-gg">
 						<a href="img/court.jpg" data-fancybox="gallery">
 							<img src="img/court.jpg">
 						</a>
@@ -298,7 +291,7 @@
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Reserve Now</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="reservation.html" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
 
@@ -358,19 +351,10 @@
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript">
 			gridGallery({
-				selector: ".gallery-gg",
+				selector: "#gallery-gg",
 				layout: "square"
 			});
-
-			Fancybox.bind("[data-fancybox]", {
-				Toolbar:{
-			        display:{
-			            left:[],
-			            middle:["infobar"],
-			            right:["close"],
-			        },
-			    },
-			});
+			
 		</script>
 	</body>
 </html>
