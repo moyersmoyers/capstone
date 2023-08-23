@@ -1,137 +1,59 @@
-const loader = document.querySelector('.loader');
-window.addEventListener('load', () =>{
-    loader.style.display = "none";
-    document.body.classList.remove('no-scroll');
-});
+/* SIDEBAR */
+let smallWidth = false;
 
-const navbar = document.querySelector('.navbar');
-window.onscroll = window.onload = () => {
-    if(this.scrollY >= 60){
-        navbar.classList.add('nav-scrolled');
-    }
-    else{
-        navbar.classList.remove('nav-scrolled');
-    }
+function setWindowWidth(){
+	let getwidth = $(window).width();
+	
+	if(getwidth <= 768){
+		smallWidth = true;
+		$('#nav-bar').removeClass('show');
+		$('#body-pd').removeClass('body-pd');
+		$('#header').removeClass('body-pd');
+	}
+	else{
+		smallWidth = false;
+	}
+	$('#nav-bar').removeClass('open');
 }
 
-$('.owl-carousel').owlCarousel({
-    margin: 10,
-    nav: true,
-    loop: true,
-    center: false,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    navText: ["<a data-aos='fade-right' class='btn btn-primary btn-book' style='margin-right:15px'><i class='bi bi-arrow-left'></i></a>","<a  data-aos='fade-left' class='btn btn-primary btn-book' style='margin-left:15px'><i class='bi bi-arrow-right'></i></a>"],
-    responsive:{
-        0:{
-            items: 1
-        },
-        768:{
-            items:2
-        },
-        992:{
-            items:3
-        }
-    }
+$(window).on('load resize', function(){
+	setWindowWidth();
+});
+
+$('#header-toggle').click(function(){
+	if(!smallWidth){
+		$('#nav-bar').toggleClass('show');
+		$('#body-pd').toggleClass('body-pd');
+		$('#header').toggleClass('body-pd');
+	}
 });
 
 
-AOS.init({
-    once: true
+/* DROPDOWN SIDEBAR */
+$('.nav_list-item a').click(function(){
+	let getid = document.getElementById(this.id);
+	if(getid.nextElementSibling === null){
+		return false;
+	}
+	else{
+		if(getid.nextElementSibling.id === "submenu"){
+			$('#' + this.id).next().slideToggle();
+		}
+	}
 });
 
-new Swiper(".testimonialSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    centeredSlides: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
-    },
+
+/* OFFCANVAS */
+const openBtn = document.querySelector('.open-btn');
+const closeBtn = document.querySelector('.close-btn');
+const offcanvasMenu = document.querySelector('.l-navbar')
+
+openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    offcanvasMenu.classList.add('open');
 });
 
-new Swiper(".headerSwiper", {
-    slidesPerView: 1,
-    loop: true,
-    effect: "fade",
-    noSwiping: true,
-    noSwipingClass: "swiper-slide",
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+closeBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    offcanvasMenu.classList.remove('open');
 });
-
-Fancybox.bind("[data-fancybox]", {
-    Toolbar:{
-        display:{
-            left:[],
-            middle:["infobar"],
-            right:["close"],
-        },
-    },
-});
-
-const nextBtn = document.querySelectorAll(".btn-next");
-const prevBtn = document.querySelectorAll(".btn-prev");
-const progress = document.getElementById("progress");
-const formSteps = document.querySelectorAll(".form-steps");
-const progressSteps = document.querySelectorAll(".progress-step");
-
-let formStepsNum = 0;
-
-nextBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formStepsNum++;
-        updateFormSteps();
-        updateProgressbar();
-    });
-});
-
-prevBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formStepsNum--;
-        updateFormSteps();
-        updateProgressbar();
-    });
-});
-
-function updateFormSteps(){
-    formSteps.forEach((formStep) => {
-        formStep.classList.contains("form-steps-active") && formStep.classList.remove("form-steps-active");
-    });
-
-    formSteps[formStepsNum].classList.add("form-steps-active");
-}
-
-function updateProgressbar(){
-    progressSteps.forEach((progressStep, index) => {
-        if(index < formStepsNum + 1){
-            progressStep.classList.add("progress-step-active");
-        }
-        else{
-            progressStep.classList.remove("progress-step-active");
-        }
-    });
-
-    const progressActive = document.querySelectorAll(".progress-step-active");
-
-    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
-}
