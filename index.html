@@ -3,487 +3,133 @@
 	<head>
 		<meta charset="utf-8"></meta>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>XYZ Resort</title>
+		<title>Admin Dashboard</title>
 		<!-- BOOTSTRAP -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-		<!-- OWL CAROUSEL -->
-		<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css"/>
-		<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.css"/>
-		<!-- SWIPER -->
-		<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css"/>
-		<!-- AOS -->
-		<link rel="stylesheet" href="css/aos/aos.css">
-		<!-- GRIDGALLERY -->
-		<link rel="stylesheet" href="css/gridgallery/grid-gallery.css"/>
-		<!-- FANCYBOX -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+		<!-- BOXICONS -->
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 		<!-- STYLE -->
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body class="no-scroll">
-
-		<!-- PRELOADER -->
-		<div class="loader"></div>
-
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-			<div class="container">
-				<a class="navbar-brand" href="#">
-					LOGO
-				</a>
-			    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
-			    	<span class="navbar-toggler-icon"></span>
-			    </button>
-				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">XYZ Resort</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<ul class="navbar-nav nav-underline ms-auto mb-2 my-2">
-				    		<li class="nav-item">
-				    			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-				    		</li>
-				    		<li class="nav-item">
-				    			<a class="nav-link" href="about.html">About</a>
-				    		</li>
-				    		<li class="nav-item">
-				    			<a class="nav-link" href="rooms.html">Rooms</a>
-				    		</li>
-				    		<!-- <li class="nav-item">
-				    			<a class="nav-link" href="amenities.html">Amenities</a>
-				    		</li> -->
-				    		<li class="nav-item">
-				    			<a class="nav-link" href="gallery.html">Gallery</a>
-				    		</li>
-				    		<li class="nav-item">
-				    			<a class="nav-link" href="contactus.html">Contact</a>
-				    		</li>
-				    		<li class="nav-item">
-				    			<a class="nav-link" href="reservation.html">Reserve Now</a>
-				    		</li>
-			    		</ul>
-					</div>
-				</div>
+	<body id="body-pd">
+		<header class="header" id="header">
+			<div class="header_toggle">
+				<i class='bx bx-menu open-btn' id="header-toggle"></i>
 			</div>
-		</nav>
-
-
-		<!-- HEADER SWIPER CAROUSEL -->
-		<header>
-			<div class="swiper headerSwiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background-image: url('img/qw.jpg');">
-						<div class="header-caption">
-			    			<h1 class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500">Welcome To XYZ Resort</h1>
-			    			<div  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-			    				<p class="masterhead-subheading opacity-75">Some representative placeholder content for the second slide of the carousel. Some representative placeholder content for the second slide of the carousel.</p>
-			    			</div>
-			    		</div>
-					</div>
-					<div class="swiper-slide" style="background-image: url('img/homepage-bg.jpg');">
-						<div class="header-caption">
-			    			<h1 class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500">Testing Testing</h1>
-			    			<div  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-			    				<p class="masterhead-subheading opacity-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam in unde eaque optio aspernatur ea, perferendis vel suscipit, provident, sunt minima culpa exercitationem eum illo libero a vitae. Omnis, quo.</p>
-			    			</div>
-			    		</div>
-					</div>
-					<div class="swiper-slide" style="background-image: url('img/parking.jpg');">
-						<div class="header-caption">
-			    			<h1 class="masterhead-heading heading-font" data-aos="fade-down" data-aos-duration="1500">Sheesh sheesh sheesh</h1>
-			    			<div  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-			    				<p class="masterhead-subheading opacity-75">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Id suscipit laborum, commodi dolorum porro eligendi ullam rem, voluptas! Necessitatibus dicta placeat eum harum adipisci pariatur minus ab magni ex laboriosam.</p>
-			    			</div>
-			    		</div>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
+			<!-- <div class="header_img">
+				<img src="../img/court.jpg" alt="">
+			</div> -->
 		</header>
-
-		<!-- ABOUT US -->
-		<section class="about-us" id="about">
-			<div class="row gx-0">
-				<div class="col-lg-6 text-center d-flex flex-column justify-content-center align-items-center about-us-text">
-					<div>
-						<h2 class="section-heading heading-font" data-aos="fade-up">About Us</h2>
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
+		<div class="l-navbar" id="nav-bar">
+			<nav class="nav">
+				<a href="#" class="close-btn"><i class="bx bx-x"></i></a>
+				<div class="nav_list">
+					<div class="nav_list-item">
+						<a href="#" class="nav_logo">
+							<img src="../img/court.jpg" class="nav_logo-icon" alt="">
+							<span class="nav_logo-name">XYZ Resort</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link active dashboard" id="dashboard">
+							<i class='bx bx-grid-alt nav_icon'></i>
+							<span class="nav_name">Dashboard</span>
+							<i class='bx bx-chevron-down chev-down nav_icon'></i>
+						</a>
+						<div class="submenu" id="submenu">
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 1</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 2</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 3</a>
+							</div>
 						</div>
 					</div>
-					<div class="about-us-content" data-aos="fade-up" data-aos-delay="150">
-						<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Facilis vel mollitia id, in odit corporis. Amet quos aut numquam voluptatum, natus illum aspernatur ipsam perspiciatis quam voluptates, fugit, at esse. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Amet debitis, reprehenderit voluptatibus eum itaque quae error ipsa iste recusandae. Fugiat corporis eos nulla impedit animi odit! Aperiam iste quo architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odit minus repellat cum sunt consectetur. Nostrum neque dolor exercitationem a quas, animi officiis qui consequuntur quo veritatis, pariatur ab recusandae. lorem</p>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="users">
+							<i class='bx bx-user nav_icon'></i>
+							<span class="nav_name">Users</span>
+						</a>
 					</div>
-					<div class="pt-4" data-aos="fade-up" data-aos-delay="200">
-						<a href="about.html" class="btn btn-outline-primary">
-							Learn more
+					<div class="nav_list-item">
+						<a href="#" class="nav_link messages" id="messages">
+							<i class='bx bx-message-square-detail nav_icon'></i>
+							<span class="nav_name">Messages</span>
+							<i class='bx bx-chevron-down chev-down nav_icon'></i>
+						</a>
+						<div class="submenu" id="submenu">
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 1</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 2</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">Submenu 3</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="bookmark">
+							<i class='bx bx-bookmark nav_icon'></i>
+							<span class="nav_name">Bookmark</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link">
+							<i class='bx bx-folder nav_icon'></i>
+							<span class="nav_name">Files</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="stats">
+							<i class='bx bx-bar-chart-alt-2 nav_icon'></i>
+							<span class="nav_name">Stats</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="settings">
+							<i class='bx bx-cog nav_icon'></i>
+							<span class="nav_name">Settings</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="logout">
+							<i class='bx bx-log-out nav_icon'></i>
+							<span class="nav_name">Logout</span>
 						</a>
 					</div>
 				</div>
-				<div class="col-lg-6 about-us-img" data-aos="fade-up">
-					<img src="img/court.jpg">
-				</div>
+			</nav>
+		</div>
+
+		<!--Container Main start-->
+		<section>
+			<div class="container g-0">
+				<h4>Dashboard</h4>
 			</div>
 		</section>
-
-	    <!-- ROOMS -->
-	    <section class="page-section bg-light" id="rooms">
-	        <div class="container">
-	        	<div class="d-flex flex-row align-items-center justify-content-between">
-		                <h2 class="section-heading heading-font" data-aos="fade-up">Rooms</h2>
-						<a href="rooms.html" class="btn btn-outline-primary" data-aos="fade-up">
-							View all
-						</a>
-		            <!-- <div class="text-start">
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
-						</div>
-		            </div>
-					<div class="text-end" data-aos="fade-up">
-					</div> -->
-	        	</div>
-				<div class="owl-carousel owl-theme">
-				    <div class="room-item" data-aos="fade-up" data-aos-delay="100">
-						<img src="img/court.jpg" />
-						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Standard Room</h4>
-				        	<p class="price">
-				        		<span class="peso-sign">&#8369;</span>
-				        		<span class="room-price">100</span>
-				        		<span class="pernight-text">/ night</span>
-				        	</p>
-				        	<p class="room-description">
-				        		This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.
-				        	</p>
-				        	<div class="room-button-container">
-								<a href="rooms.html" class="btn btn-primary">View details</a>
-				        	</div>
-				        </div>
-				    </div>
-				    <div class="room-item" data-aos="fade-up" data-aos-delay="200">
-						<img src="img/wqe.jpg" />
-						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Family Room</h4>
-				        	<p class="price">
-				        		<span class="peso-sign">&#8369;</span>
-				        		<span class="room-price">100</span>
-				        		<span class="pernight-text">/ night</span>
-				        	</p>
-				        	<p class="room-description">
-				        		This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.
-				        	</p>
-				        	<div class="room-button-container">
-								<a href="rooms.html" class="btn btn-primary">View details</a>
-				        	</div>
-				        </div>
-				    </div>
-				    <div class="room-item" data-aos="fade-up" data-aos-delay="300">
-						<img src="img/qw.jpg" />
-						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Deluxe Room</h4>
-				        	<p class="price">
-				        		<span class="peso-sign">&#8369;</span>
-				        		<span class="room-price">100</span>
-				        		<span class="pernight-text">/ night</span>
-				        	</p>
-				        	<p class="room-description">
-				        		Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.
-				        	</p>
-				        	<div class="room-button-container">
-								<a href="rooms.html" class="btn btn-primary">View details</a>
-				        	</div>
-				        </div>
-				    </div>
-				    <div class="room-item" data-aos="fade-up" data-aos-delay="400">
-						<img src="img/parking.jpg" />
-						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Luxury Room</h4>
-				        	<p class="price">
-				        		<span class="peso-sign">&#8369;</span>
-				        		<span class="room-price">100</span>
-				        		<span class="pernight-text">/ night</span>
-				        	</p>
-				        	<p class="room-description">
-				        		Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.
-				        	</p>
-				        	<div class="room-button-container">
-								<a href="rooms.html" class="btn btn-primary">View details</a>
-				        	</div>
-				        </div>
-				    </div>
-				</div>
-	        </div>
-	    </section>
-	    
-
-	    <!-- AMENITIES -->
-	    <!-- <section class="page-section">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Resort Amenities</h2>
-	            </div>
-
-				
-	            <div class="container">
-	            	<div class="row">
-		            	<div class="col-lg-6 col-md-12 left-amenity">
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Free WiFi access</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-car fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Car Parking</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-utensils fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Free Breakfast</span>
-		            		</div>
-		            	</div>
-		            	<div class="col-lg-6 col-md-12 right-amenity">
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-dumbbell fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Gym or Fitness Center</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-basketball fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Basketball Court</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Free WiFi access</span>
-		            		</div>
-		            	</div>
-		            </div>
-	            </div>
-	            
-	        </div>
-	    </section> -->
-
-
-	    <!-- Gallery -->
-	    <section class="page-section" id="gallery">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Gallery</h2>
-					<div class="line">
-						<hr data-aos="fade-up" data-aos-delay="100">
-					</div>
-	            </div>
-				<div class="gg-container" data-aos="fade-up" data-aos-delay="100">
-					<div class="gg-box" id="homepage-gg">
-						<a href="img/parking.jpg" data-fancybox="gallery">
-							<img src="img/parking.jpg">
-						</a>
-						<a href="img/wifi.jpg" data-fancybox="gallery">
-							<img src="img/wifi.jpg">
-						</a>
-						<a href="img/court.jpg" data-fancybox="gallery">
-							<img src="img/court.jpg">
-						</a>
-						<a href="img/homepage-bg.jpg" data-fancybox="gallery">
-							<img src="img/homepage-bg.jpg">
-						</a>
-						<a href="img/wqe.jpg" data-fancybox="gallery">
-							<img src="img/wqe.jpg">
-						</a>
-						<a href="img/qw.jpg" data-fancybox="gallery">
-							<img src="img/qw.jpg">
-						</a>
-					</div>
-				</div>
-
-				<div class="text-center pt-5" data-aos="fade-up" data-aos-delay="200">
-					<a href="gallery.html" class="btn btn-primary">
-						Go to gallery
-					</a>
-				</div>
-	        </div>
-	    </section>
-
-
-	    <!-- Testimonial -->
-	    <section class="page-section bg-light testi" id="testimonial">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Testimonials</h2>
-					<div class="line">
-						<hr data-aos="fade-up" data-aos-delay="100">
-					</div>
-	            </div>
-				<div class="swiper testimonialSwiper" data-aos="fade-up" data-aos-delay="150">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="quote">
-								<i class="bi bi-quote"></i>
-							</div>
-							<figure class="text-center">
-								<blockquote class="blockquote">
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est incidunt repellendus quibusdam. Laboriosam optio illum adipisci earum alias sit praesentium nulla. Odio doloribus, voluptatibus laudantium, dolorum similique nemo ullam natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni numquam maiores, nobis ad, minus iusto quisquam veritatis excepturi voluptate dignissimos quidem officia mollitia, maxime sunt, in ratione non animi? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aspernatur, numquam magnam dicta tempore ad qui inventore aut ratione, repellendus nostrum dolore minima aperiam! Consequuntur vero rem fugit praesentium officiis.</p>
-								</blockquote>
-								<figcaption class="blockquote-footer">
-									<b>Juan Dela Cruz</b> | Facebook
-								</figcaption>
-							</figure>
-						</div>
-						<div class="swiper-slide">
-							<div class="quote">
-								<i class="bi bi-quote"></i>
-							</div>
-							<figure class="text-center">
-								<blockquote class="blockquote">
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. </p>
-								</blockquote>
-								<figcaption class="blockquote-footer">
-									<b>Elon Musk</b> | Twitter
-								</figcaption>
-							</figure>
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-					<div class="swiper-buttons">
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div>
-	        </div>
-	    </section>
-
-	    <!-- CONTACT US -->
-	    <section class="page-section" id="contact">
-		        <div class="container">
-		            <div class="text-center mb-5">
-		                <h2 class="section-heading heading-font" data-aos="fade-up">Contact Us</h2>
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
-						</div>
-		            </div>
-		            <div class="row">
-		            	<div class="col-lg-6 col-md-12">
-							<form class="row g-3 text-dark">
-								<div class="col-md-6">
-									<div class="form-floating" data-aos="fade-up">
-										<input type="email" class="form-control" id="floatingInput" placeholder="Your Name">
-										<label for="floatingInput">Name</label>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-floating" data-aos="fade-up">
-										<input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-										<label for="floatingInput">Email address</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="100">
-										<select class="form-select" id="floatingSelect" aria-label="Select a subject">
-											<option selected disabled></option>
-											<option value="Feedback">Feedback</option>
-											<option value="Testimonal">Testimonial</option>
-											<option value="Others">Others</option>
-										</select>
-										<label for="floatingSelect">Subject</label>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="150">
-										<input type="text" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-										<label for="floatingInput">Please specify...</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="200">
-										<textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2" style="height: 200px; resize: none;"></textarea>
-										<label for="floatingTextarea2">Message</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<button type="submit" class="btn btn-primary" data-aos="fade-up">Submit</button>
-								</div>
-							</form>
-			            </div>
-			            <div class="col-lg-6 col-md-12 google-map" data-aos="fade-up" data-aos-delay="200">
-			            	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.0268207322497!2d121.10600378719214!3d14.649850997597754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9bec3b24113%3A0x8c567fb9097eb398!2sSTI%20College%20Marikina!5e0!3m2!1sen!2sph!4v1690877909151!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			            </div>
-		            </div>
-		        </div>
-		    </section>
-
-	    <!-- FOOTER -->
-		<div class="bg-dark">
-			<footer class="py-5 text-white">
-				<div class="row mx-5 text-start">
-					<div class="col-lg-4 col-md-6 mb-3">
-						<ul class="nav flex-column">
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="reservation.html" class="nav-link p-0 text-light">Reserve Now</a></li>
-						</ul>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-3">
-						<ul class="nav flex-column">
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Terms and Condition</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Privacy and Policy</a></li>
-						</ul>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-3 text-light">
-	            		<div class="col-12 pb-3">
-	            			<!-- <i class="fa-solid fa-location-dot fa-lg"></i> --> <p data-aos="fade-up">Address</p>
-	            			<a href="" class="address"><p data-aos="fade-up"><small>123 Address St. Barangay, Example City</small></p></a>
-	            		</div>
-	            		<div class="col-12 pb-3" >
-	            			<!-- <i class="fa-solid fa-phone fa-lg"></i> --> <p data-aos="fade-up">Contact</p>
-	            			<p data-aos="fade-up">
-	            				<small>Mobile: 09123456789</small><br>
-	            				<small>Tel: (01)23456789</small><br>
-	            				<small>Email: example@gmail.com</small>
-	            			</p>
-	            			<p></p>
-	            		</div>
-	            		<div class="col-12">
-	            			<p data-aos="fade-up">Social Media</p>
-	            			<p data-aos="fade-up">
-	            				<a href=""><i class="fa-brands fa-facebook fa-lg social-icon"></i></a>
-	            			</p>
-	            		</div>
-					</div>
-				</div>
-				<div class="text-center pt-4 mt-4 border-top">
-					<p class="copyright">Copyright &copy; <a href="#" class="text-white">XYZ Resort</a> 2023. All rights reserved.</p>
-				</div>
-			</footer>
-		</div>
+		<!--Container Main end-->
 
 		<!-- JQUERY -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
 		<!-- BOOTSTRAP -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 		<!-- FONTAWESOME -->
 		<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-		<!-- OWL CAROUSEL -->
-		<script src="js/owlcarousel/owl.carousel.min.js"></script>
-		<!-- SWIPER -->
-		<script src="js/swiper/swiper-bundle.min.js"></script>
-		<!-- AOS -->
-		<script src="js/aos/aos.js"></script>
-		<!-- GRIDGALLERY -->
-		<script type="text/javascript" src="js/gridgallery/grid-gallery.js"></script>
-		<!-- FANCYBOX -->
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		<!-- CHARTJS -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js"></script>
 		<!-- SCRIPT -->
-		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript">
-			gridGallery({
-				selector: "#homepage-gg",
-				layout: "horizontal"
-			});
-		</script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
