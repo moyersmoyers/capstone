@@ -17,9 +17,23 @@
 			<div class="header_toggle">
 				<i class='bx bx-menu open-btn' id="header-toggle"></i>
 			</div>
-			<!-- <div class="header_img">
-				<img src="../img/court.jpg" alt="">
-			</div> -->
+			<div class="header_img">
+				<i class='bx bx-caret-down caret'></i>
+				<div class="header_img-submenu">
+					<div class="header_img-submenu-item">
+						<a href="#" class="header_img-submenu-link">
+							<i class='bx bx-cog'></i>
+							<span>Settings</span>
+						</a>
+					</div>
+					<div class="header_img-submenu-item">
+						<a href="#" class="header_img-submenu-link">
+							<i class='bx bx-log-out'></i>
+							<span>Logout</span>
+						</a>
+					</div>
+				</div>
+			</div>
 		</header>
 		<div class="l-navbar" id="nav-bar">
 			<nav class="nav">
@@ -35,79 +49,91 @@
 						<a href="#" class="nav_link active dashboard" id="dashboard">
 							<i class='bx bx-grid-alt nav_icon'></i>
 							<span class="nav_name">Dashboard</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="reservation">
+							<i class='bx bx-notepad nav_icon'></i>
+							<span class="nav_name">Reservation</span>
 							<i class='bx bx-chevron-down chev-down nav_icon'></i>
 						</a>
 						<div class="submenu" id="submenu">
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 1</a>
+								<a href="#" class="submenu-link">Reservation Requests</a>
 							</div>
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 2</a>
+								<a href="#" class="submenu-link">Reservation List</a>
 							</div>
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 3</a>
+								<a href="#" class="submenu-link">Completed Reservation</a>
 							</div>
 						</div>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link messages" id="Billing">
+							<i class='bx bx-receipt nav_icon'></i>
+							<span class="nav_name">Billing</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="rooms">
+							<i class='bx bx-door-open nav_icon'></i>
+							<span class="nav_name">Rooms/Cottages</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="reports">
+							<i class='bx bx-line-chart nav_icon'></i>
+							<span class="nav_name">Reports</span>
+						</a>
+					</div>
+					<div class="nav_list-item">
+						<a href="#" class="nav_link" id="contact_queries">
+							<i class='bx bx-comment-detail nav_icon'></i>
+							<span class="nav_name">Contact Us Queries</span>
+						</a>
 					</div>
 					<div class="nav_list-item">
 						<a href="#" class="nav_link" id="users">
 							<i class='bx bx-user nav_icon'></i>
-							<span class="nav_name">Users</span>
+							<span class="nav_name">User Accounts</span>
 						</a>
 					</div>
 					<div class="nav_list-item">
-						<a href="#" class="nav_link messages" id="messages">
-							<i class='bx bx-message-square-detail nav_icon'></i>
-							<span class="nav_name">Messages</span>
+						<a href="#" class="nav_link" id="cms">
+							<i class='bx bx-user nav_icon'></i>
+							<span class="nav_name">CMS</span>
 							<i class='bx bx-chevron-down chev-down nav_icon'></i>
 						</a>
 						<div class="submenu" id="submenu">
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 1</a>
+								<a href="#" class="submenu-link">CMS 1 asd asd asd asd asd asd as</a>
 							</div>
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 2</a>
+								<a href="#" class="submenu-link">CMS 2</a>
 							</div>
 							<div class="submenu-item">
 								<i class='bx bx-grid-alt submenu-icon'></i>
-								<a href="#" class="submenu-link">Submenu 3</a>
+								<a href="#" class="submenu-link">CMS 3</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">CMS 1</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">CMS 2</a>
+							</div>
+							<div class="submenu-item">
+								<i class='bx bx-grid-alt submenu-icon'></i>
+								<a href="#" class="submenu-link">CMS 3</a>
 							</div>
 						</div>
-					</div>
-					<div class="nav_list-item">
-						<a href="#" class="nav_link" id="bookmark">
-							<i class='bx bx-bookmark nav_icon'></i>
-							<span class="nav_name">Bookmark</span>
-						</a>
-					</div>
-					<div class="nav_list-item">
-						<a href="#" class="nav_link">
-							<i class='bx bx-folder nav_icon'></i>
-							<span class="nav_name">Files</span>
-						</a>
-					</div>
-					<div class="nav_list-item">
-						<a href="#" class="nav_link" id="stats">
-							<i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-							<span class="nav_name">Stats</span>
-						</a>
-					</div>
-					<div class="nav_list-item">
-						<a href="#" class="nav_link" id="settings">
-							<i class='bx bx-cog nav_icon'></i>
-							<span class="nav_name">Settings</span>
-						</a>
-					</div>
-					<div class="nav_list-item">
-						<a href="#" class="nav_link" id="logout">
-							<i class='bx bx-log-out nav_icon'></i>
-							<span class="nav_name">Logout</span>
-						</a>
 					</div>
 				</div>
 			</nav>
