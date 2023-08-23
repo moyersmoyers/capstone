@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 :root{
-  --header-height:  3rem;
-  --nav-width:  240px;
-  --first-color:  #343a40;
-  --first-color-light:  #b3b3b3;
-  --white-color:  #F7F6FB;
-  --z-fixed:  100;
+  --header-height: 3rem;
+  --nav-width: 240px;
+  --first-color: #343a40;
+  --first-color-light: #b3b3b3;
+  --white-color: #F7F6FB;
+  --z-fixed: 100;
 }
 
 @property --var1 {
@@ -66,7 +66,6 @@ a{
 .header{
   width: 100%;
   height: calc(var(--header-height) + 1rem);
-  /*height: var(--header-height);*/
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +73,6 @@ a{
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem 0 calc(var(--nav-width) + 1rem);
-  /*padding: 0 1rem;*/
   background-color: var(--white-color);
   z-index: var(--z-fixed);
   transition: .3s;
@@ -87,18 +85,53 @@ a{
   cursor: pointer;
 }
 
-/*.header_img{
+.header_img{
   width: 35px;
   height: 35px;
-  display: flex;
-  justify-content: center;
   border-radius: 50%;
-  overflow: hidden;
 }
 
-.header_img img{
-  width: 40px;
-}*/
+.header_img .caret{
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.header_img-submenu{
+  position: absolute;
+  top: 50px;
+  right: 12px;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--first-color);
+  border-radius: 10px;
+  display: none;
+  transition: all 0.5s;
+}
+
+.header_img-submenu.header-sub-active{
+  display: block;
+}
+
+.header_img-submenu-item{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+}
+
+.header_img-submenu-link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: .7rem 1.5rem .7rem 1.4rem;
+  font-size: 14px;
+  color: var(--first-color-light);
+}
+
+.header_img-submenu-link:hover{
+  color: var(--white-color);
+}
 
 .l-navbar{
   position: fixed;
@@ -186,15 +219,13 @@ a{
   color: var(--white-color);
 }
 
-.nav_icon{
-  font-size: 1rem;
+.nav_name{
+  font-size: 15px;
 }
 
 .show{
-  width: calc(var(--nav-width) - 170px);
+  width: calc(var(--nav-width) - 172px);
   left: 0;
-  /*left: 0;
-  width: calc(var(--nav-width) + 87px);*/
 }
 
 .show .chev-down{
@@ -202,8 +233,7 @@ a{
 }
 
 .body-pd{
-  padding-left: calc(var(--nav-width) - 160px) !important;
-  /*padding-left: calc(var(--nav-width) + 105px);*/
+  padding-left: calc(var(--nav-width) - 150px) !important;
 }
 
 .chev-down{
@@ -215,14 +245,14 @@ a{
 .submenu{
   display: none;
   background-color: #262626;
-  margin-left: 10px;
+  overflow: hidden;
 }
 
 .submenu-item{
   display: grid;
   grid-template-columns: max-content max-content;
   align-items: center;
-  padding-left: 1rem;
+  padding-left: 1.4rem;
 }
 
 .submenu-link{
@@ -232,6 +262,7 @@ a{
   column-gap: 1.5rem;
   padding: .5rem 0 .5rem 1.3rem;
   color: var(--white-color);
+  font-size: 13px;
 }
 
 .submenu-icon{
@@ -239,7 +270,7 @@ a{
 }
 
 .rotate{
- transform: rotate(180deg);
+ transform: rotate(-180deg);
 }
 
 .active{
@@ -263,9 +294,11 @@ a{
   body{
     padding-left: calc(var(--nav-width) - 14rem) !important;
   }
+
   .header{
     padding: 0 2rem 0 calc(var(--nav-width) - 14rem);
   }
+
   .l-navbar{
     position: fixed;
     top: 0;
@@ -274,9 +307,11 @@ a{
     transform: translateX(-100%);
     transition: all 0.3s;
   }
+
   .l-navbar.open{
     transform: translateX(0%);
   }
+
   .l-navbar.open .close-btn{
     display: block;
     position: absolute;
@@ -285,6 +320,7 @@ a{
     font-size: 1.5rem;
     color: #fff;
   }
+
   .nav_logo{
     padding-top: 1.5rem;
   }
