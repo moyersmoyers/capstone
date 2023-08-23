@@ -38,8 +38,14 @@ $('.nav_list-item a').click(function(){
 	else{
 		if(getid.nextElementSibling.id === "submenu"){
 			$('#' + this.id).next().slideToggle();
+			$('.chev-down').toggleClass('rotate');
 		}
 	}
+});
+
+
+$('.caret').click(function(){
+	$('.header_img-submenu').toggleClass('header-sub-active');
 });
 
 
