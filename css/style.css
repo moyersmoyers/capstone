@@ -131,7 +131,7 @@ a{
 }
 
 .user-nav{
-  margin-top: auto;
+  margin-top: calc(auto - 100px);
 }
 
 .nav-user-icon{
