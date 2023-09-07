@@ -1,59 +1,111 @@
-/* SIDEBAR */
+/* SIDEBAR START */
 let smallWidth = false;
+
+function expandSidebar(){
+	$('#sidebar').removeClass('collapse-nav');
+	$('#main').removeClass('main-pd');
+	$('#header').removeClass('header-pd');
+}
 
 function setWindowWidth(){
 	let getwidth = $(window).width();
 	
 	if(getwidth <= 768){
 		smallWidth = true;
-		$('#nav-bar').removeClass('show');
-		$('#body-pd').removeClass('body-pd');
-		$('#header').removeClass('body-pd');
+		expandSidebar();
+		$('.backdrop').css('display', 'none');
+		$('.submenu').slideUp();
 	}
 	else{
 		smallWidth = false;
 	}
-	$('#nav-bar').removeClass('open');
+	$('#sidebar').removeClass('open');
 }
 
 $(window).on('load resize', function(){
 	setWindowWidth();
 });
 
-$('#header-toggle').click(function(){
+$('#sidebar-toggle').click(function(){
 	if(!smallWidth){
-		$('#nav-bar').toggleClass('show');
-		$('#body-pd').toggleClass('body-pd');
-		$('#header').toggleClass('body-pd');
-	}
-});
-
-
-/* DROPDOWN SIDEBAR */
-$('.nav_list-item a').click(function(){
-	let getid = document.getElementById(this.id);
-	if(getid.nextElementSibling === null){
-		return false;
+		$('#sidebar').toggleClass('collapse-nav');
+		$('#header').toggleClass('header-pd');
+		$('#main').toggleClass('main-pd');
+		$('#sidebar-toggle').toggleClass('rotate');
 	}
 	else{
-		if(getid.nextElementSibling.id === "submenu"){
-			$('#' + this.id).next().slideToggle();
-		}
+		$('#sidebar').addClass('open');
+		$('.backdrop').css('display', 'block');
 	}
 });
 
-
-/* OFFCANVAS */
-const openBtn = document.querySelector('.open-btn');
-const closeBtn = document.querySelector('.close-btn');
-const offcanvasMenu = document.querySelector('.l-navbar')
-
-openBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    offcanvasMenu.classList.add('open');
+$('.backdrop').click(function(){
+	$('#sidebar').removeClass('open');
+	$(this).css('display', 'none');
+	$('.submenu').slideUp();
+	$('.chev-down').removeClass('rotate');
 });
 
-closeBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    offcanvasMenu.classList.remove('open');
+/* SIDEBAR END */
+
+
+
+/* DROPDOWN SIDEBAR NAV START */
+$('.nav_list-item a').click(function(event){
+	//selecting submenu
+	$(this).siblings().slideToggle();
+	$(this).find('.chev-down').toggleClass('rotate');
+
+	//selecting other submenu
+	$(this).parent().siblings().find('.submenu').first().slideUp();
+	$(this).parent().siblings().find('a').find('.chev-down').removeClass('rotate');
+	
+	console.log();
 });
+/* DROPDOWN SIDEBAR NAV END */
+
+
+
+/* USER SETTINGS START */
+$(document).mouseup(function(e){
+	let userSetting = $('.user-settings');
+	let userSettingSubmenu = $('.user-settings-submenu');
+	if (!userSetting.is(e.target) && userSetting.has(e.target).length === 0) 
+    {
+        userSettingSubmenu.removeClass('user-settings-sub-active');
+    }
+    else{
+    	userSettingSubmenu.toggleClass('user-settings-sub-active');
+    }
+
+    let notification = $('.notification');
+    let notificationSubmenu = $('.notification-submenu');
+    if (!notification.is(e.target) && notification.has(e.target).length === 0) 
+    {
+        notificationSubmenu.removeClass('notification-submenu-active');
+    }
+    else{
+    	notificationSubmenu.toggleClass('notification-submenu-active');
+    }
+
+    /*if($('#sidebar').hasClass('collapse-nav') || !$('.submenu').parent().is(e.target) && $('.submenu').parent().has(e.target).length === 0){
+    	$('.nav_list-item a').parent().siblings().find('.submenu').slideUp();
+		$('.nav_list-item a').parent().siblings().find('a').find('.chev-down').removeClass('rotate');
+    }*/
+});
+
+$('body, .nav').on('scroll', function(){
+	$('.user-settings-submenu').removeClass('user-settings-sub-active');
+	if($('#sidebar').hasClass('collapse-nav')){
+		$('.submenu').slideUp();
+		$('.chev-down').removeClass('rotate');
+	}
+});
+/* USER SETTINGS END */
+
+const sidebar_loader = setTimeout(() => {
+    document.querySelector('.sidebar-loader').style.display = "none";
+}, 500);
+const content_loader = setTimeout(() => {
+    document.querySelector('.content-loader').style.display = "none";
+}, 1000);
