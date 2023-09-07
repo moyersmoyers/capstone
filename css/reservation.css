@@ -25,12 +25,16 @@ button{
 }
 
 .page-section{
-	padding: 5rem 0;
+	padding: 5rem 5rem;
 }
 
 .section-heading{
 	padding-bottom: 1.4rem;
 	font-size: 2.5rem;
+}
+
+.form-floating label{
+	font-size: 0.9rem;
 }
 
 /* LOADER START */
@@ -126,7 +130,7 @@ button{
 	display: flex;
 	justify-content: space-between;
 	counter-reset: step;
-	margin-bottom: 4rem;
+	margin-bottom: 5rem;
 }
 
 .progressbar:before, .progress{
@@ -170,9 +174,37 @@ button{
 	color: #000;
 }
 
+.progress-step:nth-child(2):after, .progress-step:last-child:after{
+	content: attr(data-title);
+	position: absolute;
+	text-align: center;
+	font-size: 0.85rem;
+	color: #000;
+}
+
+
 .progress-step-active{
 	background: #343a40;
 	color: #fff;
+}
+
+.steps-btn{
+	display: flex;
+	justify-content: space-between;
+}
+
+.card img{
+	width: 100%;
+	height: 250px;
+}
+
+.card-links{
+	display: flex;
+	justify-content: space-between;
+}
+
+.date-picker{
+	display: none;
 }
 
 
