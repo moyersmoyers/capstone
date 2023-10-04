@@ -3,11 +3,16 @@
 
 body{
 	font-family: "Rubik", arial, sans-serif;
+	font-size: 14px;
 }
 
 button{
 	outline: none !important;
     box-shadow: none !important;
+}
+
+a{
+	text-decoration: none !important;
 }
 
 .heading-font{
@@ -25,11 +30,11 @@ button{
 }
 
 .page-section{
-	padding: 5rem 0;
+	padding: 2rem 0;
 }
 
 .section-heading{
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 
@@ -75,11 +80,11 @@ button{
 /* HEADER SWIPER START */
 
 .headerSwiper {
-	height: 100vh;
+	height: 70vh;
 }
 
 .headerSwiper .swiper-slide {
-	height: 100vh;
+	height: 70vh;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -119,12 +124,12 @@ button{
 
 /* MASTERHEAD START */
 .masterhead-subheading{
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	margin-bottom: 2rem;
 }
 
 .masterhead-heading{
-	font-size: 3.5rem;
+	font-size: 2.8rem;
 	margin-bottom: 1rem;
 }
 /* MASTERHEAD END */
@@ -223,7 +228,7 @@ button{
 }
 
 .owl-stage-outer{
-	height: 570px;
+	height: 420px;
 }
 
 .owl-nav{
@@ -248,8 +253,21 @@ button{
 /* ROOMS SECTION START*/
 .room-button-container{
 	display: flex;
-	align-content: center;
 	justify-content: space-evenly;
+}
+
+.room-button-container a{
+	font-size: 14px;
+}
+
+.room-item{
+	width: 80%;
+	margin-left: 40px;
+}
+
+.room-item button{
+	border: none;
+	padding: 0;
 }
 
 .room-item img{
@@ -257,9 +275,7 @@ button{
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-    height: 300px;
-    width: 100%;
-    display: table;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -267,8 +283,7 @@ button{
 	box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
     background: #fff;
     padding: 20px;
-    padding-top: 25px;
-    height: 250px;
+    height: 200px;
 }
 
 .details ul {
@@ -284,12 +299,16 @@ button{
 }
 
 .room-price{
-	font-size: 1.7rem;
+	font-size: 1.4rem;
 	padding-bottom: 1rem;
 }
 
 .pernight-text{
-	font-size: 16px;
+	font-size: 14px;
+}
+
+.room-description{
+	margin-bottom: 0.5rem !important;
 }
 /* ROOMS SECTION START*/
 
