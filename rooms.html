@@ -47,7 +47,7 @@
 				    			<a class="nav-link" href="about.html">About</a>
 				    		</li>
 				    		<li class="nav-item">
-				    			<a class="nav-link active" aria-current="page" href="rooms.html">Rooms</a>
+				    			<a class="nav-link active" aria-current="page" href="rooms.html">Accomodations</a>
 				    		</li>
 				    		<!-- <li class="nav-item">
 				    			<a class="nav-link" href="amenities.html">Amenities</a>
@@ -57,6 +57,12 @@
 				    		</li>
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="contactus.html">Contact</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="inquiry.html">Inquiry</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Feedback</a>
 				    		</li>
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="reservation.html">Reserve Now</a>
@@ -71,7 +77,7 @@
 		<!-- HEADER -->
 		<header class="head">
 			<div class="container text-center">
-				<h1 class="heading-font text-white" data-aos="fade-down">Rooms</h1>
+				<h3 class="heading-font text-white" data-aos="fade-down">Accomodations</h3>
 				<div class="line text-white">
 					<hr data-aos="fade-up" data-aos-delay="100">
 				</div>
@@ -82,12 +88,12 @@
 	    	<div class="container">
 	    		<div class="row">
 					<div class="col-md-6">
-						<img src="img/wifi.jpg" class="img amenity-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-right" data-aos-delay="200">
+						<img src="img/wifi.jpg" class="img room-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-right" data-aos-delay="200">
 					</div>
 					<div class="col-md-6">	
-						<h2 class="heading-font amenity-heading" data-aos="fade-left" data-aos-delay="400">Standard Room</h2>
+						<h3 class="heading-font room-heading" data-aos="fade-left" data-aos-delay="400">Standard Room</h3>
 						<p class="lead" data-aos="fade-left" data-aos-delay="600">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-						<a data-aos="fade-left" data-aos-delay="700" class="btn btn-outline-primary mt-5" href="#" role="button">Reserve now</a>
+						<a data-aos="fade-left" data-aos-delay="700" class="btn btn-outline-primary mt-3" href="#" role="button" data-bs-toggle="modal" data-bs-target="#room-select-modal">Reserve now</a>
 					</div>
 				</div>
 
@@ -95,12 +101,12 @@
 
 	            <div class="row">
 					<div class="col-md-6 order-md-2">
-						<img src="img/court.jpg" class="img amenity-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-left" data-aos-delay="200">
+						<img src="img/court.jpg" class="img room-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-left" data-aos-delay="200">
 					</div>
 					<div class="col-md-6 order-md-1">	
-						<h2 class="heading-font amenity-heading" data-aos="fade-right" data-aos-delay="400">Luxury Room</h2>
+						<h3 class="heading-font room-heading" data-aos="fade-right" data-aos-delay="400">Luxury Room</h3>
 						<p class="lead" data-aos="fade-right" data-aos-delay="600">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-						<a data-aos="fade-right" data-aos-delay="700" class="btn btn-outline-primary mt-5" href="#" role="button">Reserve now</a>
+						<a data-aos="fade-right" data-aos-delay="700" class="btn btn-outline-primary mt-3" href="#" role="button" data-bs-toggle="modal" data-bs-target="#room-select-modal">Reserve now</a>
 					</div>
 				</div>
 
@@ -108,16 +114,35 @@
 
 				<div class="row">
 					<div class="col-md-6">
-						<img src="img/parking.jpg" class="img amenity-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-right" data-aos-delay="200">
+						<img src="img/parking.jpg" class="img room-img" preserveAspectRatio="xMidYMid slice" data-aos="fade-right" data-aos-delay="200">
 					</div>
 					<div class="col-md-6">	
-						<h2 class="heading-font amenity-heading" data-aos="fade-left" data-aos-delay="400">Deluxe Room</h2>
+						<h3 class="heading-font room-heading" data-aos="fade-left" data-aos-delay="400">Deluxe Room</h3>
 						<p class="lead" data-aos="fade-left" data-aos-delay="600">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-						<a data-aos="fade-left" data-aos-delay="700" class="btn btn-outline-primary mt-5" href="#" role="button">Reserve now</a>
+						<a data-aos="fade-left" data-aos-delay="700" class="btn btn-outline-primary mt-3" href="#" role="button" data-bs-toggle="modal" data-bs-target="#room-select-modal">Reserve now</a>
 					</div>
 				</div>
 	    	</div>
 	    </section>
+
+	    <!-- ROOM SELECT MODAL -->
+		<div class="modal fade room-select-modal" id="room-select-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Room Selection</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- FOOTER -->
 		<div class="container-fluid px-5 bg-dark">
@@ -127,9 +152,11 @@
 						<ul class="nav flex-column">
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="reservation.html" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
@@ -187,6 +214,6 @@
 		<!-- FANCYBOX -->
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<!-- SCRIPT -->
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/rooms.js"></script>
 	</body>
 </html>
