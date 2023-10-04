@@ -49,7 +49,7 @@
 				    			<a class="nav-link" href="about.html">About</a>
 				    		</li>
 				    		<li class="nav-item">
-				    			<a class="nav-link" href="rooms.html">Rooms</a>
+				    			<a class="nav-link" href="rooms.html">Accomodations</a>
 				    		</li>
 				    		<!-- <li class="nav-item">
 				    			<a class="nav-link amenities" href="amenities.html">Amenities</a>
@@ -64,6 +64,12 @@
 				    			<a class="nav-link" href="contactus.html">Contact</a>
 				    		</li>
 				    		<li class="nav-item">
+				    			<a class="nav-link" href="inquiry.html">Inquiry</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Feedback</a>
+				    		</li>
+				    		<li class="nav-item">
 				    			<a class="nav-link active" aria-current="page" href="reservation.html">Reserve Now</a>
 				    		</li>
 			    		</ul>
@@ -76,7 +82,7 @@
 		<!-- HEADER  -->
 	    <header class="head">
 	        <div class="container text-center">
-	            <h1 class="heading-font text-white" data-aos="fade-up">magreserve ka na</h1>
+	            <h3 class="heading-font text-white" data-aos="fade-up">Reservation</h3>
 				<div class="line text-white">
 					<hr data-aos="fade-up" data-aos-delay="100">
 				</div>
@@ -100,54 +106,9 @@
 	        		<!-- RESERVATION DETAILS -->
 	        		<div class="form-steps form-steps-active">
 	        			<div class="row g-4">
-							<div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/court.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<div class="card-links">
-												<a href="#" class="link-underline link-underline-opacity-0">View Details</a>
-												<a href="#" class="btn btn-primary">Select this room</a>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="d-grid gap-2">
+								<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#room-select-modal">Select a Room</button>
 							</div>
-							<div class="col-12">
-								<input class="date-picker" type="text" />
-							</div>
-							<!-- <div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/wqe.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/parking.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-										</div>
-									</div>
-								</div>
-							</div> -->
 							<div class="col-12 text-end">
 								<a href="#" class="btn btn-primary btn-next" data-aos="fade-up">Next</a>
 							</div>
@@ -244,6 +205,25 @@
     		</div>
 	    </section>
 
+	    <!-- ROOM SELECT MODAL -->
+		<div class="modal fade room-select-modal" id="room-select-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Select a Room</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<!-- FOOTER -->
 		<div class="container-fluid px-5 bg-dark">
@@ -253,9 +233,11 @@
 						<ul class="nav flex-column">
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
@@ -316,6 +298,6 @@
 		<script src="fecha-master/fecha-master/lib/fecha.js"></script>
 		<script src="hotel-datepicker-4.6.0/hotel-datepicker-4.6.0/dist/js/hotel-datepicker.min.js"></script>
 		<!-- SCRIPT -->
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/reservation.js"></script>
 	</body>
 </html>
