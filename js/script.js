@@ -1,6 +1,5 @@
-const loader = document.querySelector('.loader');
 window.addEventListener('load', () =>{
-    loader.style.display = "none";
+    document.querySelector('.loader').style.display = "none";
     document.body.classList.remove('no-scroll');
 });
 
@@ -14,12 +13,16 @@ window.onscroll = window.onload = () => {
     }
 }
 
+AOS.init({
+    once: true
+});
+
 $('.owl-carousel').owlCarousel({
     margin: 10,
     nav: true,
     loop: true,
     center: false,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     navText: ["<a data-aos='fade-right' class='btn btn-primary btn-book' style='margin-right:15px'><i class='bi bi-arrow-left'></i></a>","<a  data-aos='fade-left' class='btn btn-primary btn-book' style='margin-left:15px'><i class='bi bi-arrow-right'></i></a>"],
@@ -34,31 +37,6 @@ $('.owl-carousel').owlCarousel({
             items:3
         }
     }
-});
-
-
-AOS.init({
-    once: true
-});
-
-new Swiper(".testimonialSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    centeredSlides: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
-    },
 });
 
 new Swiper(".headerSwiper", {
@@ -77,7 +55,7 @@ new Swiper(".headerSwiper", {
     },
 });
 
-Fancybox.bind("[data-fancybox]", {
+/*Fancybox.bind("[data-fancybox]", {
     Toolbar:{
         display:{
             left:[],
@@ -85,53 +63,20 @@ Fancybox.bind("[data-fancybox]", {
             right:["close"],
         },
     },
-});
+});*/
 
-const nextBtn = document.querySelectorAll(".btn-next");
-const prevBtn = document.querySelectorAll(".btn-prev");
-const progress = document.getElementById("progress");
-const formSteps = document.querySelectorAll(".form-steps");
-const progressSteps = document.querySelectorAll(".progress-step");
 
-let formStepsNum = 0;
 
-nextBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formStepsNum++;
-        updateFormSteps();
-        updateProgressbar();
-    });
-});
-
-prevBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formStepsNum--;
-        updateFormSteps();
-        updateProgressbar();
-    });
-});
-
-function updateFormSteps(){
-    formSteps.forEach((formStep) => {
-        formStep.classList.contains("form-steps-active") && formStep.classList.remove("form-steps-active");
-    });
-
-    formSteps[formStepsNum].classList.add("form-steps-active");
-}
-
-function updateProgressbar(){
-    progressSteps.forEach((progressStep, index) => {
-        if(index < formStepsNum + 1){
-            progressStep.classList.add("progress-step-active");
-        }
-        else{
-            progressStep.classList.remove("progress-step-active");
-        }
-    });
-
-    const progressActive = document.querySelectorAll(".progress-step-active");
-
-    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
-}
+/*let input = document.querySelector('.date-picker');
+let datepicker = new HotelDatepicker(input, {
+    clearButton: true,
+    format: "MM/DD/YYYY",
+    moveBothMonths: true,
+    selectForward: true,
+    topbarPosition: 'bottom',
+    onSelectRange: () => {
+        let datesArr = input.value.split(" - ");
+        console.log("check in " + datesArr[0]);
+        console.log("check out " + datesArr[1]);
+    }
+});*/
