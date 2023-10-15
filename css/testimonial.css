@@ -3,11 +3,34 @@
 
 body{
 	font-family: "Rubik", arial, sans-serif;
+	font-size: 14px;
 }
 
 button{
 	outline: none !important;
     box-shadow: none !important;
+}
+
+.heading-font{
+	font-family: "Playfair Display", times, serif;
+}
+
+.line{
+	display: grid;
+	justify-items: center;
+}
+
+.line hr{
+	width: 5rem;
+}
+
+.page-section{
+	padding: 11rem 0 2rem 0;
+}
+
+.section-heading{
+	padding-bottom: 1.4rem;
+	font-size: 2rem;
 }
 
 
@@ -50,63 +73,21 @@ button{
 /* LOADER END */
 
 
-.heading-font{
-	font-family: "Playfair Display", times, serif;
+/* HEADER SWIPER START */
+.head{
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: #343a40;
+	padding: 4rem 0 1rem;
 }
 
-/* MASTERHEAD START */
-.masterhead {
-	height: 100vh;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: #fff;
-	background-image: url('../img/homepage-bg.jpg');
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	background-size: cover;
+.head p{
+	margin: 0;
 }
+/* HEADER END */
 
-.masterhead:before{
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, .5);
-}
 
-.masterhead-subheading{
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-	margin-bottom: 2rem;
-}
-
-.masterhead-heading{
-	font-size: 3.5rem;
-	line-height: 4.5rem;
-	margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-	.masterhead-subheading{
-		font-size: 1.5rem;
-		line-height: 2.25rem;
-		margin-bottom: 2rem;
-	}
-
-	.masterhead-heading{
-		font-size: 4rem;
-		line-height: 4.5rem;
-		margin-bottom: 1rem;
-	}
-}
-
-/* MASTERHEAD END */
 
 
 /* NAVBAR START */
@@ -136,35 +117,123 @@ button{
 /* NAVBAR END */
 
 
-.page-section{
-	padding: 5rem 0;
+/* TESTIMONIAL START */
+.testimonialSwiper {
+	width: 80%;
+	height: 30rem;
+	padding: 0 0 2.5rem 0;
 }
 
-.section-heading{
-	padding-bottom: 1.4rem;
-	font-size: 2.5rem;
+.testimonialSwiper .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
+
+.testimonialSwiper .swiper-buttons{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.testimonialSwiper .swiper-button-next, .testimonialSwiper .swiper-button-prev{
+	position: relative;
+	/*bottom: -1.7rem;*/
+	bottom: 16rem;
+	left: 0;
+   padding: 2rem 1rem;
+}
+
+/*.swiper-button-next{
+	left: 4rem;
+}
+
+.swiper-button-prev{
+	left: -4rem;
+}*/
+
+:root {
+    --swiper-navigation-size: 20px;
+    --swiper-theme-color: #000;
+}
+
+.quote{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 3.5rem;
+}
+
+figure{
+	width: 80%;
+	margin: auto;
+}
+
+.blockquote{
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	display: -webkit-box;
+	margin-bottom: 2rem;
+}
+
+.blockquote p{
+	font-size: 14px;
+}
+
+/*.testi{
+	background: linear-gradient(180deg, #fdcd3b 60%, #f8f9fa 40%) !important;
+}*/
+/* TESTIMONIAL END */
 
 
 /* FOOTER START */
-@media (min-width: 536px){
-	footer{
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-	}
-	footer ul{
-		justify-content: flex-end;
-	}
+.address{
+	text-decoration: none;
 }
-@media (max-width: 535px){
-	footer{
-		text-align: center;
-		justify-content: center;
-	}
-	footer ul{
-		justify-content: center;
-	}
+
+.address p small:hover{
+	color: #fff;
+}
+
+footer small, footer .social-icon{
+	color: #aaa;
 }
 /* FOOTER END */
+
+
+@media (max-width: 991px){
+	figure{
+		width: 75%;
+	}
+}
+
+@media (max-width: 767px){
+	figure{
+		width: 70%;
+	}
+}
+
+@media (max-width: 460px){
+	figure{
+		width: 60%;
+	}
+
+	.blockquote{
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		display: -webkit-box;
+	}
+
+	footer .text-start{
+		text-align: center !important;
+	}
+}
