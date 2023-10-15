@@ -117,12 +117,12 @@ $('.remove-room').click(function(e){
 
 $('.guest-info-next').click(function(e){
     e.preventDefault();
-        formStepsNum++;
+       /* formStepsNum++;
         updateFormSteps();
         updateProgressbar();
-        scrollToTop();
+        scrollToTop();*/
 
-    /*let valid = 0;
+    let valid = 0;
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     let inputs = document.querySelectorAll('.guest-info-input');
     inputs.forEach(function(el){
@@ -157,17 +157,17 @@ $('.guest-info-next').click(function(e){
         updateFormSteps();
         updateProgressbar();
         scrollToTop();
-    }*/
+    }
 });
 
 $('.payment-next').click(function(e){
     e.preventDefault();
 
-    formStepsNum++;
+    /*formStepsNum++;
     updateFormSteps();
     updateProgressbar();
-    scrollToTop();
-    /*if(document.querySelector("input[type='file']").files.length === 0){
+    scrollToTop();*/
+    if(document.querySelector("input[type='file']").files.length === 0){
         $('.file-error').css('display', 'block');
     }
     else{
@@ -176,7 +176,7 @@ $('.payment-next').click(function(e){
         updateFormSteps();
         updateProgressbar();
         scrollToTop();
-    }*/
+    }
 
     $('.r_id').text('2000086185');
     $('.checkin').text(startDate);
