@@ -3,11 +3,12 @@
 
 body{
 	font-family: "Rubik", arial, sans-serif;
+	font-size: 14px;
 }
 
 button{
 	outline: none !important;
-    box-shadow: none !important;
+   box-shadow: none !important;
 }
 
 .heading-font{
@@ -17,7 +18,6 @@ button{
 .line{
 	display: grid;
 	justify-items: center;
-	padding-bottom: 1.4rem;
 }
 
 .line hr{
@@ -25,13 +25,14 @@ button{
 }
 
 .page-section{
-	padding: 5rem 0;
+	padding: 3rem 0 4rem 0;
 }
 
 .section-heading{
 	padding-bottom: 1.4rem;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
+
 
 /* LOADER START */
 .no-scroll {
@@ -135,9 +136,12 @@ button{
 
 
 
-.head{
+.head {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
 	background: #343a40;
-	padding: 7rem 0 3rem;
+	padding: 4rem 0 1rem;
 }
 
 .head p{
@@ -162,26 +166,63 @@ button{
 }
 
 .contact-icon{
-	padding: 2rem 0;
+	padding-right: 1rem;
+	font-size: 15px;
+}
+
+.contact-info{
+	background: #343a40;
+	padding: 11rem 7.5rem 2rem;
+}
+
+.contact-social-link{
+	font-size: 18px;
+	color: #fff;
+	transition: all 0.2s;
+}
+
+.contact-social-link:hover:nth-child(1){
+	color: #4269ff;
+}
+
+.contact-social-link:hover:nth-child(2){
+	color: #dd2a7b;
+}
+
+.contact-social-link:hover:nth-child(3){
+	color: #08a0e9;
+}
+
+.contact-social-link:not(:last-child){
+	padding-right: 20px;
 }
 
 .google-map{
-	height: 450px;
+	position: absolute;
+	top: 160px;
+	right: 55px;
+	width: 45%;
+	height: 480px;
 	overflow: hidden;
 }
 
 .google-map iframe{
 	width: 100%;
+	height: 100%;
 	overflow: hidden;
 }
 
-
-/* FOOTER START */
-.copyright{
-	font-size: 14px;
-	margin-bottom: 0;
+.modal-footer{
+	padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 1.5);
 }
 
+.modal-footer a{
+	font-size: 14px;
+}
+
+
+
+/* FOOTER START */
 .address{
 	text-decoration: none;
 }
