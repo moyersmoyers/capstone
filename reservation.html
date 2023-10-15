@@ -7,19 +7,12 @@
 		<!-- BOOTSTRAP -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-		<!-- OWL CAROUSEL -->
-		<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css"/>
-		<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.css"/>
-		<!-- SWIPER -->
-		<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css"/>
+		<!-- BOXICON -->
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 		<!-- AOS -->
 		<link rel="stylesheet" href="css/aos/aos.css">
-		<!-- GRIDGALLERY -->
-		<link rel="stylesheet" href="css/gridgallery/grid-gallery.css"/>
-		<!-- FANCYBOX -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-		<!-- DATEPICKER -->
-		<link rel="stylesheet" href="hotel-datepicker-4.6.0/hotel-datepicker-4.6.0/dist/css/hotel-datepicker.css">
+		<!-- DATE RANGE PICKER -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/reservation.css">
 	</head>
@@ -49,7 +42,7 @@
 				    			<a class="nav-link" href="about.html">About</a>
 				    		</li>
 				    		<li class="nav-item">
-				    			<a class="nav-link" href="rooms.html">Rooms</a>
+				    			<a class="nav-link" href="rooms.html">Accomodations</a>
 				    		</li>
 				    		<!-- <li class="nav-item">
 				    			<a class="nav-link amenities" href="amenities.html">Amenities</a>
@@ -64,6 +57,12 @@
 				    			<a class="nav-link" href="contactus.html">Contact</a>
 				    		</li>
 				    		<li class="nav-item">
+				    			<a class="nav-link" href="inquiry.html">Inquiry</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Feedback</a>
+				    		</li>
+				    		<li class="nav-item">
 				    			<a class="nav-link active" aria-current="page" href="reservation.html">Reserve Now</a>
 				    		</li>
 			    		</ul>
@@ -76,7 +75,7 @@
 		<!-- HEADER  -->
 	    <header class="head">
 	        <div class="container text-center">
-	            <h1 class="heading-font text-white" data-aos="fade-up">magreserve ka na</h1>
+	            <h3 class="heading-font text-white" data-aos="fade-up">Reservation</h3>
 				<div class="line text-white">
 					<hr data-aos="fade-up" data-aos-delay="100">
 				</div>
@@ -86,117 +85,187 @@
 
 	    <section class="page-section">
 			<div class="container">
-	        	<form action="" class="form">
 	        		<!-- PROGRESS BAR -->
 	        		<div class="progressbar">
 	        			<div class="progress" id="progress"></div>
-	        			<div class="progress-step progress-step-active" data-title="Select a room"></div>
-	        			<div class="progress-step" data-title="Personal Information"></div>
+	        			<div class="progress-step progress-step-active" data-title="Date"></div>
+	        			<div class="progress-step" data-title="Accomodation"></div>
+	        			<div class="progress-step" data-title="Guest Information"></div>
 	        			<div class="progress-step" data-title="Payment"></div>
 	        			<div class="progress-step" data-title="Confirm"></div>
 	        		</div>
 
 
-	        		<!-- RESERVATION DETAILS -->
+	        		<!-- SELECT A DATE -->
 	        		<div class="form-steps form-steps-active">
 	        			<div class="row g-4">
-							<div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/court.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<div class="card-links">
-												<a href="#" class="link-underline link-underline-opacity-0">View Details</a>
-												<a href="#" class="btn btn-primary">Select this room</a>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="d-grid gap-2">
+								<input type="text" name="datetimes" class="datepicker" readonly />
 							</div>
-							<div class="col-12">
-								<input class="date-picker" type="text" />
-							</div>
-							<!-- <div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/wqe.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card mb-3 p-0">
-								<div class="row g-0">
-									<div class="col-md-4">
-										<img src="img/parking.jpg">
-									</div>
-									<div class="col-md-8">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-										</div>
-									</div>
-								</div>
-							</div> -->
 							<div class="col-12 text-end">
-								<a href="#" class="btn btn-primary btn-next" data-aos="fade-up">Next</a>
+								<a href="#" class="btn btn-primary btn-next next1" data-aos="fade-up">Next</a>
 							</div>
 	        			</div>
 	    			</div>
 
-	    			<!-- PERSONAL INFORMATION -->
-	    			<div class="form-steps">
+	    			<!-- SELECT A ROOM -->
+	        		<div class="form-steps">
 	        			<div class="row g-4">
-							<div class="col-md-4">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control" id="floatingInput" placeholder="First Name">
-									<label for="floatingInput">First Name</label>
+	        				<div class="rooms-container">
+								<!-- <div class="card mb-2" style="max-width: 100%; height: 200px;">
+									<div class="row g-0" style="height: 100%">
+										<div class="col-md-4" style="height: 100%;">
+											<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+										</div>
+										<div class="col-md-8">
+											<div class="card-body">
+												<h4 class="card-title">Standard Room</h4>
+												<div class="card-info row">
+													<div class="col-md-9">
+														<p class="room-description">This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.</p>
+														<p class="people">
+															<i class="fa-solid fa-user"></i> 2
+															&nbsp;&nbsp;&nbsp;
+															<i class="fa-solid fa-bed"></i> 2
+														</p>
+														<a href="#" class="read-more" >Read More...</a>
+													</div>
+													<div class="col-md-3">
+														<p style="margin-bottom: 5px;">From</p>
+														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
+														<a class="btn btn-primary" style="font-size: 14px">Select this room</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> -->
+								<div class="card mb-2" style="max-width: 100%; height: 200px;">
+									<div class="row g-0" style="height: 100%">
+										<div class="col-md-4" style="height: 100%;">
+											<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
+										</div>
+										<div class="col-md-8">
+											<div class="card-body">
+												<h4 class="card-title">Luxury Room</h4>
+												<div class="card-info row">
+													<div class="col-md-9">
+														<p class="room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
+														<p class="people">
+															<span><i class="fa-solid fa-user"></i> 6</span>
+															&nbsp;&nbsp;&nbsp;
+															<span><i class="fa-solid fa-bed"></i> 5</span>
+														</p>
+														<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+													</div>
+													<div class="col-md-3">
+														<p style="margin-bottom: 5px;">From</p>
+														<p class="price"><b style="font-size: 18px;">PHP 5000</b> per night</p>
+														<a href="#" class="btn btn-primary btn-next select-this-room" style="font-size: 14px">Select this room</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control" id="floatingInput" placeholder="Middle Name">
-									<label for="floatingInput">Middle Name (Optional)</label>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
-									<label for="floatingInput">Last Name</label>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="email" class="form-control" id="floatingInput" placeholder="Email Address">
-									<label for="floatingInput">Email Address</label>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control contactnum" id="floatingInput" placeholder="Contact Number">
-									<label for="floatingInput">Contact Number</label>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control" id="floatingInput" placeholder="Address">
-									<label for="floatingInput">Address</label>
-								</div>
-							</div>
+	        				</div>
 							<div class="col-12 steps-btn">
 								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-								<a href="#" class="btn btn-primary btn-next" data-aos="fade-up">Next</a>
+								<a href="#" class="btn btn-primary room-next" data-aos="fade-up">Skip</a>
 							</div>
+	        			</div>
+	    			</div>
+
+	    			<!-- GUEST INFORMATION -->
+	    			<div class="form-steps">
+	        			<div class="row g-4">
+	        				<div class="col-md-5 mt-3">
+	        					<div class="guest-info-room">
+        							<h4 class="room-selected-text mb-3"><b>Room Selected</b></h4>
+	        						<div class="no-room text-center">
+	        							<p>No Room Selected</p>
+	        						</div>
+	        						<div class="yes-room">
+	        							<div class="card mb-3" style="max-width: 540px;">
+	        								<div class="row g-0">
+	        									<div class="col-md-4">
+	        										<img src="img/qw.jpg" class="img-fluid">
+	        									</div>
+	        									<div class="col-md-8">
+	        										<div class="card-body">
+	        											<h4 class="card-title room-name">Luxury Room</h4>
+	        											<p class="rate"><b>PHP 5000</b> per night</p>
+	        											Adults
+	        											<select class="adult-select">
+	        												<option value="1">1</option>
+	        												<option value="2">2</option>
+	        												<option value="3">3</option>
+	        												<option value="4">4</option>
+	        												<option value="5">5</option>
+	        												<option value="6">6</option>
+	        											</select>
+	        											&nbsp;&nbsp;&nbsp;
+	        											Children
+	        											<select class="children-select">
+	        												<option value="0">0</option>
+	        												<option value="1">1</option>
+	        												<option value="2">2</option>
+	        												<option value="3">3</option>
+	        												<option value="4">4</option>
+	        												<option value="5">5</option>
+	        												<option value="6">6</option>
+	        											</select>
+	        											<a href="#" class="btn btn-primary mt-3 remove-room" style="display: block;">Remove</a>
+	        										</div>
+	        									</div>
+	        								</div>
+	        							</div>
+	        						</div>
+	        					</div>
+	        				</div>
+	        				<div class="row col-md-7 mt-3">
+    							<h4 class="room-selected-text mb-3"><b>Guest Information</b></h4>
+    							
+								<div class="col-md-6 pb-4">
+									<div class="form-floating" data-aos="fade-up">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="First Name" name="firstname">
+										<label for="floatingInput">First Name <span style="color: red">*</span></label>
+										<span class="error">This field is required.</span>
+									</div>
+								</div>
+								<div class="col-md-6 pb-4">
+									<div class="form-floating" data-aos="fade-up">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Last Name" name="lastname">
+										<label for="floatingInput">Last Name <span style="color: red">*</span></label>
+										<span class="error">This field is required.</span>
+									</div>
+								</div>
+								<div class="col-md-6 pb-4">
+									<div class="form-floating" data-aos="fade-up">
+										<input type="email" class="form-control guest-info-input" id="floatingInput email" placeholder="Email Address" name="e_mail">
+										<label for="floatingInput">Email Address <span style="color: red">*</span></label>
+										<span class="error">Please enter a valid email address.</span>
+									</div>
+								</div>
+								<div class="col-md-6 pb-4">
+									<div class="form-floating" data-aos="fade-up">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Contact Number" name="contactnumber" onkeypress="validate(event)">
+										<label for="floatingInput">Contact Number <span style="color: red">*</span></label>
+										<span class="error">This field is required.</span>
+									</div>
+								</div>
+								<div class="col-md-12 pb-4">
+									<div class="form-floating" data-aos="fade-up">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Address" name="address">
+										<label for="floatingInput">Address <span style="color: red">*</span></label>
+										<span class="error">This field is required.</span>
+									</div>
+								</div>
+								<div class="col-12 steps-btn">
+									<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
+									<a href="#" class="btn btn-primary guest-info-next" data-aos="fade-up">Next</a>
+								</div>
+	        				</div>
 	        			</div>
 	    			</div>
 
@@ -205,16 +274,35 @@
 	        			<div class="row g-4">
 	        				<div class="col-md-12">
 								<div class="form-floating">
-									<select class="form-select" id="floatingSelect" aria-label="Payment Method">
-										<option value="1">GCash</option>
-										<option value="2">BDO</option>
+									<select class="form-select method-select" id="floatingSelect" aria-label="Payment Method">
+										<option disabled selected>--Select a Payment Method--</option>
+										<option value="gcash">GCash</option>
+										<option value="bdo">BDO</option>
 									</select>
 									<label for="floatingSelect">Select a payment method</label>
 								</div>
 	        				</div>
+	        				<div class="col-md-12">
+								<div class="form-floating">
+									<div class="payment-info">
+										<p>Kindly send your payment to the number below:</p>
+										<p class="gcash">
+											Account Number: <span class="gcash-number">09123456789</span><br>
+											Account Name: <span class="gcash-name">Juan Dela Cruz</span>
+										</p>
+										<p class="bdo">
+											Account Number: <span class="bdo-number">12345678910</span>
+										</p>
+										<p>Also, please send the screenshot of your payment: <span style="color:red;">*</span></p>
+	  									<input class="insert-img" type="file" id="formFile">
+	  									<span class="file-error">This field is required.</span>
+									</div>
+									
+								</div>
+	        				</div>
 							<div class="col-12 steps-btn">
 								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-								<a href="#" class="btn btn-primary btn-next" data-aos="fade-up">Next</a>
+								<a href="#" class="btn btn-primary payment-next " data-aos="fade-up">Next</a>
 							</div>
 	        			</div>
 	    			</div>
@@ -222,27 +310,86 @@
 	    			<!-- CONFIRM -->
 	    			<div class="form-steps">
 	        			<div class="row g-4">
-							<div class="col-md-6">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="text" class="form-control" id="floatingInput" placeholder="Your Name">
-									<label for="floatingInput">Bayad</label>
+	        				<div class="confirm-div">
+	        					<div class="summary text-center">
+		        					<h3>Summary</h3>
+		        					<p>
+		        						Reservation ID: <b><span class="r_id"></span></b>
+		        					</p>
+		        					<p>
+		        						Check In Date: <b><span class="checkin"></span></b>
+		        						&nbsp;&nbsp;
+		        						Check Out Date: <b><span class="checkout"></span></b>
+		        					</p>
+		        					<p>
+		        						Name: <b><span class="first_name"></span> <span class="last_name"></span></b>
+		        					</p>
+		        					<p>
+		        						Total: <b><span class="total"></span></b>
+		        					</p>
+	        					</div>
+	        					<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 200px;"></textarea>
+									<label for="floatingTextarea">Special Request(s) (Optional)</label>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-floating" data-aos="fade-up">
-									<input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-									<label for="floatingInput">Contact Number</label>
+	        					<div class="form-check pt-3">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									<label class="form-check-label" for="flexCheckDefault">
+									I have read and agreed to the <a href="#">Privacy Policies</a> and <a href="#">Terms and Condition</a> 
+									</label>
+									<span class="check-error">This field is required.</span>
 								</div>
-							</div>
+	        				</div>
 							<div class="col-12 steps-btn">
 								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
 								<button type="submit" class="btn btn-primary" data-aos="fade-up">Confirm</button>
 							</div>
 	        			</div>
 	    			</div>
-	        	</form>
+	        	
     		</div>
 	    </section>
+
+	    <!-- ROOM SELECT MODAL -->
+		<div class="modal fade room-select-modal" id="room-select-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Are you sure?</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Are you sure you want to skip choosing a room?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-success btn-next" data-bs-dismiss="modal" onclick="scrollToTop()">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <!-- ROOM MODAL -->
+		<div class="modal fade room-modal" id="room-modal" tabindex="-1">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title" id="exampleModalLabel">Luxury Room</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="room-description-modal">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
+						<p>Room Size: 20sqm</p>
+						<p>Max. Capacity: 6 people</p>
+						<p>Bed Configuration: 1 Queen Size, 2 Single Beds, and 2 Bunk Beds</p>
+						<p>Room Amenities: Free WiFi, Cable TV, Private Bathroom with shower, towels, and toiletries, Air Conditioner, and Mini Bar</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<!-- FOOTER -->
@@ -253,9 +400,11 @@
 						<ul class="nav flex-column">
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
@@ -298,24 +447,18 @@
 
 		<!-- JQUERY -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
 		<!-- BOOTSTRAP -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 		<!-- FONTAWESOME -->
 		<script type="text/javascript" src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-		<!-- OWL CAROUSEL -->
-		<script type="text/javascript" src="js/owlcarousel/owl.carousel.min.js"></script>
-		<!-- SWIPER -->
-		<script type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
 		<!-- AOS -->
 		<script type="text/javascript" src="js/aos/aos.js"></script>
-		<!-- GRIDGALLERY -->
-		<script type="text/javascript" src="js/gridgallery/grid-gallery.js"></script>
-		<!-- FANCYBOX -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-		<!-- DATEPICKER -->
-		<script src="fecha-master/fecha-master/lib/fecha.js"></script>
-		<script src="hotel-datepicker-4.6.0/hotel-datepicker-4.6.0/dist/js/hotel-datepicker.min.js"></script>
+		<!-- DATE RANGE PICKER -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 		<!-- SCRIPT -->
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/reservation.js"></script>
 	</body>
 </html>
