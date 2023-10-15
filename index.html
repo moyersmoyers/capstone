@@ -14,10 +14,6 @@
 		<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css"/>
 		<!-- AOS -->
 		<link rel="stylesheet" href="css/aos/aos.css">
-		<!-- GRIDGALLERY -->
-		<link rel="stylesheet" href="css/gridgallery/grid-gallery.css"/>
-		<!-- FANCYBOX -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
@@ -49,7 +45,7 @@
 				    			<a class="nav-link" href="about.html">About</a>
 				    		</li>
 				    		<li class="nav-item">
-				    			<a class="nav-link" href="rooms.html">Rooms</a>
+				    			<a class="nav-link" href="rooms.html">Accomodations</a>
 				    		</li>
 				    		<!-- <li class="nav-item">
 				    			<a class="nav-link" href="amenities.html">Amenities</a>
@@ -59,6 +55,12 @@
 				    		</li>
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="contactus.html">Contact</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="inquiry.html">Inquiry</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Feedback</a>
 				    		</li>
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="reservation.html">Reserve Now</a>
@@ -103,52 +105,20 @@
 			</div>
 		</header>
 
-		<!-- ABOUT US -->
-		<section class="about-us" id="about">
-			<div class="row gx-0">
-				<div class="col-lg-6 text-center d-flex flex-column justify-content-center align-items-center about-us-text">
-					<div>
-						<h2 class="section-heading heading-font" data-aos="fade-up">About Us</h2>
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
-						</div>
-					</div>
-					<div class="about-us-content" data-aos="fade-up" data-aos-delay="150">
-						<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Facilis vel mollitia id, in odit corporis. Amet quos aut numquam voluptatum, natus illum aspernatur ipsam perspiciatis quam voluptates, fugit, at esse. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Amet debitis, reprehenderit voluptatibus eum itaque quae error ipsa iste recusandae. Fugiat corporis eos nulla impedit animi odit! Aperiam iste quo architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odit minus repellat cum sunt consectetur. Nostrum neque dolor exercitationem a quas, animi officiis qui consequuntur quo veritatis, pariatur ab recusandae. lorem</p>
-					</div>
-					<div class="pt-4" data-aos="fade-up" data-aos-delay="200">
-						<a href="about.html" class="btn btn-outline-primary">
-							Learn more
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-6 about-us-img" data-aos="fade-up">
-					<img src="img/court.jpg">
-				</div>
-			</div>
-		</section>
-
 	    <!-- ROOMS -->
 	    <section class="page-section bg-light" id="rooms">
 	        <div class="container">
 	        	<div class="d-flex flex-row align-items-center justify-content-between">
-		                <h2 class="section-heading heading-font" data-aos="fade-up">Rooms</h2>
-						<a href="rooms.html" class="btn btn-outline-primary" data-aos="fade-up">
-							View all
-						</a>
-		            <!-- <div class="text-start">
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
-						</div>
-		            </div>
-					<div class="text-end" data-aos="fade-up">
-					</div> -->
+	                <h3 class="section-heading heading-font" data-aos="fade-up">Accomodations</h3>
+					<a href="rooms.html" class="btn btn-outline-primary" data-aos="fade-up">
+						View all
+					</a>
 	        	</div>
 				<div class="owl-carousel owl-theme">
 				    <div class="room-item" data-aos="fade-up" data-aos-delay="100">
-						<img src="img/court.jpg" />
+			    		<img src="img/court.jpg" />
 						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Standard Room</h4>
+				        	<h5 class="heading-font text-truncate">Standard Room</h5>
 				        	<p class="price">
 				        		<span class="peso-sign">&#8369;</span>
 				        		<span class="room-price">100</span>
@@ -163,9 +133,9 @@
 				        </div>
 				    </div>
 				    <div class="room-item" data-aos="fade-up" data-aos-delay="200">
-						<img src="img/wqe.jpg" />
+			    		<img src="img/wqe.jpg" />
 						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Family Room</h4>
+				        	<h5 class="heading-font text-truncate">Family Room</h5>
 				        	<p class="price">
 				        		<span class="peso-sign">&#8369;</span>
 				        		<span class="room-price">100</span>
@@ -180,9 +150,9 @@
 				        </div>
 				    </div>
 				    <div class="room-item" data-aos="fade-up" data-aos-delay="300">
-						<img src="img/qw.jpg" />
+			    		<img src="img/qw.jpg" />
 						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Deluxe Room</h4>
+				        	<h5 class="heading-font text-truncate">Deluxe Room</h5>
 				        	<p class="price">
 				        		<span class="peso-sign">&#8369;</span>
 				        		<span class="room-price">100</span>
@@ -197,9 +167,9 @@
 				        </div>
 				    </div>
 				    <div class="room-item" data-aos="fade-up" data-aos-delay="400">
-						<img src="img/parking.jpg" />
+			    		<img src="img/parking.jpg" />
 						<div class="details text-center">
-				        	<h4 class="heading-font text-truncate">Luxury Room</h4>
+				        	<h5 class="heading-font text-truncate">Luxury Room</h5>
 				        	<p class="price">
 				        		<span class="peso-sign">&#8369;</span>
 				        		<span class="room-price">100</span>
@@ -213,202 +183,43 @@
 				        	</div>
 				        </div>
 				    </div>
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="400">
+			    		<img src="img/qw.jpg" />
+						<div class="details text-center">
+				        	<h5 class="heading-font text-truncate">Best Room</h5>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-description">
+				        		Room description.
+				        	</p>
+				        	<div class="room-button-container">
+								<a href="rooms.html" class="btn btn-primary">View details</a>
+				        	</div>
+				        </div>
+				    </div>
+				    <div class="room-item" data-aos="fade-up" data-aos-delay="300">
+			    		<img src="img/wqe.jpg" />
+						<div class="details text-center">
+				        	<h5 class="heading-font text-truncate">Example Room</h5>
+				        	<p class="price">
+				        		<span class="peso-sign">&#8369;</span>
+				        		<span class="room-price">100</span>
+				        		<span class="pernight-text">/ night</span>
+				        	</p>
+				        	<p class="room-description">
+				        		Room description alalal.a
+				        	</p>
+				        	<div class="room-button-container">
+								<a href="rooms.html" class="btn btn-primary">View details</a>
+				        	</div>
+				        </div>
+				    </div>
 				</div>
 	        </div>
 	    </section>
-	    
-
-	    <!-- AMENITIES -->
-	    <!-- <section class="page-section">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Resort Amenities</h2>
-	            </div>
-
-				
-	            <div class="container">
-	            	<div class="row">
-		            	<div class="col-lg-6 col-md-12 left-amenity">
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Free WiFi access</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-car fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Car Parking</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-utensils fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Free Breakfast</span>
-		            		</div>
-		            	</div>
-		            	<div class="col-lg-6 col-md-12 right-amenity">
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-dumbbell fa-xl" style="color: #005eff;"></i>
-								<span class="amenity-name">Gym or Fitness Center</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-basketball fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Basketball Court</span>
-		            		</div>
-		            		<div class="amenity-item">
-								<i class="fa-solid fa-wifi fa-xl" style="color: #005eff;"></i> 
-								<span class="amenity-name">Free WiFi access</span>
-		            		</div>
-		            	</div>
-		            </div>
-	            </div>
-	            
-	        </div>
-	    </section> -->
-
-
-	    <!-- Gallery -->
-	    <section class="page-section" id="gallery">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Gallery</h2>
-					<div class="line">
-						<hr data-aos="fade-up" data-aos-delay="100">
-					</div>
-	            </div>
-				<div class="gg-container" data-aos="fade-up" data-aos-delay="100">
-					<div class="gg-box" id="homepage-gg">
-						<a href="img/parking.jpg" data-fancybox="gallery">
-							<img src="img/parking.jpg">
-						</a>
-						<a href="img/wifi.jpg" data-fancybox="gallery">
-							<img src="img/wifi.jpg">
-						</a>
-						<a href="img/court.jpg" data-fancybox="gallery">
-							<img src="img/court.jpg">
-						</a>
-						<a href="img/homepage-bg.jpg" data-fancybox="gallery">
-							<img src="img/homepage-bg.jpg">
-						</a>
-						<a href="img/wqe.jpg" data-fancybox="gallery">
-							<img src="img/wqe.jpg">
-						</a>
-						<a href="img/qw.jpg" data-fancybox="gallery">
-							<img src="img/qw.jpg">
-						</a>
-					</div>
-				</div>
-
-				<div class="text-center pt-5" data-aos="fade-up" data-aos-delay="200">
-					<a href="gallery.html" class="btn btn-primary">
-						Go to gallery
-					</a>
-				</div>
-	        </div>
-	    </section>
-
-
-	    <!-- Testimonial -->
-	    <section class="page-section bg-light testi" id="testimonial">
-	        <div class="container">
-	            <div class="text-center">
-	                <h2 class="section-heading heading-font" data-aos="fade-up">Testimonials</h2>
-					<div class="line">
-						<hr data-aos="fade-up" data-aos-delay="100">
-					</div>
-	            </div>
-				<div class="swiper testimonialSwiper" data-aos="fade-up" data-aos-delay="150">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="quote">
-								<i class="bi bi-quote"></i>
-							</div>
-							<figure class="text-center">
-								<blockquote class="blockquote">
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est incidunt repellendus quibusdam. Laboriosam optio illum adipisci earum alias sit praesentium nulla. Odio doloribus, voluptatibus laudantium, dolorum similique nemo ullam natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni numquam maiores, nobis ad, minus iusto quisquam veritatis excepturi voluptate dignissimos quidem officia mollitia, maxime sunt, in ratione non animi? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aspernatur, numquam magnam dicta tempore ad qui inventore aut ratione, repellendus nostrum dolore minima aperiam! Consequuntur vero rem fugit praesentium officiis.</p>
-								</blockquote>
-								<figcaption class="blockquote-footer">
-									<b>Juan Dela Cruz</b> | Facebook
-								</figcaption>
-							</figure>
-						</div>
-						<div class="swiper-slide">
-							<div class="quote">
-								<i class="bi bi-quote"></i>
-							</div>
-							<figure class="text-center">
-								<blockquote class="blockquote">
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. </p>
-								</blockquote>
-								<figcaption class="blockquote-footer">
-									<b>Elon Musk</b> | Twitter
-								</figcaption>
-							</figure>
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-					<div class="swiper-buttons">
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div>
-	        </div>
-	    </section>
-
-	    <!-- CONTACT US -->
-	    <section class="page-section" id="contact">
-		        <div class="container">
-		            <div class="text-center mb-5">
-		                <h2 class="section-heading heading-font" data-aos="fade-up">Contact Us</h2>
-						<div class="line">
-							<hr data-aos="fade-up" data-aos-delay="100">
-						</div>
-		            </div>
-		            <div class="row">
-		            	<div class="col-lg-6 col-md-12">
-							<form class="row g-3 text-dark">
-								<div class="col-md-6">
-									<div class="form-floating" data-aos="fade-up">
-										<input type="email" class="form-control" id="floatingInput" placeholder="Your Name">
-										<label for="floatingInput">Name</label>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-floating" data-aos="fade-up">
-										<input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-										<label for="floatingInput">Email address</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="100">
-										<select class="form-select" id="floatingSelect" aria-label="Select a subject">
-											<option selected disabled></option>
-											<option value="Feedback">Feedback</option>
-											<option value="Testimonal">Testimonial</option>
-											<option value="Others">Others</option>
-										</select>
-										<label for="floatingSelect">Subject</label>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="150">
-										<input type="text" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-										<label for="floatingInput">Please specify...</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="form-floating" data-aos="fade-up" data-aos-delay="200">
-										<textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2" style="height: 200px; resize: none;"></textarea>
-										<label for="floatingTextarea2">Message</label>
-									</div>
-								</div>
-								<div class="col-12">
-									<button type="submit" class="btn btn-primary" data-aos="fade-up">Submit</button>
-								</div>
-							</form>
-			            </div>
-			            <div class="col-lg-6 col-md-12 google-map" data-aos="fade-up" data-aos-delay="200">
-			            	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.0268207322497!2d121.10600378719214!3d14.649850997597754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9bec3b24113%3A0x8c567fb9097eb398!2sSTI%20College%20Marikina!5e0!3m2!1sen!2sph!4v1690877909151!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			            </div>
-		            </div>
-		        </div>
-		    </section>
 
 	    <!-- FOOTER -->
 		<div class="bg-dark">
@@ -418,9 +229,11 @@
 						<ul class="nav flex-column">
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Rooms</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
 							<li class="nav-item mb-3" data-aos="fade-up"><a href="reservation.html" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
@@ -473,17 +286,7 @@
 		<script src="js/swiper/swiper-bundle.min.js"></script>
 		<!-- AOS -->
 		<script src="js/aos/aos.js"></script>
-		<!-- GRIDGALLERY -->
-		<script type="text/javascript" src="js/gridgallery/grid-gallery.js"></script>
-		<!-- FANCYBOX -->
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<!-- SCRIPT -->
 		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript">
-			gridGallery({
-				selector: "#homepage-gg",
-				layout: "horizontal"
-			});
-		</script>
 	</body>
 </html>
