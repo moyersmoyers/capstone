@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 		<!-- BOXICON -->
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-		<!-- AOS -->
-		<link rel="stylesheet" href="css/aos/aos.css">
 		<!-- DATE RANGE PICKER -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 		<!-- STYLE -->
@@ -75,9 +73,9 @@
 		<!-- HEADER  -->
 	    <header class="head">
 	        <div class="container text-center">
-	            <h3 class="heading-font text-white" data-aos="fade-up">Reservation</h3>
+	            <h3 class="heading-font text-white" >Reservation</h3>
 				<div class="line text-white">
-					<hr data-aos="fade-up" data-aos-delay="100">
+					<hr>
 				</div>
 	        </div>
 	    </header>
@@ -88,182 +86,347 @@
 	        		<!-- PROGRESS BAR -->
 	        		<div class="progressbar">
 	        			<div class="progress" id="progress"></div>
-	        			<div class="progress-step progress-step-active" data-title="Date"></div>
-	        			<div class="progress-step" data-title="Accomodation"></div>
+	        			<div class="progress-step progress-step-active" data-title="Date & Accomodation"></div>
 	        			<div class="progress-step" data-title="Guest Information"></div>
 	        			<div class="progress-step" data-title="Payment"></div>
 	        			<div class="progress-step" data-title="Confirm"></div>
 	        		</div>
 
-
 	        		<!-- SELECT A DATE -->
 	        		<div class="form-steps form-steps-active">
-	        			<div class="row g-4">
-							<div class="d-grid gap-2">
-								<input type="text" name="datetimes" class="datepicker" readonly />
-							</div>
-							<div class="col-12 text-end">
-								<a href="#" class="btn btn-primary btn-next next1" data-aos="fade-up">Next</a>
-							</div>
-	        			</div>
-	    			</div>
-
-	    			<!-- SELECT A ROOM -->
-	        		<div class="form-steps">
-	        			<div class="row g-4">
-	        				<div class="rooms-container">
-								<!-- <div class="card mb-2" style="max-width: 100%; height: 200px;">
-									<div class="row g-0" style="height: 100%">
-										<div class="col-md-4" style="height: 100%;">
-											<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+	        			<div class="row g-4 pt-4">
+	        				<div class="row col-md-9">
+	        					<div class="pe-4">
+									<label class="form-label" for="datepicker">Select check in & check out</label>
+									<input type="text" name="datetimes" id="datepicker" class="datepicker" readonly />
+								</div>
+		        				<div class="accomodation pe-4 pt-4">
+		        					<label class="form-label" for="accomodation-select">Select your accomodation</label>
+									<select class="form-select accomodation-select" id="accomodation-select">
+										<option selected disabled value=""></option>
+										<option value="public">Public Pool</option>
+										<option value="private">Private Pool</option>
+									</select>
+									<span class="accomodation-error">This field is required.</span>
+		        				</div>
+								<div class="row pt-4 pe-0">
+									<div class="row pe-0 public-container">
+										<label class="form-label" for="roomcottage-select">Select Rooms/Cottages</label>
+										<div class="col-lg-12 pe-0 room-cottage-select-div">
+											<select class="form-select room-cottage-select" id="roomcottage-select">
+												<option selected disabled value=""></option>
+												<option value="umbrella">Umbrella</option>
+												<option value="cottagekubo">Cottage kubo</option>
+												<option value="room">Room</option>
+											</select>
+											<span class="select-room-error">This field is required.</span>
+											<span class="select-atleast-error">Please reserve at least one (1) room/cottage.</span>
 										</div>
-										<div class="col-md-8">
-											<div class="card-body">
-												<h4 class="card-title">Standard Room</h4>
-												<div class="card-info row">
-													<div class="col-md-9">
-														<p class="room-description">This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.</p>
-														<p class="people">
-															<i class="fa-solid fa-user"></i> 2
-															&nbsp;&nbsp;&nbsp;
-															<i class="fa-solid fa-bed"></i> 2
-														</p>
-														<a href="#" class="read-more" >Read More...</a>
+										<div class="public-rooms-container col-lg-9 pe-0">
+											<div class="card umbrella-card mb-2" id="umbrella" style="max-width: 100%; height: 100%;">
+												<div class="row g-0">
+													<div class="col-md-4" style="height: 170px;">
+														<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
 													</div>
-													<div class="col-md-3">
-														<p style="margin-bottom: 5px;">From</p>
-														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
-														<a class="btn btn-primary" style="font-size: 14px">Select this room</a>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h4 class="card-title">Umbrella</h4>
+															<div class="card-info row">
+																<div class="col-md-12">
+																	<p class="room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
+																	<p>
+																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																	</p>
+																</div>
+															</div>
+														</div>
 													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div> -->
-								<div class="card mb-2" style="max-width: 100%; height: 200px;">
-									<div class="row g-0" style="height: 100%">
-										<div class="col-md-4" style="height: 100%;">
-											<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
-										</div>
-										<div class="col-md-8">
-											<div class="card-body">
-												<h4 class="card-title">Luxury Room</h4>
-												<div class="card-info row">
-													<div class="col-md-9">
-														<p class="room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
-														<p class="people">
-															<span><i class="fa-solid fa-user"></i> 6</span>
-															&nbsp;&nbsp;&nbsp;
-															<span><i class="fa-solid fa-bed"></i> 5</span>
-														</p>
-														<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+													<div class="col-lg-4 p-3">
+														<div class="people">
+															<span><b>Number of Guests:</b></span><br>
+															<label class="label-adult" for="select-adult">Adult(s):</label>
+															<select id="select-adult" style="">
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+															<br><br>
+															<label class="label-kids" for="select-kids">Kid(s):</label>
+															<select id="select-kids">
+																<option value="0">0</option>
+																<option value="1">1</option>
+															</select>
+														</div>
 													</div>
-													<div class="col-md-3">
+													<div class="col-lg-5 p-3">
+														<div class="addons">
+															<span><b>Add ons:</b></span><br>
+															<div class="form-check form-check-inline">
+																<input class="form-check-input" type="checkbox" value="" id="karaoke-check" name="Karaoke">
+																<label class="form-check-label" for="karaoke-check">
+																	Karaoke
+																</label>
+															</div>
+															<div class="form-check form-check-inline">
+																<input class="form-check-input" type="checkbox" value="" id="dkitchen-check" name="Dirty Kitchen">
+																<label class="form-check-label" for="dkitchen-check">
+																	Dirty Kitchen
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-3 p-3">
 														<p style="margin-bottom: 5px;">From</p>
 														<p class="price"><b style="font-size: 18px;">PHP 5000</b> per night</p>
-														<a href="#" class="btn btn-primary btn-next select-this-room" style="font-size: 14px">Select this room</a>
+														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+													</div>
+												</div>
+											</div>
+											<div class="card cottage-kubo-card mb-2" id="cottage-kubo" style="max-width: 100%; height: 100%;">
+												<div class="row g-0">
+													<div class="col-md-4" style="height: 170px;">
+														<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h4 class="card-title">Cottage Kubo</h4>
+															<div class="card-info row">
+																<div class="col-md-12">
+																	<p class="room-description">This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.</p>
+																	<p>
+																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 p-3">
+														<div class="people">
+															<span><b>Number of Guests:</b></span><br>
+															<label class="label-adult" for="select-adult">Adult(s):</label>
+															<select id="select-adult" style="">
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+															<br><br>
+															<label class="label-kids" for="select-kids">Kid(s):</label>
+															<select id="select-kids">
+																<option value="0">0</option>
+																<option value="1">1</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-5 p-3">
+														<div class="addons">
+															<span><b>Add ons:</b></span><br>
+															<div class="form-check form-check-inline">
+																<input class="form-check-input" type="checkbox" value="" id="karaoke" name="Karaoke">
+																<label class="form-check-label" for="karaoke">
+																	Karaoke
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-3 p-3">
+														<p style="margin-bottom: 5px;">From</p>
+														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
+														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+													</div>
+												</div>
+											</div>
+											<div class="card room-card mb-2" id="room" style="max-width: 100%; height: 100%;">
+												<div class="row g-0">
+													<div class="col-md-4" style="height: 170px;">
+														<img src="img/parking.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+													<div class="col-md-8">
+														<div class="card-body">
+															<h4 class="card-title">Room</h4>
+															<div class="card-info row">
+																<div class="col-md-12">
+																	<p class="room-description">Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.</p>
+																	<p>
+																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 p-3">
+														<div class="people">
+															<span><b>Number of Guests:</b></span><br>
+															<label class="label-adult" for="select-adult">Adult(s):</label>
+															<select id="select-adult" style="">
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+															<br><br>
+															<label class="label-kids" for="select-kids">Kid(s):</label>
+															<select id="select-kids">
+																<option value="0">0</option>
+																<option value="1">1</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-5 p-3">
+														<!-- NONE -->
+													</div>
+													<div class="col-md-3 p-3">
+														<p style="margin-bottom: 5px;">From</p>
+														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
+														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+													</div>
+												</div>
+											</div>
+			        					</div>
+									</div>
+			        				<div class="row pe-0 private-container">
+			        					<div class="col-lg-3">
+			        						<label class="form-label" for="time-select">Select Time</label>
+			        						<select class="form-select time-select" id="time-select">
+												<option selected disabled value=""></option>
+												<option value="Day">Day</option>
+												<option value="Night">Night</option>
+												<option value="Overnight">Overnight</option>
+			        						</select>
+											<span class="select-time-error">This field is required.</span>
+			        						<br>
+			        						<label class="form-label" for="private-extra">Add extra (<b>PHP 300</b>/head)</label>
+			        						<!-- <input class="form-control private-extra" type="number" id="private-extra" min="0"> -->
+			        						<select class="form-select private-extra" id="private-extra">
+			        							<option value="0">0</option>
+			        							<option value="1">1</option>
+			        							<option value="2">2</option>
+			        							<option value="3">3</option>
+			        							<option value="4">4</option>
+			        							<option value="5">5</option>
+			        							<option value="6">6</option>
+			        							<option value="7">7</option>
+			        							<option value="8">8</option>
+			        							<option value="9">9</option>
+			        							<option value="10">10</option>
+			        						</select>
+											<div class="private-addons pt-3">
+												<span><b>Add ons:</b></span><br>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" name="Karaoke" id="add-on-1">
+													<label class="form-check-label" for="add-on-1">
+														Karaoke
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" name="Dirty Kitchen" id="add-on-2">
+													<label class="form-check-label" for="add-on-2">
+														Dirty Kitchen
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" name="Gasul" id="add-on-3">
+													<label class="form-check-label" for="add-on-3">
+														Gasul
+													</label>
+												</div>
+											</div>
+			        					</div>
+			        					<div class="card private-card col-lg-9">
+											<div class="row g-0">
+												<div class="col-md-4" style="height: 170px;">
+													<img src="img/homepage-bg.jpg" class="img-fluid" alt="...">
+												</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h4 class="card-title">Private Pool</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<p>Price: <b>PHP 10000</b> per night</p>
+																	<p>Capacity: Max. 20 PAX. Extra/head <b>PHP 300</b></p>
+																	<p>Bed: 2 King Size and 4 Single Beds</p>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+			        				</div>
 								</div>
 	        				</div>
-							<div class="col-12 steps-btn">
-								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-								<a href="#" class="btn btn-primary room-next" data-aos="fade-up">Skip</a>
+	        				<div class="col-md-3 mt-3 guest-info-room-div">
+	        					<div class="guest-info-room">
+	        						<h5 style="border-bottom: 1px solid; padding-bottom: 10px;">Reservation Summary</h5>
+	        						<div class="selected-date">
+	        							<b>Check In</b>: <span class="display-check-in"></span><br>
+	        							<b>Check Out</b>: <span class="display-check-out"></span>
+	        						</div>
+	        						<div class="selected-accomodation">
+	        							
+	        						</div>
+	        						<div class="private-room-selected">
+        								<div class="room-summary">
+        									
+        								</div>
+	        						</div>
+	        						<div class="public-room-selected">
+	        							<div class="room-summary">
+
+	        							</div>
+	        						</div>
+        							<div class="total fs-6">
+        								<span><b>Total:</b> </span>
+        								<span><b>PHP <span class="display-total">0</span></b></span>
+        							</div>
+	        					</div>
+	        				</div>
+							<div class="col-12 text-end">
+								<a href="#" class="btn btn-primary date-next">Next</a>
 							</div>
 	        			</div>
 	    			</div>
 
 	    			<!-- GUEST INFORMATION -->
 	    			<div class="form-steps">
-	        			<div class="row g-4">
-	        				<div class="col-md-5 mt-3">
-	        					<div class="guest-info-room">
-        							<h4 class="room-selected-text mb-3"><b>Room Selected</b></h4>
-	        						<div class="no-room text-center">
-	        							<p>No Room Selected</p>
-	        						</div>
-	        						<div class="yes-room">
-	        							<div class="card mb-3" style="max-width: 540px;">
-	        								<div class="row g-0">
-	        									<div class="col-md-4">
-	        										<img src="img/qw.jpg" class="img-fluid">
-	        									</div>
-	        									<div class="col-md-8">
-	        										<div class="card-body">
-	        											<h4 class="card-title room-name">Luxury Room</h4>
-	        											<p class="rate"><b>PHP 5000</b> per night</p>
-	        											Adults
-	        											<select class="adult-select">
-	        												<option value="1">1</option>
-	        												<option value="2">2</option>
-	        												<option value="3">3</option>
-	        												<option value="4">4</option>
-	        												<option value="5">5</option>
-	        												<option value="6">6</option>
-	        											</select>
-	        											&nbsp;&nbsp;&nbsp;
-	        											Children
-	        											<select class="children-select">
-	        												<option value="0">0</option>
-	        												<option value="1">1</option>
-	        												<option value="2">2</option>
-	        												<option value="3">3</option>
-	        												<option value="4">4</option>
-	        												<option value="5">5</option>
-	        												<option value="6">6</option>
-	        											</select>
-	        											<a href="#" class="btn btn-primary mt-3 remove-room" style="display: block;">Remove</a>
-	        										</div>
-	        									</div>
-	        								</div>
-	        							</div>
-	        						</div>
-	        					</div>
-	        				</div>
-	        				<div class="row col-md-7 mt-3">
-    							<h4 class="room-selected-text mb-3"><b>Guest Information</b></h4>
-    							
+	        			<div class="row g-4 guest-info">
+	        				<div class="row mt-3 guest-info-input-div">
 								<div class="col-md-6 pb-4">
-									<div class="form-floating" data-aos="fade-up">
+									<div class="form-floating" >
 										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="First Name" name="firstname">
 										<label for="floatingInput">First Name <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
 								</div>
 								<div class="col-md-6 pb-4">
-									<div class="form-floating" data-aos="fade-up">
+									<div class="form-floating" >
 										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Last Name" name="lastname">
 										<label for="floatingInput">Last Name <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
 								</div>
 								<div class="col-md-6 pb-4">
-									<div class="form-floating" data-aos="fade-up">
+									<div class="form-floating" >
 										<input type="email" class="form-control guest-info-input" id="floatingInput email" placeholder="Email Address" name="e_mail">
 										<label for="floatingInput">Email Address <span style="color: red">*</span></label>
 										<span class="error">Please enter a valid email address.</span>
 									</div>
 								</div>
 								<div class="col-md-6 pb-4">
-									<div class="form-floating" data-aos="fade-up">
+									<div class="form-floating" >
 										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Contact Number" name="contactnumber" onkeypress="validate(event)">
 										<label for="floatingInput">Contact Number <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
 								</div>
 								<div class="col-md-12 pb-4">
-									<div class="form-floating" data-aos="fade-up">
+									<div class="form-floating" >
 										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Address" name="address">
 										<label for="floatingInput">Address <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
 								</div>
 								<div class="col-12 steps-btn">
-									<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-									<a href="#" class="btn btn-primary guest-info-next" data-aos="fade-up">Next</a>
+									<a href="#" class="btn btn-primary btn-back" >Back</a>
+									<a href="#" class="btn btn-primary guest-info-next" >Next</a>
 								</div>
 	        				</div>
 	        			</div>
@@ -301,8 +464,8 @@
 								</div>
 	        				</div>
 							<div class="col-12 steps-btn">
-								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-								<a href="#" class="btn btn-primary payment-next " data-aos="fade-up">Next</a>
+								<a href="#" class="btn btn-primary btn-back" >Back</a>
+								<a href="#" class="btn btn-primary payment-next " >Next</a>
 							</div>
 	        			</div>
 	    			</div>
@@ -325,15 +488,18 @@
 		        						Name: <b><span class="first_name"></span> <span class="last_name"></span></b>
 		        					</p>
 		        					<p>
-		        						Total: <b><span class="total"></span></b>
+		        						Total: <b><span class="summary-total"></span></b>
+		        					</p>
+		        					<p>
+		        						<a href="#" class="view-full-details">View Full Details</a>
 		        					</p>
 	        					</div>
 	        					<div class="form-floating">
-									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 200px;"></textarea>
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 170px;"></textarea>
 									<label for="floatingTextarea">Special Request(s) (Optional)</label>
 								</div>
 	        					<div class="form-check pt-3">
-									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									<input class="form-check-input i-have-read-check" type="checkbox" value="" id="flexCheckDefault">
 									<label class="form-check-label" for="flexCheckDefault">
 									I have read and agreed to the <a href="#">Privacy Policies</a> and <a href="#">Terms and Condition</a> 
 									</label>
@@ -341,8 +507,8 @@
 								</div>
 	        				</div>
 							<div class="col-12 steps-btn">
-								<a href="#" class="btn btn-primary btn-back" data-aos="fade-up">Back</a>
-								<button type="submit" class="btn btn-primary" data-aos="fade-up">Confirm</button>
+								<a href="#" class="btn btn-primary btn-back" >Back</a>
+								<button type="submit" class="btn btn-primary final-confirm">Confirm</button>
 							</div>
 	        			</div>
 	    			</div>
@@ -391,6 +557,110 @@
 			</div>
 		</div>
 
+		<!-- ADDED MODAL -->
+		<div class="modal fade added-modal" id="added-modal" tabindex="-1">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Added Successfully</h5>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">Your selected room/cottage has been added.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- SELECT AT LEAST 1 ROOM MODAL -->
+		<div class="modal fade select-atleast-modal" id="select-atleast-modal" tabindex="-1">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Error</h5>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">Your must reserve at least one (1) room/cottage.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- DISCARD MODAL -->
+		<div class="modal fade discard-modal" id="discard-modal" tabindex="-1">
+			<div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Discard</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">You've made some changes. Do you wan to discard it?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-danger discard-changes">Discard</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- VIEW FULL DETAILS MODAL -->
+		<div class="modal fade view-full-modal" id="view-full-modal" tabindex="-1">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">View Full Details</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">working on it</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONFIRMATION MODAL -->
+		<div class="modal fade confirmation-modal" id="confirmation-modal" tabindex="-1">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">Confirm your reservation. Are you sure?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" data-bs-target="#thank-you-modal" data-bs-toggle="modal">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- THANK YOU MODAL -->
+		<div class="modal fade thank-you-modal" id="thank-you-modal" tabindex="-1">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Thank you!</h5>
+						<a href="reservation.html" class="btn-close" aria-label="Close"></a>
+					</div>
+					<div class="modal-body">
+						<p class="fs-6">Thank you for reserving to us. We've sent an email to you. Please check it and do not delete it as it serves as your receipt.</p>
+					</div>
+					<div class="modal-footer">
+						<a href="reservation.html" class="btn btn-secondary">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- FOOTER -->
 		<div class="container-fluid px-5 bg-dark">
@@ -398,33 +668,33 @@
 				<div class="row mx-5 text-start">
 					<div class="col-lg-4 col-md-6 mb-3">
 						<ul class="nav flex-column">
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Reserve Now</a></li>
+							<li class="nav-item mb-3" ><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
+							<li class="nav-item mb-3" ><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
+							<li class="nav-item mb-3" ><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
+							<li class="nav-item mb-3" ><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
+							<li class="nav-item mb-3" ><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" ><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" ><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
+							<li class="nav-item mb-3" ><a href="#" class="nav-link p-0 text-light">Reserve Now</a></li>
 						</ul>
 					</div>
 
 					<div class="col-lg-4 col-md-6 mb-3">
 						<ul class="nav flex-column">
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Terms and Condition</a></li>
-							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Privacy and Policy</a></li>
+							<li class="nav-item mb-3" ><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+							<li class="nav-item mb-3" ><a href="#" class="nav-link p-0 text-light">Terms and Condition</a></li>
+							<li class="nav-item mb-3" ><a href="#" class="nav-link p-0 text-light">Privacy and Policy</a></li>
 						</ul>
 					</div>
 
 					<div class="col-lg-4 col-md-6 mb-3 text-light">
 	            		<div class="col-12 pb-3">
-	            			<!-- <i class="fa-solid fa-location-dot fa-lg"></i> --> <p data-aos="fade-up">Address</p>
-	            			<a href="" class="address"><p data-aos="fade-up"><small>123 Address St. Barangay, Example City</small></p></a>
+	            			<!-- <i class="fa-solid fa-location-dot fa-lg"></i> --> <p >Address</p>
+	            			<a href="" class="address"><p ><small>123 Address St. Barangay, Example City</small></p></a>
 	            		</div>
 	            		<div class="col-12 pb-3" >
-	            			<!-- <i class="fa-solid fa-phone fa-lg"></i> --> <p data-aos="fade-up">Phone</p>
-	            			<p data-aos="fade-up">
+	            			<!-- <i class="fa-solid fa-phone fa-lg"></i> --> <p >Phone</p>
+	            			<p >
 	            				<small>Mobile: 09123456789</small><br>
 	            				<small>Tel: (01)23456789</small><br>
 	            				<small>Email: example@gmail.com</small>
@@ -432,8 +702,8 @@
 	            			<p></p>
 	            		</div>
 	            		<div class="col-12">
-	            			<p data-aos="fade-up">Social Media</p>
-	            			<p data-aos="fade-up">
+	            			<p >Social Media</p>
+	            			<p >
 	            				<a href=""><i class="fa-brands fa-facebook fa-lg social-icon"></i></a>
 	            			</p>
 	            		</div>
@@ -453,8 +723,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 		<!-- FONTAWESOME -->
 		<script type="text/javascript" src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-		<!-- AOS -->
-		<script type="text/javascript" src="js/aos/aos.js"></script>
 		<!-- DATE RANGE PICKER -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
