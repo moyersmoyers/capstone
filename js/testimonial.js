@@ -21,8 +21,8 @@ new Swiper(".testimonialSwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    /*autoplay: {
+    autoplay: {
         delay: 7000,
         disableOnInteraction: false,
-    },*/
+    },
 });
