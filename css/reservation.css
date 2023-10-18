@@ -191,37 +191,71 @@ button{
 /* PROGRESSBAR END */
 
 
-/* DATEPICKER START */
-.datepicker{
-	font-size: 16px;
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px rgba(0,0,0,0.3) solid;
-}
-/* DATEPICKER END */
-
-
 /* ROOMS START */
-.rooms-container{
+.public-rooms-container{
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.rooms-container img{
+.public-rooms-container .form-check:not(:last-child){
+	padding-right: 20px;
+}
+
+.public-rooms-container img{
 	width: 100%;
 	height: 100%;
+	border-bottom-left-radius: 0 !important;
 }
 
 .room-description{
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+}
+
+.label-adult, .label-kids{
+	width: 60px;
+	font-size: 15px;
+}
+
+#select-adult, #select-kids{
+	width: 50px;
+	padding: 2px;
+}
+
+.people, .addons{
+	margin-bottom: 10px;
+}
+
+.private-card{
+	max-width: 100%;
+	height: 100%;
+	border-radius: 0;
+	padding-left: 0;
+}
+
+.private-room-description{
 	overflow: hidden;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	display: -webkit-box;
 }
 
-.fa-user, .fa-bed{
-	font-size: 20px;
+.guest-info{
+	gap: 20px;
+}
+
+.guest-info-room-div{
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 5px;
+	padding: 10px;
+	max-height: 555px;
+}
+
+.guest-info-input-div{
+	padding: 10px;
 }
 
 .guest-info-room{
@@ -230,20 +264,32 @@ button{
 	justify-content: center;*/
 	height: 100%;
 	width: 100%;
-	border-right: 1px rgba(0,0,0,0.4) solid;
-	padding-right: 20px;
+	position: relative;
 }
 
-.no-room{
-	display: block;
+.private-room-selected, .public-room-selected{
+	height: 76%;
+	overflow: auto;
+	padding-bottom: 50px;
 }
 
-.yes-room{
-	display: none;
+.room-item, .private-item{
+	padding: 0.5rem 0;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.1);
+	padding-left: 10px;
 }
 
-.yes-room div{
-	border: none;
+.total{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-top: 10px;
+	width: 100%;
+	border-top: 1px solid;
+	display: flex;
+	justify-content: space-between;
 }
 
 .room-selected-text{
@@ -255,7 +301,7 @@ button{
 	padding: 3px 5px;
 }
 
-.error, .file-error, .check-error{
+.error, .file-error, .check-error, .accomodation-error, .select-room-error, .select-time-error, .select-atleast-error{
 	color: red;
 	padding-left: 5px;
 	display: none;
@@ -286,6 +332,17 @@ button{
 	padding: 0 200px;
 }
 /* ROOMS END */
+
+
+/* INPUTS START */
+.datepicker, .accomodation-select, .room-cottage-select, .time-select, .private-extra{
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px rgba(0,0,0,0.3) solid;
+	width: 100%;
+}
+/* INPUTS END */
 
 
 /* FOOTER START */
