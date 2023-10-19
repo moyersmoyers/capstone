@@ -11,6 +11,8 @@
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 		<!-- DATE RANGE PICKER -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+		<!-- FOTORAMA -->
+		<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 		<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="css/reservation.css">
 	</head>
@@ -101,7 +103,7 @@
 									<input type="text" name="datetimes" id="datepicker" class="datepicker" readonly />
 								</div>
 		        				<div class="accomodation pe-4 pt-4">
-		        					<label class="form-label" for="accomodation-select">Select your accomodation</label>
+		        					<label class="form-label" for="accomodation-select">Select your accomodation <span style="color: red">*</span></label>
 									<select class="form-select accomodation-select" id="accomodation-select">
 										<option selected disabled value=""></option>
 										<option value="public">Public Pool</option>
@@ -111,7 +113,7 @@
 		        				</div>
 								<div class="row pt-4 pe-0">
 									<div class="row pe-0 public-container">
-										<label class="form-label" for="roomcottage-select">Select Rooms/Cottages</label>
+										<label class="form-label" for="roomcottage-select">Select Rooms/Cottages <span style="color: red">*</span></label>
 										<div class="col-lg-12 pe-0 room-cottage-select-div">
 											<select class="form-select room-cottage-select" id="roomcottage-select">
 												<option selected disabled value=""></option>
@@ -123,10 +125,13 @@
 											<span class="select-atleast-error">Please reserve at least one (1) room/cottage.</span>
 										</div>
 										<div class="public-rooms-container col-lg-9 pe-0">
-											<div class="card umbrella-card mb-2" id="umbrella" style="max-width: 100%; height: 100%;">
+											<div class="card umbrella-card mb-2 ps-1" id="umbrella" style="max-width: 100%; height: 100%;">
 												<div class="row g-0">
 													<div class="col-md-4" style="height: 170px;">
-														<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
+														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
+															<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
+															<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+														</div>
 													</div>
 													<div class="col-md-8">
 														<div class="card-body">
@@ -181,10 +186,13 @@
 													</div>
 												</div>
 											</div>
-											<div class="card cottage-kubo-card mb-2" id="cottage-kubo" style="max-width: 100%; height: 100%;">
+											<div class="card cottage-kubo-card mb-2 ps-1" id="cottage-kubo" style="max-width: 100%; height: 100%;">
 												<div class="row g-0">
 													<div class="col-md-4" style="height: 170px;">
-														<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
+															<img src="img/parking.jpg" class="img-fluid rounded-start" alt="...">
+															<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+														</div>
 													</div>
 													<div class="col-md-8">
 														<div class="card-body">
@@ -233,10 +241,12 @@
 													</div>
 												</div>
 											</div>
-											<div class="card room-card mb-2" id="room" style="max-width: 100%; height: 100%;">
+											<div class="card room-card mb-2 ps-1" id="room" style="max-width: 100%; height: 100%;">
 												<div class="row g-0">
 													<div class="col-md-4" style="height: 170px;">
-														<img src="img/parking.jpg" class="img-fluid rounded-start" alt="...">
+														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
+															<img src="img/wifi.jpg" class="img-fluid rounded-start" alt="...">
+														</div>
 													</div>
 													<div class="col-md-8">
 														<div class="card-body">
@@ -281,7 +291,7 @@
 									</div>
 			        				<div class="row pe-0 private-container">
 			        					<div class="col-lg-3">
-			        						<label class="form-label" for="time-select">Select Time</label>
+			        						<label class="form-label" for="time-select">Select Time <span style="color: red">*</span></label>
 			        						<select class="form-select time-select" id="time-select">
 												<option selected disabled value=""></option>
 												<option value="Day">Day</option>
@@ -327,10 +337,13 @@
 												</div>
 											</div>
 			        					</div>
-			        					<div class="card private-card col-lg-9">
+			        					<div class="card private-card col-lg-9 ps-1">
 											<div class="row g-0">
 												<div class="col-md-4" style="height: 170px;">
-													<img src="img/homepage-bg.jpg" class="img-fluid" alt="...">
+													<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
+														<img src="img/homepage-bg.jpg" class="img-fluid rounded-start" alt="...">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
 												</div>
 												<div class="col-md-8">
 													<div class="card-body">
@@ -379,7 +392,7 @@
         							</div>
 	        					</div>
 	        				</div>
-							<div class="col-12 text-end">
+							<div class="col-12 text-end mt-5">
 								<a href="#" class="btn btn-primary date-next">Next</a>
 							</div>
 	        			</div>
@@ -488,7 +501,7 @@
 		        						Name: <b><span class="first_name"></span> <span class="last_name"></span></b>
 		        					</p>
 		        					<p>
-		        						Total: <b><span class="summary-total"></span></b>
+		        						Total: <b>PHP <span class="summary-total"></span></b>
 		        					</p>
 		        					<p>
 		        						<a href="#" class="view-full-details">View Full Details</a>
@@ -590,7 +603,7 @@
 
 		<!-- DISCARD MODAL -->
 		<div class="modal fade discard-modal" id="discard-modal" tabindex="-1">
-			<div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content text-center">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Discard</h5>
@@ -609,14 +622,14 @@
 
 		<!-- VIEW FULL DETAILS MODAL -->
 		<div class="modal fade view-full-modal" id="view-full-modal" tabindex="-1">
-			<div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-				<div class="modal-content text-center">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">View Full Details</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<p class="fs-6">working on it</p>
+
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -726,6 +739,8 @@
 		<!-- DATE RANGE PICKER -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<!-- FOTORAMA -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 		<!-- SCRIPT -->
 		<script type="text/javascript" src="js/reservation.js"></script>
 	</body>
