@@ -326,14 +326,47 @@
 
 		<!-- ADD USER MODAL -->
 		<div class="modal fade add-modal" id="add-modal" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h2 class="modal-title fs-5" id="exampleModalLabel">Add Billing Information</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						...
+						<div class="row">
+							<div class="col-lg-6 mb-3">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+									<label for="floatingInput">First Name</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
+									<label for="floatingInput">Last Name</label>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-3">
+								<div class="form-floating">
+									<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+										<option selected disabled value=""></option>
+										<option value="online">Online</option>
+										<option value="walkin">Walk-in</option>
+									</select>
+									<label for="floatingSelect">Type of Reservation</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-floating">
+									<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+										<option selected disabled value=""></option>
+										<option value="online">Paid (100%)</option>
+										<option value="walkin">Paid (50%)</option>
+									</select>
+									<label for="floatingSelect">Type of Payment</label>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
