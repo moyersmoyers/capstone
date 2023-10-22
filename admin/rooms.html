@@ -308,14 +308,45 @@
 
 		<!-- ADD USER MODAL -->
 		<div class="modal fade add-modal" id="add-modal" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h2 class="modal-title fs-5" id="exampleModalLabel">Add Room/Cottage</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						...
+						<div class="row">
+							<div class="col-lg-12 mb-3">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="floatingInput" placeholder="Room Name">
+									<label for="floatingInput">Room Name</label>
+								</div>
+							</div>
+							<div class="col-lg-12 mb-3">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Room Description" id="floatingTextarea"></textarea>
+									<label for="floatingTextarea">Room Description</label>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-floating">
+									<input type="number" class="form-control" id="floatingInput" placeholder="Price">
+									<label for="floatingInput">Price (PHP)</label>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-floating">
+									<input type="number" class="form-control" id="floatingInput" placeholder="Discount">
+									<label for="floatingInput">Discount (%)</label>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-floating">
+									<input type="text" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="Total Price w/ Discount" value="0">
+									<label for="floatingPlaintextInput">Total Price w/ Discount</label>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
