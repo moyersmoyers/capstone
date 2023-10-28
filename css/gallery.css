@@ -208,7 +208,26 @@ button{
   border-radius: 0 !important;
 }
 
-.modal-caption {
+#prev-btn, #next-btn{
+	position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+#prev-btn{
+	left: 15%;
+}
+#next-btn{
+	right: 11.5%;
+}
+
+/*.modal-caption {
   margin: auto;
   display: block;
   width: 80%;
@@ -218,9 +237,9 @@ button{
   font-weight: 700;
   font-size: 1em;
   margin-top: 32px;
-}
+}*/
 
-.modal-content, .modal-caption {  
+/*.modal-content, .prev, .next{
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -235,7 +254,7 @@ button{
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
-}
+}*/
 
 .modal-close {
   position: absolute;
