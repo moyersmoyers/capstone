@@ -100,266 +100,208 @@
 	        				<div class="row col-md-9">
 	        					<div class="pe-4">
 									<label class="form-label" for="datepicker">Select check in & check out</label>
-									<input type="text" name="datetimes" id="datepicker" class="datepicker" readonly />
+									<input type="text" name="datepicker" id="datepicker" class="datepicker" readonly />
 								</div>
 		        				<div class="accomodation pe-4 pt-4">
 		        					<label class="form-label" for="accomodation-select">Select your accomodation <span style="color: red">*</span></label>
 									<select class="form-select accomodation-select" id="accomodation-select">
 										<option selected disabled value=""></option>
-										<option value="public">Public Pool</option>
-										<option value="private">Private Pool</option>
+										<option value="1">Private 1</option>
+										<option value="2">Private 2</option>
 									</select>
 									<span class="accomodation-error">This field is required.</span>
 		        				</div>
 								<div class="row pt-4 pe-0">
-									<div class="row pe-0 public-container">
-										<label class="form-label" for="roomcottage-select">Select Rooms/Cottages <span style="color: red">*</span></label>
-										<div class="col-lg-12 pe-0 room-cottage-select-div">
-											<select class="form-select room-cottage-select" id="roomcottage-select">
-												<option selected disabled value=""></option>
-												<option value="umbrella">Umbrella</option>
-												<option value="cottagekubo">Cottage kubo</option>
-												<option value="room">Room</option>
-											</select>
-											<span class="select-room-error">This field is required.</span>
-											<span class="select-atleast-error">Please reserve at least one (1) room/cottage.</span>
-										</div>
-										<div class="public-rooms-container col-lg-9 pe-0">
-											<div class="card umbrella-card mb-2 ps-1" id="umbrella" style="max-width: 100%; height: 100%;">
-												<div class="row g-0">
-													<div class="col-md-4" style="height: 170px;">
-														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
-															<img src="img/qw.jpg" class="img-fluid rounded-start" alt="...">
-															<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
-														</div>
-													</div>
-													<div class="col-md-8">
-														<div class="card-body">
-															<h4 class="card-title">Umbrella</h4>
-															<div class="card-info row">
-																<div class="col-md-12">
-																	<p class="room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
-																	<p>
-																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
-																	</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4 p-3">
-														<div class="people">
-															<span><b>Number of Guests:</b></span><br>
-															<label class="label-adult" for="select-adult">Adult(s):</label>
-															<select id="select-adult" style="">
-																<option value="1">1</option>
-																<option value="2">2</option>
-															</select>
-															<br><br>
-															<label class="label-kids" for="select-kids">Kid(s):</label>
-															<select id="select-kids">
-																<option value="0">0</option>
-																<option value="1">1</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-lg-5 p-3">
-														<div class="addons">
-															<span><b>Add ons:</b></span><br>
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" type="checkbox" value="" id="karaoke-check" name="Karaoke">
-																<label class="form-check-label" for="karaoke-check">
-																	Karaoke
-																</label>
-															</div>
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" type="checkbox" value="" id="dkitchen-check" name="Dirty Kitchen">
-																<label class="form-check-label" for="dkitchen-check">
-																	Dirty Kitchen
-																</label>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3 p-3">
-														<p style="margin-bottom: 5px;">From</p>
-														<p class="price"><b style="font-size: 18px;">PHP 5000</b> per night</p>
-														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
-													</div>
-												</div>
-											</div>
-											<div class="card cottage-kubo-card mb-2 ps-1" id="cottage-kubo" style="max-width: 100%; height: 100%;">
-												<div class="row g-0">
-													<div class="col-md-4" style="height: 170px;">
-														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
-															<img src="img/parking.jpg" class="img-fluid rounded-start" alt="...">
-															<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
-														</div>
-													</div>
-													<div class="col-md-8">
-														<div class="card-body">
-															<h4 class="card-title">Cottage Kubo</h4>
-															<div class="card-info row">
-																<div class="col-md-12">
-																	<p class="room-description">This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.</p>
-																	<p>
-																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
-																	</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4 p-3">
-														<div class="people">
-															<span><b>Number of Guests:</b></span><br>
-															<label class="label-adult" for="select-adult">Adult(s):</label>
-															<select id="select-adult" style="">
-																<option value="1">1</option>
-																<option value="2">2</option>
-															</select>
-															<br><br>
-															<label class="label-kids" for="select-kids">Kid(s):</label>
-															<select id="select-kids">
-																<option value="0">0</option>
-																<option value="1">1</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-lg-5 p-3">
-														<div class="addons">
-															<span><b>Add ons:</b></span><br>
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" type="checkbox" value="" id="karaoke" name="Karaoke">
-																<label class="form-check-label" for="karaoke">
-																	Karaoke
-																</label>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-3 p-3">
-														<p style="margin-bottom: 5px;">From</p>
-														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
-														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
-													</div>
-												</div>
-											</div>
-											<div class="card room-card mb-2 ps-1" id="room" style="max-width: 100%; height: 100%;">
-												<div class="row g-0">
-													<div class="col-md-4" style="height: 170px;">
-														<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
-															<img src="img/wifi.jpg" class="img-fluid rounded-start" alt="...">
-														</div>
-													</div>
-													<div class="col-md-8">
-														<div class="card-body">
-															<h4 class="card-title">Room</h4>
-															<div class="card-info row">
-																<div class="col-md-12">
-																	<p class="room-description">Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.</p>
-																	<p>
-																		<a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
-																	</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-4 p-3">
-														<div class="people">
-															<span><b>Number of Guests:</b></span><br>
-															<label class="label-adult" for="select-adult">Adult(s):</label>
-															<select id="select-adult" style="">
-																<option value="1">1</option>
-																<option value="2">2</option>
-															</select>
-															<br><br>
-															<label class="label-kids" for="select-kids">Kid(s):</label>
-															<select id="select-kids">
-																<option value="0">0</option>
-																<option value="1">1</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-lg-5 p-3">
-														<!-- NONE -->
-													</div>
-													<div class="col-md-3 p-3">
-														<p style="margin-bottom: 5px;">From</p>
-														<p class="price"><b style="font-size: 18px;">PHP 2000</b> per night</p>
-														<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
-													</div>
-												</div>
-											</div>
-			        					</div>
-									</div>
-			        				<div class="row pe-0 private-container">
-			        					<div class="col-lg-3">
-			        						<label class="form-label" for="time-select">Select Time <span style="color: red">*</span></label>
-			        						<select class="form-select time-select" id="time-select">
-												<option selected disabled value=""></option>
-												<option value="Day">Day</option>
-												<option value="Night">Night</option>
-												<option value="Overnight">Overnight</option>
-			        						</select>
-											<span class="select-time-error">This field is required.</span>
-			        						<br>
-			        						<label class="form-label" for="private-extra">Add extra (<b>PHP 300</b>/head)</label>
-			        						<!-- <input class="form-control private-extra" type="number" id="private-extra" min="0"> -->
-			        						<select class="form-select private-extra" id="private-extra">
-			        							<option value="0">0</option>
-			        							<option value="1">1</option>
-			        							<option value="2">2</option>
-			        							<option value="3">3</option>
-			        							<option value="4">4</option>
-			        							<option value="5">5</option>
-			        							<option value="6">6</option>
-			        							<option value="7">7</option>
-			        							<option value="8">8</option>
-			        							<option value="9">9</option>
-			        							<option value="10">10</option>
-			        						</select>
-											<div class="private-addons pt-3">
-												<span><b>Add ons:</b></span><br>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="Karaoke" id="add-on-1">
-													<label class="form-check-label" for="add-on-1">
-														Karaoke
-													</label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="Dirty Kitchen" id="add-on-2">
-													<label class="form-check-label" for="add-on-2">
-														Dirty Kitchen
-													</label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="Gasul" id="add-on-3">
-													<label class="form-check-label" for="add-on-3">
-														Gasul
-													</label>
-												</div>
-											</div>
-			        					</div>
-			        					<div class="card private-card col-lg-9 ps-1">
+			        				<div class="row pe-0 room-container">
+			        					<div class="card room-card room1 col-lg-9 mb-3 pb-3">
 											<div class="row g-0">
-												<div class="col-md-4" style="height: 170px;">
-													<div class="fotorama" data-width="200px" data-height="170" data-allowfullscreen="true">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
 														<img src="img/homepage-bg.jpg" class="img-fluid rounded-start" alt="...">
 														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
 													</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-md-9">
 													<div class="card-body">
-														<h4 class="card-title">Private Pool</h4>
+														<h4 class="card-title">Private Pool #1</h4>
 														<div class="card-info row">
 															<div class="col-md-12">
 																<span class="private-room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
 																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
 																<div class="private-room-details pt-3">
-																	<p>Price: <b>PHP 10000</b> per night</p>
+																	<p>Price: <b>PHP <span class="price">1000</span></b> per night</p>
 																	<p>Capacity: Max. 20 PAX. Extra/head <b>PHP 300</b></p>
 																	<p>Bed: 2 King Size and 4 Single Beds</p>
 																</div>
 															</div>
 														</div>
 													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="Day">Day</option>
+														<option value="Night">Night</option>
+														<option value="Overnight">Overnight</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+													<label class="form-label" for="private-extra">Add extra (<b>PHP 300</b>/head)</label>
+					        						<select class="form-select private-extra" id="private-extra">
+					        							<option value="0">0</option>
+					        							<option value="1">1</option>
+					        							<option value="2">2</option>
+					        							<option value="3">3</option>
+					        							<option value="4">4</option>
+					        							<option value="5">5</option>
+					        							<option value="6">6</option>
+					        							<option value="7">7</option>
+					        							<option value="8">8</option>
+					        							<option value="9">9</option>
+					        							<option value="10">10</option>
+					        						</select>
+												</div>
+												<div class="addons pt-3 col-lg-12">
+													<span><b>Add ons:</b></span><br>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Karaoke" id="r1-add-on-1">
+														<label class="form-check-label" for="r1-add-on-1">
+															Karaoke
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Dirty Kitchen" id="r1-add-on-2">
+														<label class="form-check-label" for="r1-add-on-2">
+															Dirty Kitchen
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Gasul" id="r1-add-on-3">
+														<label class="form-check-label" for="r1-add-on-3">
+															Gasul
+														</label>
+													</div>
+												</div>
+												<div class="col-lg-12 text-end">
+													<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+												</div>
+											</div>
+										</div>
+			        					<div class="card room-card room2 col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/homepage-bg.jpg" class="img-fluid rounded-start" alt="...">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">Private Pool #2</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<p>Price: <b>PHP <span class="price">2000</span></b> per night</p>
+																	<p>Capacity: Max. 20 PAX. Extra/head <b>PHP 300</b></p>
+																	<p>Bed: 2 King Size and 4 Single Beds</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r2-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r2-time-select">
+														<option selected disabled value=""></option>
+														<option value="Day">Day</option>
+														<option value="Night">Night</option>
+														<option value="Overnight">Overnight</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+													<label class="form-label" for="private-extra">Add extra (<b>PHP 300</b>/head)</label>
+					        						<select class="form-select private-extra" id="private-extra">
+					        							<option value="0">0</option>
+					        							<option value="1">1</option>
+					        							<option value="2">2</option>
+					        							<option value="3">3</option>
+					        							<option value="4">4</option>
+					        							<option value="5">5</option>
+					        							<option value="6">6</option>
+					        							<option value="7">7</option>
+					        							<option value="8">8</option>
+					        							<option value="9">9</option>
+					        							<option value="10">10</option>
+					        						</select>
+												</div>
+												<div class="addons pt-3 col-lg-12">
+													<span><b>Add ons:</b></span><br>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Karaoke" id="r2-add-on-1">
+														<label class="form-check-label" for="r2-add-on-1">
+															Karaoke
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Dirty Kitchen" id="r2-add-on-2">
+														<label class="form-check-label" for="r2-add-on-2">
+															Dirty Kitchen
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" name="Gasul" id="r2-add-on-3">
+														<label class="form-check-label" for="r2-add-on-3">
+															Gasul
+														</label>
+													</div>
+												</div>
+												<div class="col-lg-12 text-end">
+													<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
 												</div>
 											</div>
 										</div>
@@ -373,15 +315,7 @@
 	        							<b>Check In</b>: <span class="display-check-in"></span><br>
 	        							<b>Check Out</b>: <span class="display-check-out"></span>
 	        						</div>
-	        						<div class="selected-accomodation">
-	        							
-	        						</div>
-	        						<div class="private-room-selected">
-        								<div class="room-summary">
-        									
-        								</div>
-	        						</div>
-	        						<div class="public-room-selected">
+	        						<div class="room-selected">
 	        							<div class="room-summary">
 
 	        							</div>
@@ -391,10 +325,13 @@
         								<span><b>PHP <span class="display-total">0</span></b></span>
         							</div>
 	        					</div>
+								<div class="mt-4">
+									<a href="#" class="btn btn-primary date-next w-100">Next</a>
+								</div>
 	        				</div>
-							<div class="col-12 text-end mt-5">
+							<!-- <div class="col-12 text-end mt-5">
 								<a href="#" class="btn btn-primary date-next">Next</a>
-							</div>
+							</div> -->
 	        			</div>
 	    			</div>
 
@@ -404,14 +341,14 @@
 	        				<div class="row mt-3 guest-info-input-div">
 								<div class="col-md-6 pb-4">
 									<div class="form-floating" >
-										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="First Name" name="firstname">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="First Name" name="firstname" onkeypress="lettersOnly(event, this)">
 										<label for="floatingInput">First Name <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
 								</div>
 								<div class="col-md-6 pb-4">
 									<div class="form-floating" >
-										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Last Name" name="lastname">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Last Name" name="lastname" onkeypress="lettersOnly(event, this)">
 										<label for="floatingInput">Last Name <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
@@ -425,7 +362,7 @@
 								</div>
 								<div class="col-md-6 pb-4">
 									<div class="form-floating" >
-										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Contact Number" name="contactnumber" onkeypress="validate(event)">
+										<input type="text" class="form-control guest-info-input" id="floatingInput" placeholder="Contact Number" name="contactnumber" onkeypress="validate(event, this)">
 										<label for="floatingInput">Contact Number <span style="color: red">*</span></label>
 										<span class="error">This field is required.</span>
 									</div>
@@ -449,11 +386,14 @@
 	    			<div class="form-steps">
 	        			<div class="row g-4">
 	        				<div class="col-md-12">
+								<p><b>Important Note:</b> You may skip this part. pls help</p>
+	        				</div>
+	        				<div class="col-md-12">
 								<div class="form-floating">
 									<select class="form-select method-select" id="floatingSelect" aria-label="Payment Method">
-										<option disabled selected>--Select a Payment Method--</option>
+										<option disabled selected value="">--Select a payment method--</option>
 										<option value="gcash">GCash</option>
-										<option value="bdo">BDO</option>
+										<option value="bank">Bank Transfer</option>
 									</select>
 									<label for="floatingSelect">Select a payment method</label>
 								</div>
@@ -471,7 +411,6 @@
 										</p>
 										<p>Also, please send the screenshot of your payment: <span style="color:red;">*</span></p>
 	  									<input class="insert-img" type="file" id="formFile">
-	  									<span class="file-error">This field is required.</span>
 									</div>
 									
 								</div>
