@@ -12,14 +12,6 @@ table, .dataTables_scrollHeadInner{
   text-align: center;
 }
 
-.action a:nth-child(1) {
-  color: var(--bs-success);
-}
-
-.action a:nth-child(2) {
-  color: var(--bs-danger);
-}
-
-.action a:nth-child(3) {
+.action a {
   color: var(--bs-warning);
 }
