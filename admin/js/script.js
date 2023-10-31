@@ -59,8 +59,10 @@ $('.nav_list-item a').click(function(event){
 	//selecting other submenu
 	$(this).parent().siblings().find('.submenu').first().slideUp();
 	$(this).parent().siblings().find('a').find('.chev-down').removeClass('rotate');
-	
-	console.log();
+});
+
+$('#reservation, #cms').click(function(e){
+	e.preventDefault();
 });
 /* DROPDOWN SIDEBAR NAV END */
 
@@ -109,3 +111,37 @@ const sidebar_loader = setTimeout(() => {
 const content_loader = setTimeout(() => {
     document.querySelector('.content-loader').style.display = "none";
 }, 1000);
+
+
+/* CHART JS START */
+const mychart = document.querySelector('#chart');
+
+new Chart(mychart, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      datasets: [
+	      {
+	        label: 'Number of Reservations',
+	        data: [5, 12, 10, 20, 21, 14, 14, 13, 19, 9],
+	        borderWidth: 2
+	      },
+	      {
+	      	label: 'Number of Cancellations',
+	      	data: [2, 4, 1, 3, 8, 0, 0, 10, 2, 5],
+	        borderWidth: 2
+	      }
+      ]
+    },
+    options: {
+    	responsive: true,
+    	plugins: {
+    		legend: {
+    			position: 'top',
+    		}
+    	}
+    }
+});
+/* CHART JS END*/
+
+
