@@ -12,6 +12,7 @@ body{
   font-family: "Rubik", arial, sans-serif !important;
   transition: .3s;
   height: 100vh;
+  font-size: 14px !important;
 }
 
 a{
@@ -461,7 +462,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .collapse-nav{
-  width: calc(var(--nav-width) - 170px);
+  width: calc(var(--nav-width) - 171px);
   transition: all 0.3s;
 }
 
@@ -521,40 +522,11 @@ body::-webkit-scrollbar-thumb{
   font-size: 0.9rem;
 }
 
-.main-container{
-  padding-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 250px 300px;
-  grid-template-areas: 
-  "c1 c2 c3 c4"
-  "c5 c5 c6 c6";
-  gap: 20px;
-}
-
-.card{
-  background: #f6f7f9;
+.canvas-container{
   border-radius: 5px;
-}
-
-.card:nth-child(1){
-  grid-area: c1;
-}
-
-.card:nth-child(2){
-  grid-area: c2;
-}
-.card:nth-child(3){
-  grid-area: c3;
-}
-.card:nth-child(4){
-  grid-area: c4;
-}
-.card:nth-child(5){
-  grid-area: c5;
-}
-.card:nth-child(6){
-  grid-area: c6;
+  padding: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background: var(--white-color);
 }
 
 @media screen and (max-width: 768px){
