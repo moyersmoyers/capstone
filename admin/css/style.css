@@ -522,7 +522,7 @@ body::-webkit-scrollbar-thumb{
   font-size: 0.9rem;
 }
 
-.canvas-container{
+.canvas-container, .dashboard-card{
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
