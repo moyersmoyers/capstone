@@ -8,7 +8,11 @@ body{
 
 button{
 	outline: none !important;
-   box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+a{
+	text-decoration: none !important;
 }
 
 .heading-font{
@@ -18,6 +22,7 @@ button{
 .line{
 	display: grid;
 	justify-items: center;
+	padding-bottom: 1.4rem;
 }
 
 .line hr{
@@ -25,7 +30,11 @@ button{
 }
 
 .page-section{
-	padding: 11rem 0 2rem 0;
+	padding: 1.5rem 0;
+}
+
+.section-heading{
+	font-size: 2rem;
 }
 
 
@@ -69,28 +78,59 @@ button{
 
 
 /* HEADER SWIPER START */
-.head{
-	position: fixed;
-	width: 100%;
-	z-index: 999;
-	background: #343a40;
-	padding: 4rem 0 1rem;
+
+.headerSwiper {
+	height: 55vh;
 }
 
-.head p{
-	margin: 0;
+.headerSwiper .swiper-slide {
+	height: 55vh;
+	padding-top: 55px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
 }
-/* HEADER END */
+
+.headerSwiper .swiper-slide:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .5);
+}
+
+.headerSwiper .swiper-pagination-bullet{
+	opacity: 1;
+	background: #999;
+}
+
+.headerSwiper .swiper-pagination-bullet-active{
+	background: #fff;
+}
+
+.header-caption{
+	width: 70%;
+}
+/* HEADER SWIPER END */
 
 
 /* MASTERHEAD START */
 .masterhead-subheading{
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin-bottom: 2rem;
 }
 
 .masterhead-heading{
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	margin-bottom: 1rem;
 }
 /* MASTERHEAD END */
@@ -123,26 +163,103 @@ button{
 /* NAVBAR END */
 
 
-/* ABOUT US START */
-.about-us img{
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	background-size: cover;
+/* OWL CAROUSEL START */
+.owl-stage{
+	height: 600px;
 }
 
-.about-us-content{
-	width: 80%;
+.owl-stage-outer{
+	height: 400px;
+}
+
+.owl-nav{
+    position: relative;
+    /*bottom: 10rem;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+/*.owl-prev{
+	position: relative;
+	right: 3rem;
+}
+.owl-next{
+	position: relative;
+	left: 3rem;
+}*/
+/* OWL CAROUSEL END */
+
+
+/* ROOMS SECTION START*/
+.room-button-container{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.room-button-container a{
+	font-size: 14px;
+}
+
+.room-item{
+	width: 70%;
+	margin: 15px 0 10px 53px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.owl-item:hover .room-item{
+	transform: scale(1.05);
+	/*box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);*/
+}
+
+.room-item button{
+	border: none;
+	padding: 0;
+}
+
+.room-item img{
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.details{
+	box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+    background: #fff;
+    padding: 20px;
+    height: 200px;
+}
+
+.details ul {
+	margin: 0 0 30px 0;
+	padding-left: 0;
+}
+
+.room-description, .masterhead-subheading{
 	overflow: hidden;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 2;
 	display: -webkit-box;
 }
 
-/* ABOUT US END */
+.room-price{
+	font-size: 1.4rem;
+	padding-bottom: 1rem;
+}
 
+.pernight-text{
+	font-size: 14px;
+}
+
+.room-description{
+	margin-bottom: 0.5rem !important;
+}
+/* ROOMS SECTION START*/
 
 
 /* FOOTER START */
@@ -160,21 +277,16 @@ footer small, footer .social-icon{
 /* FOOTER END */
 
 
-@media (max-width: 991px){
-	.about-us-text{
-		padding: 3rem 0;
-	}
-}
-
 @media (max-width: 860px){
 	.masterhead-subheading{
-		font-size: 1.1rem;
+		font-size: 0.8rem;
 	}
 
 	.masterhead-heading{
-		font-size: 3rem;
+		font-size: 2.3rem;
 	}
 }
+
 
 @media (max-width: 516px){
 	.masterhead-subheading{
@@ -186,6 +298,6 @@ footer small, footer .social-icon{
 	}
 
 	.masterhead-heading{
-		font-size: 2.7rem;
+		font-size: 2rem;
 	}
 }
