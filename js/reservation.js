@@ -130,8 +130,8 @@ function getNumOfDaysDifference(){
 
 /* -------------------- ACCOMODATION -------------------- */
 $(document).ready(function(){
-    $('.room1').css('display', 'none');
-    $('.room2').css('display', 'none');
+    $('.regular').css('display', 'none');
+    $('.big').css('display', 'none');
 
     $('.display-check-in').html(moment().format('MM/DD/YYYY'));
     $('.display-check-out').html(moment().add(1, 'days').format('MM/DD/YYYY'));
@@ -142,13 +142,13 @@ $('.accomodation-select').change(function(){
     $('.accomodation-error').css('display', 'none');
     $('.select-time-error').css('display', 'none');
 
-    if($(this).val() === "1"){
-        $('.room1').css('display', 'block');
-        $('.room2').css('display', 'none');
+    if($(this).val() === "regular"){
+        $('.regular').css('display', 'block');
+        $('.big').css('display', 'none');
     }
     else{
-        $('.room2').css('display', 'block');
-        $('.room1').css('display', 'none');
+        $('.big').css('display', 'block');
+        $('.regular').css('display', 'none');
     }
 });
 
@@ -179,10 +179,11 @@ $('.select-this-room').click(function(e){
         roomName = $(this).parent().parent().siblings().find('.card-title').text();
         time = $(this).parent().siblings().find('.time-select').val();
         numOfAdult = $(this).parent().siblings().find('#adult-select').val();
-        numOfKids = $(this).parent().siblings().find('#kids-select').val();
+        extra = $(this).parent().siblings().find('#extra').val();
+        /*numOfKids = $(this).parent().siblings().find('#kids-select').val();*/
         roomPrice = $(this).parent().parent().siblings().find('.price').text();
 
-        $('.addons input:checked').each(function() {
+        /*$('.addons input:checked').each(function() {
             selectedAddOns.push($(this).attr('name'));
 
             if($(this).attr('name') === 'Karaoke'){
@@ -194,7 +195,7 @@ $('.select-this-room').click(function(e){
             if($(this).attr('name') === 'Gasul'){
                 subtotal += 300;
             }
-        });
+        });*/
 
         reserve();
     }
@@ -210,9 +211,12 @@ function reserve(){
     for(let i = 1; i < parseInt(numOfAdult); i++){
         subtotal += 150;
     }
-    for(let i = 0; i < parseInt(numOfKids); i++){
-        subtotal += 100;
+    for(let i = 0; i < parseInt(extra); i++){
+        subtotal += 250;
     }
+    /*for(let i = 0; i < parseInt(numOfKids); i++){
+        subtotal += 100;
+    }*/
     /*for(let i = 0; i < selectedAddOns.length; i++){
         if($.inArray('Karaoke', selectedAddOns) !== -1){
             subtotal += 200;
@@ -251,12 +255,6 @@ function reserve(){
                             <span class="selected-number-of-adult">
                                 <span class="display-adult">`+tempSelectedRoomsCottages[0].numOfAdult+`</span> Adult(s),
                             </span>
-                            <span class="selected-number-of-kids">
-                                <span class="display-kids">`+tempSelectedRoomsCottages[0].numOfKids+`</span> Kid(s)
-                            </span>
-                        </div>
-                        <div class="selected-addons">
-                            Add-ons: <span class="display-addons">`+isAddonsEmpty+`</span>
                         </div>
                         <div class="sub-total">
                             Sub Total: <span class="display-sub-total">`+subtotal+`</span>
