@@ -325,8 +325,8 @@ button{
 	font-size: 16px;
 }
 
-.confirm-div{
-	padding: 0 200px;
+.confirm-div .form-check input{
+	float: none;
 }
 /* ROOMS END */
 
